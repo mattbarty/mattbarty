@@ -1,0 +1,37 @@
+[
+  {
+    "type": "video",
+    "src": "assets/videos/arcanagpt-demo.mp4",
+    "title": "ArcanaGPT",
+    "description": "This is the description for Project 3.",
+    "tags": ["app", "mobile"]
+  },
+  {
+    "type": "video",
+    "src": "assets/videos/sudoku-solver-demo.mp4",
+    "title": "CV Sudoku Solver",
+    "description": "This is the description for Project 3.",
+    "tags": ["app", "mobile"]
+  },
+  {
+    "type": "video",
+    "src": "assets/videos/ai-art-demo.mp4",
+    "title": "AI-Powered Art Workflow",
+    "description": "This is the description for Project 3.",
+    "tags": ["app", "mobile"]
+  },
+  {
+    "type": "video",
+    "src": "assets/videos/whatsapp-language-features-demo.mp4",
+    "title": "WhatsApp Language Extension",
+    "description": "This is the description for Project 3.",
+    "tags": ["app", "mobile"]
+  },
+  {
+    "type": "video",
+    "src": "assets/videos/linkedinfluencer-demo.mp4",
+    "title": "LinkedInfluencer",
+    "description": "This is the description for Project 3.",
+    "tags": ["app", "mobile"]
+  }
+]
