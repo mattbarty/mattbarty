@@ -1,4 +1,5 @@
 import React from 'react';
+import AutoPlaySilentVideo from './AutoPlaySilentVideo';
 
 type Project = {
   title: string;
@@ -11,6 +12,7 @@ type ProjectCardProps = {
   project: Project;
 };
 
+
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="flex rounded shadow-lg relative">
@@ -22,10 +24,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <img src={project.src} alt={project.title} className="object-cover" />
         )}
         {project.type === 'video' && (
-          <video autoPlay muted loop className="w-full aspect-square object-cover">
-            <source src={project.src} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <AutoPlaySilentVideo video={project.src} className="w-full aspect-square object-cover" />
+          // <video autoPlay muted loop className="w-full aspect-square object-cover">
+          //   <source src={project.src} type="video/mp4" />
+          //   Your browser does not support the video tag.
+          // </video>
         )}
       </div>
       <div className="absolute px-6 py-4 opacity-0 hover:opacity-80 h-full w-full bg-black">

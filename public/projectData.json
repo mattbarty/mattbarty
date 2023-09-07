@@ -4,34 +4,41 @@
     "src": "assets/videos/arcanagpt-demo.mp4",
     "title": "ArcanaGPT",
     "description": "This is the description for Project 3.",
-    "tags": ["app", "mobile"]
+    "tags": ["Midjourney", "Figma", "GPT-3.5"]
   },
   {
     "type": "video",
     "src": "assets/videos/sudoku-solver-demo.mp4",
     "title": "CV Sudoku Solver",
     "description": "This is the description for Project 3.",
-    "tags": ["app", "mobile"]
+    "tags": ["Python", "TensorFlow"]
   },
   {
     "type": "video",
     "src": "assets/videos/ai-art-demo.mp4",
     "title": "AI-Powered Art Workflow",
     "description": "This is the description for Project 3.",
-    "tags": ["app", "mobile"]
+    "tags": ["Stable Diffusion", "Creative Cloud", "Midjourney"]
+  },
+    {
+    "type": "video",
+    "src": "assets/videos/stable-diffusion-portrait-demo.mp4",
+    "title": "ControlNet Portraits",
+    "description": "This is the description for Project 3.",
+    "tags": ["Stable Difussion"]
   },
   {
     "type": "video",
     "src": "assets/videos/whatsapp-language-features-demo.mp4",
     "title": "WhatsApp Language Extension",
     "description": "This is the description for Project 3.",
-    "tags": ["app", "mobile"]
+    "tags": ["Typescript", "Google Cloud Translation API"]
   },
   {
     "type": "video",
     "src": "assets/videos/linkedinfluencer-demo.mp4",
     "title": "LinkedInfluencer",
     "description": "This is the description for Project 3.",
-    "tags": ["app", "mobile"]
+    "tags": ["React", "Typescript", "NextJS 13", "GPT-3.5", "BLIP-2"]
   }
 ]
