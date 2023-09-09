@@ -11,34 +11,40 @@
     "src": "assets/videos/sudoku-solver-demo.mp4",
     "title": "CV Sudoku Solver",
     "description": "This is the description for Project 3.",
-    "tags": ["Python", "TensorFlow"]
+    "tags": ["Python", "TensorFlow"],
+    "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_machinelearning-tensorflow-artificialintelligence-activity-7101517894634586112-2Xlr?utm_source=share&utm_medium=member_desktop"
   },
   {
     "type": "video",
     "src": "assets/videos/ai-art-demo.mp4",
     "title": "AI-Powered Art Workflow",
     "description": "This is the description for Project 3.",
-    "tags": ["Stable Diffusion", "Creative Cloud", "Midjourney"]
+    "tags": ["Stable Diffusion", "Creative Cloud", "Midjourney"],
+    "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop"
   },
     {
     "type": "video",
     "src": "assets/videos/stable-diffusion-portrait-demo.mp4",
     "title": "ControlNet Portraits",
     "description": "This is the description for Project 3.",
-    "tags": ["Stable Difussion"]
+    "tags": ["Stable Difussion"],
+    "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_stablediffusion-ai-aiartwork-activity-7065698539477069825-eaZ8?utm_source=share&utm_medium=member_desktop"
   },
   {
     "type": "video",
     "src": "assets/videos/whatsapp-language-features-demo.mp4",
     "title": "WhatsApp Language Extension",
     "description": "This is the description for Project 3.",
-    "tags": ["Typescript", "Google Cloud Translation API"]
+    "tags": ["Typescript", "Google Cloud Translation API"],
+    "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop"
   },
   {
     "type": "video",
     "src": "assets/videos/linkedinfluencer-demo.mp4",
     "title": "LinkedInfluencer",
     "description": "This is the description for Project 3.",
-    "tags": ["React", "Typescript", "NextJS 13", "GPT-3.5", "BLIP-2"]
+    "tags": ["React", "Typescript", "NextJS 13", "GPT-3.5", "BLIP-2"],
+    "webUrl": "https://linkedinfluencer.app",
+    "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_ai-project-webdev-activity-7063114429814460416-OIMn?utm_source=share&utm_medium=member_desktop"
   }
 ]

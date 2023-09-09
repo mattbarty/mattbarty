@@ -12,7 +12,8 @@ export default function AutoPlaySilentVideo(props: any) {
       loop
       autoPlay
       muted
-      playsInline>
+      playsInline
+      style={{ width: "100%", height: "100%" }}>
       <source src={props.video} type="video/mp4" />
     </video>
   );
