@@ -27,10 +27,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div className="rounded elative">
           <div className="w-full aspect-[8/6] bg-yellow-300 z-0">
             {project.type === 'image' && (
-              <img src={project.src} alt={project.title} className="object-cover" />
+              <img src={project.src} alt={project.title} className="w-full  object-cover" />
             )}
             {project.type === 'gif' && (
-              <img src={project.src} alt={project.title} className="object-cover" />
+              <img src={project.src} alt={project.title} className="w-full object-cover aspect-[8/6]" />
             )}
             {project.type === 'video' && (
               <AutoPlaySilentVideo video={project.src} className="w-full object-cover" />

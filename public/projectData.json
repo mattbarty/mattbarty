@@ -15,12 +15,30 @@
     "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_machinelearning-tensorflow-artificialintelligence-activity-7101517894634586112-2Xlr?utm_source=share&utm_medium=member_desktop"
   },
   {
+    "type": "gif",
+    "src": "assets/gifs/eye-disease-classification-demo.gif",
+    "title": "Eye Disease Classifier (TensorFlow)",
+    "description": "This is the description for Project 3.",
+    "tags": ["Python", "TensorFlow"],
+    "linkedInUrl": "",
+    "githubUrl": "https://github.com/mattbarty/eye_diseases_classification"
+  },
+    {
+    "type": "gif",
+    "src": "assets/gifs/brain-disease-classifier-demo.gif",
+    "title": "Brain Disease Classifier (TensorFlow)",
+    "description": "This is the description for Project 3.",
+    "tags": ["Python", "TensorFlow"],
+    "linkedInUrl": "",
+    "githubUrl": "https://github.com/mattbarty/brain-tumour-categorical-classifier"
+  },
+  {
     "type": "video",
     "src": "assets/videos/ai-art-demo.mp4",
     "title": "AI-Powered Art Workflow",
     "description": "This is the description for Project 3.",
     "tags": ["Stable Diffusion", "Creative Cloud", "Midjourney"],
-    "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop"
+    "linkedInUrl": "https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop"
   },
     {
     "type": "video",
