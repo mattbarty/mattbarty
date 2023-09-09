@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        text: "#141a17",
-        primary: "#6b8e80",
-        secondary: "#c8d5d0",
-        accent: "#5a776b",
+        text: "#1C0202",
+        primary: "#305454",
+        secondary: "#E2E2E9",
+        accent: "#11C069",
       },
     },
   },

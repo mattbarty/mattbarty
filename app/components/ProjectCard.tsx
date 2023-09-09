@@ -9,6 +9,7 @@ type Project = {
   description: string;
   type: 'image' | 'gif' | 'video';
   src: string;
+  tags: string[];
   webUrl?: string;
   githubUrl?: string;
   linkedInUrl?: string;
@@ -43,28 +44,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className='my-2 flex'>
             {project.webUrl && (
               <a href={project.webUrl} target='_blank' rel='noopener noreferrer'>
-                <div className='flex items-center justify-center rounded-lg bg-green-400 w-10 h-6 mx-1 text-[text]'>
+                <div className='flex items-center justify-center rounded-lg bg-green-500 w-10 h-6 mx-1 text-[white]'>
                   <FontAwesomeIcon icon={faGlobe} />
                 </div>
               </a>
             )}
             {project.githubUrl && (
               <a href={project.githubUrl} target='_blank' rel='noopener noreferrer'>
-                <div className='flex items-center justify-center rounded-lg bg-green-400 w-10 h-6 mx-1 text-[text]'>
+                <div className='flex items-center justify-center rounded-lg bg-green-500 w-10 h-6 mx-1 text-[white]'>
                   <FontAwesomeIcon icon={faGithub} />
                 </div>
               </a>
             )}
             {project.linkedInUrl && (
               <a href={project.linkedInUrl} target='_blank' rel='noopener noreferrer'>
-                <div className='flex items-center justify-center rounded-lg bg-green-400 w-10 h-6 mx-1 text-[text]'>
+                <div className='flex items-center justify-center rounded-lg bg-green-500 w-10 h-6 mx-1 text-[white]'>
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </div>
               </a>
             )}
             {project.figmaUrl && (
               <a href={project.figmaUrl} target='_blank' rel='noopener noreferrer'>
-                <div className='flex items-center justify-center rounded-lg bg-green-400 w-10 h-6 mx-1 text-[text]'>
+                <div className='flex items-center justify-center rounded-lg bg-green-500 w-10 h-6 mx-1 text-[white]'>
                   <FontAwesomeIcon icon={faFigma} />
                 </div>
               </a>
