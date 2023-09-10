@@ -1,6 +1,7 @@
 "use client";
 import ProjectCard from './ProjectCard';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import ProjectModal from './ProjectModal';
 
 type Project = {
   title: string;
@@ -17,6 +18,7 @@ type Project = {
 const Projects = () => {
   const [projectData, setProjectData] = useState<Project[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -35,45 +37,61 @@ const Projects = () => {
     }
   };
 
-  const filteredProjects = selectedTags.length
-    ? projectData.filter((project) =>
-      project.tags.some((tag) => selectedTags.includes(tag))
-    )
-    : projectData;
+  const filteredProjects = useMemo(() => {
+    if (selectedTags.length) {
+      return projectData.filter((project) =>
+        project.tags.some((tag) => selectedTags.includes(tag))
+      );
+    } else {
+      return projectData;
+    }
+  }, [projectData, selectedTags]);
 
-  return (
-    <div className="container py-8 max-w-6xl px-4 md:px-4">
-      <div className="text-2xl mb-6 bg-red-300">Projects</div>
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+  };
 
+  const handleCloseModal = () => {
+    setSelectedProject(null);
+  };
+
+  type ProjectFilterProps = {
+    tags: string[];
+    onTagClick: (tag: string) => void;
+  };
+
+  const ProjectFilter = ({ tags, onTagClick }: ProjectFilterProps) => {
+    return (
       <div className="flex flex-wrap gap-2 mb-4">
-        <button
-          className={`${selectedTags.includes('Python') ? 'bg-blue-500 text-white' : ''
-            } px-4 py-2 rounded-md border border-blue-500`}
-          onClick={() => handleTagClick('Python')}
-        >
-          Python
-        </button>
-        <button
-          className={`${selectedTags.includes('React') ? 'bg-blue-500 text-white' : ''
-            } px-4 py-2 rounded-md border border-blue-500`}
-          onClick={() => handleTagClick('React')}
-        >
-          React
-        </button>
-        <button
-          className={`${selectedTags.includes('TypeScript') ? 'bg-blue-500 text-white' : ''
-            } px-4 py-2 rounded-md border border-blue-500`}
-          onClick={() => handleTagClick('TypeScript')}
-        >
-          TypeScript
-        </button>
-      </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {filteredProjects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+        {tags.map((tag) => (
+          <button
+            key={tag}
+            className={`${selectedTags.includes(tag) ? 'bg-blue-500 text-white' : ''
+              } px-4 py-2 rounded-md border border-blue-500`}
+            onClick={() => onTagClick(tag)}
+          >
+            {tag}
+          </button>
         ))}
       </div>
+    );
+  };
+
+  return (
+    <div className="container flex flex-col items-center py-8 max-w-6xl px-4 md:px-4">
+      <div className="text-2xl md:text-4xl my-6">Projects</div>
+
+      <ProjectFilter tags={['Python', 'React', 'TypeScript']} onTagClick={handleTagClick} />
+
+      <div className="max-w-[450px] md:max-w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+        {filteredProjects.map((project, index) => (
+          <div key={project.title} onClick={() => handleProjectClick(project)}>
+            <ProjectCard project={project} />
+          </div>
+        ))}
+      </div>
+
+      {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
     </div>
   );
 };
