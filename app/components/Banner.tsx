@@ -7,7 +7,7 @@ const Banner = () => {
             Matthew Barty
           </div>
           <div className="text-xl font-semithin">
-            UX Engineer | Creative Technologist
+            UX Engineer || Creative Technologist
           </div>
         </div>
       </div>
