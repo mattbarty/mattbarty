@@ -69,19 +69,21 @@ const Projects = () => {
   };
 
   return (
-    <div className="container flex flex-col items-center py-8 max-w-6xl px-4 md:px-4">
-      <div className="text-2xl md:text-4xl my-6">Projects</div>
+    <>
+      <div className="container flex flex-col items-center py-4 max-w-6xl px-4 md:px-4 border-t-2">
+        <div className="text-2xl md:text-4xl my-6">Projects</div>
 
-      <ProjectFilter tags={['Python', 'React', 'TypeScript']} onTagClick={handleTagClick} />
+        <ProjectFilter tags={['Python', 'React', 'TypeScript']} onTagClick={handleTagClick} />
 
-      <div className="max-w-[450px] md:max-w-full grid grid-cols-1 md:grid-cols-3 gap-4">
-        {filteredProjects.map((project, index) => (
-          <div key={project.title}>
-            <ProjectCard project={project} />
-          </div>
-        ))}
+        <div className="max-w-[450px] md:max-w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+          {filteredProjects.map((project, index) => (
+            <div key={project.title}>
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
