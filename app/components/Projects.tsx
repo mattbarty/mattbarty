@@ -1,7 +1,6 @@
 "use client";
 import ProjectCard from './ProjectCard';
 import { useEffect, useMemo, useState } from 'react';
-import ProjectModal from './ProjectModal';
 
 type Project = {
   title: string;
@@ -90,8 +89,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-
-      {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
     </div>
   );
 };
