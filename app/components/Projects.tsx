@@ -8,6 +8,7 @@ type Project = {
   type: 'image' | 'gif' | 'video';
   src: string;
   tags: string[];
+  projectUrl?: string;
   webUrl?: string;
   githubUrl?: string;
   linkedInUrl?: string;

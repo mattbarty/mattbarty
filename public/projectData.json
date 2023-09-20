@@ -3,6 +3,7 @@
     "type": "video",
     "src": "assets/videos/arcanagpt-demo.mp4",
     "title": "ArcanaGPT",
+    "projectURL": "",
     "description": "This is the description for Project 3.",
     "tags": ["Midjourney", "Figma", "GPT-3.5"],
     "figmaUrl": "https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design"
@@ -58,6 +59,7 @@
     "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop"
   },
   {
+    "projectUrl": "/projects/linkedinfluencer",
     "type": "video",
     "src": "assets/videos/linkedinfluencer-demo.mp4",
     "title": "LinkedInfluencer",
