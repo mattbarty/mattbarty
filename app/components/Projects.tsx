@@ -18,7 +18,6 @@ type Project = {
 const Projects = () => {
   const [projectData, setProjectData] = useState<Project[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -46,14 +45,6 @@ const Projects = () => {
       return projectData;
     }
   }, [projectData, selectedTags]);
-
-  const handleProjectClick = (project: Project) => {
-    setSelectedProject(project);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProject(null);
-  };
 
   type ProjectFilterProps = {
     tags: string[];
@@ -85,7 +76,7 @@ const Projects = () => {
 
       <div className="max-w-[450px] md:max-w-full grid grid-cols-1 md:grid-cols-3 gap-4">
         {filteredProjects.map((project, index) => (
-          <div key={project.title} onClick={() => handleProjectClick(project)}>
+          <div key={project.title}>
             <ProjectCard project={project} />
           </div>
         ))}
