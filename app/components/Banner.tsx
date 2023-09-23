@@ -8,7 +8,7 @@ const Banner = () => {
               <div>
                 🚧 In Development 🚧</div>
             </div>
-            <div>I'm still building this site - In the meantime, most my projects are on my ➡️ <a href='https://www.linkedin.com/in/matthew-barty/' className="font-bold underline-offset-4 underline text-blue-500">LinkedIn</a> ⬅️</div>
+            <div>I&apos;m still building this site - In the meantime, most my projects are on my ➡️ <a href='https://www.linkedin.com/in/matthew-barty/' className="font-bold underline-offset-4 underline text-blue-500">LinkedIn</a> ⬅️</div>
           </div>
           <div className="text-4xl my-2">
             Matthew Barty
