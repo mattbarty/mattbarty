@@ -1,8 +1,8 @@
 import React from "react";
 
 type PageContentContainerProps = {
-  ProjectBanner: React.FC<{}>;
-  ProjectContent: React.FC<{}>;
+  ProjectBanner: React.ReactNode;
+  ProjectContent: React.ReactNode;
 };
 
 const PageContentContainer: React.FC<PageContentContainerProps> = ({ ProjectBanner, ProjectContent }) => {
