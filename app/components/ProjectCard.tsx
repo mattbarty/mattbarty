@@ -25,7 +25,7 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <>
-      <div className='relative flex flex-row md:flex-col overflow-clip rounded-lg border border-gray-200 shadow-sm'>
+      <div className='relative flex flex-row md:flex-col overflow-clip rounded-lg border border-gray-200 shadow-sm md:items-center'>
         <div className="md:rounded elative overflow-clip">
           <div className="flex justify-center items-center w-[250px] md:w-full aspect-[7/6] bg-gray-800 z-0 overflow-clip">
             {project.type === 'image' && (
@@ -39,47 +39,49 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             )}
           </div>
         </div>
-        <div className='flex flex-col mx-2 md:mx-0 md:p-4 justify-between md:absolute md:justify-end md:h-full md:opacity-0 md:hover:opacity-100 transition-all md:bg-black md:bg-opacity-60 md:backdrop-blur-sm md:text-white'>
-          <div>
-            <div className='font-semibold mt-2 text-base md:text-base'>{project.title}</div>
-            <div className='mt-2 text-sm md:text-base'>{project.description}</div>
-          </div>
-          <div className='my-2 pt-4 flex md:flex border-t-2'>
-            <div className={`flex items-center justify-center rounded-lg w-10 h-6 mx-1 text-[white] ${project.webUrl ? 'bg-blue-500' : 'bg-gray-300'}`}>
-              {project.webUrl ? (
-                <a href={project.webUrl} target='_blank' rel='noopener noreferrer'>
+        <div className='md:absolute md:justify-end md:h-full md:w-full md:opacity-0 md:hover:opacity-100 transition-all md:bg-black md:bg-opacity-60 md:backdrop-blur-sm md:text-white'>
+          <div className='flex flex-col mx-2 md:mx-4 lg:mx-8 md:p-4 md:h-full justify-between md:justify-end'>
+            <div>
+              <div className='font-semibold mt-2 text-base md:text-base'>{project.title}</div>
+              <div className='mt-2 text-sm md:text-gray-300 md:text-sm'>{project.description}</div>
+            </div>
+            <div className='my-2 pt-4 flex md:flex border-t-2'>
+              <div className={`flex items-center justify-center rounded-lg w-10 h-6 mx-1 text-[white] ${project.webUrl ? 'bg-blue-500' : 'bg-gray-300'}`}>
+                {project.webUrl ? (
+                  <a href={project.webUrl} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center w-full h-full'>
+                    <FontAwesomeIcon icon={faGlobe} />
+                  </a>
+                ) : (
                   <FontAwesomeIcon icon={faGlobe} />
-                </a>
-              ) : (
-                <FontAwesomeIcon icon={faGlobe} />
-              )}
-            </div>
-            <div className={`flex items-center justify-center rounded-lg w-10 h-6 mx-1 text-[white] ${project.githubUrl ? 'bg-blue-500' : 'bg-gray-300'}`}>
-              {project.githubUrl ? (
-                <a href={project.githubUrl} target='_blank' rel='noopener noreferrer'>
+                )}
+              </div>
+              <div className={`flex items-center justify-center rounded-lg w-10 h-6 mx-1 text-[white] ${project.githubUrl ? 'bg-blue-500' : 'bg-gray-300'}`}>
+                {project.githubUrl ? (
+                  <a href={project.githubUrl} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center w-full h-full'>
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                ) : (
                   <FontAwesomeIcon icon={faGithub} />
-                </a>
-              ) : (
-                <FontAwesomeIcon icon={faGithub} />
-              )}
-            </div>
-            <div className={`flex items-center justify-center rounded-lg w-10 h-6 mx-1 text-[white] ${project.linkedInUrl ? 'bg-blue-500' : 'bg-gray-300'}`}>
-              {project.linkedInUrl ? (
-                <a href={project.linkedInUrl} target='_blank' rel='noopener noreferrer'>
+                )}
+              </div>
+              <div className={`flex items-center justify-center rounded-lg w-10 h-6 mx-1 text-[white] ${project.linkedInUrl ? 'bg-blue-500' : 'bg-gray-300'}`}>
+                {project.linkedInUrl ? (
+                  <a href={project.linkedInUrl} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center w-full h-full'>
+                    <FontAwesomeIcon icon={faLinkedinIn} />
+                  </a>
+                ) : (
                   <FontAwesomeIcon icon={faLinkedinIn} />
-                </a>
-              ) : (
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              )}
-            </div>
-            <div className={`flex items-center justify-center rounded-lg w-10 h-6 mx-1 text-[white] ${project.figmaUrl ? 'bg-blue-500' : 'bg-gray-300'}`}>
-              {project.figmaUrl ? (
-                <a href={project.figmaUrl} target='_blank' rel='noopener noreferrer'>
+                )}
+              </div>
+              <div className={`flex items-center justify-center rounded-lg w-10 h-6 mx-1 text-[white] ${project.figmaUrl ? 'bg-blue-500' : 'bg-gray-300'}`}>
+                {project.figmaUrl ? (
+                  <a href={project.figmaUrl} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center w-full h-full'>
+                    <FontAwesomeIcon icon={faFigma} />
+                  </a>
+                ) : (
                   <FontAwesomeIcon icon={faFigma} />
-                </a>
-              ) : (
-                <FontAwesomeIcon icon={faFigma} />
-              )}
+                )}
+              </div>
             </div>
           </div>
         </div>
