@@ -26,8 +26,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <>
       <div className='relative flex flex-row md:flex-col overflow-clip rounded-lg border border-gray-200 shadow-sm md:items-center'>
-        <div className="md:rounded elative overflow-clip min-w-[250px] md:min-w-full">
-          <div className="flex justify-center items-center w-full bg-gray-800 z-0 overflow-clip aspect-square h-[250px] md:aspect-[7/6]">
+        <div className="md:rounded elative overflow-clip min-w-[200px] md:min-w-full">
+          <div className="flex justify-center items-center w-full bg-gray-800 z-0 overflow-clip aspect-square h-[200px] ">
             {project.type === 'image' && (
               <img src={project.src} alt={project.title} className="w-full  object-cover" />
             )}
@@ -40,12 +40,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </div>
         </div>
         <div className='md:absolute md:justify-end md:h-full md:w-full md:opacity-0 md:hover:opacity-100 transition-all md:bg-black md:bg-opacity-60 md:backdrop-blur-sm md:text-white'>
-          <div className='flex flex-col mx-2 md:mx-4 lg:mx-6 md:p-4 md:h-full justify-between md:justify-end'>
+          <div className='flex flex-col h-full w-full mx-2 p-2 md:p-4 md:h-full md:w-auto justify-between md:justify-end'>
             <div>
               <div className='font-semibold mt-2 text-base md:text-base'>{project.title}</div>
-              <div className='mt-2 text-sm md:text-gray-300 md:text-sm'>{project.description}</div>
+              <div className='mt-2 text-sm text-gray-600 md:text-gray-300 md:text-sm'>{project.description}</div>
             </div>
-            <div className='my-2 pt-4 flex md:flex border-t-2'>
+            <div className='my-2 pt-4 flex md:flex border-t-2 w-full'>
               <div className={`flex items-center justify-center rounded-lg w-10 h-6 mx-1 text-[white] ${project.webUrl ? 'bg-blue-500' : 'bg-gray-300'}`}>
                 {project.webUrl ? (
                   <a href={project.webUrl} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center w-full h-full'>

@@ -17,7 +17,7 @@ const Banner = () => {
             <div className="w-full">
               <a className="my-2 flex flex-col hover:pointer" href="https://www.linkedin.com/in/matthew-barty/" target='_blank'>
                 <span className="font-bold text-lg mx-2">Matthew Barty</span>
-                <span className="font-thin text-sm mx-2 hidden md:block">UX Engineer || Creative Technologist</span>
+                <span className="text-sm mx-2 hidden md:block">UX Engineer || Creative Technologist</span>
               </a>
             </div>
             <div className="flex">
