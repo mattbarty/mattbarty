@@ -3,7 +3,6 @@ import AutoPlaySilentVideo from './AutoPlaySilentVideo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFigma, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import Link from 'next/link';
 
 type Project = {
   title: string;
@@ -28,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <>
       <div className='flex flex-row md:flex-col overflow-clip rounded-lg border border-gray-200 shadow-sm'>
         <div className="md:rounded elative overflow-clip">
-          <div className="flex justify-center items-center w-[300px] md:w-full aspect-[8/6] bg-gray-800 z-0 overflow-clip">
+          <div className="flex justify-center items-center w-[250px] md:w-full aspect-[8/6] bg-gray-800 z-0 overflow-clip">
             {project.type === 'image' && (
               <img src={project.src} alt={project.title} className="w-full  object-cover" />
             )}
