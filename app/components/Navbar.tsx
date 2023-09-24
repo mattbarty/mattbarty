@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Banner = () => {
   return (
     <div className="bg-gray-200 h-12 w-full flex justify-center">
@@ -6,7 +8,9 @@ const Banner = () => {
           <div className="w-full">
           </div>
           <div className="flex">
-            <div className="max-4">Projects</div>
+            <Link href='/'>
+              <div className="max-4">Projects</div>
+            </Link>
             <div className="mx-4">About</div>
           </div>
         </div>

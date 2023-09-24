@@ -26,7 +26,7 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <>
-      <Link href={project.projectUrl ? project.projectUrl : '/'} target='_blank' rel='noopener noreferrer'>
+      <Link href={project.projectUrl ? project.projectUrl : '/'} rel='noopener noreferrer'>
         <div className='flex flex-col overflow-clip rounded-lg border border-gray-200 shadow-sm'>
           <div className="rounded elative">
             <div className="w-full aspect-[8/6] bg-yellow-300 z-0">
