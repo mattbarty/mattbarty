@@ -70,9 +70,8 @@ const Projects = () => {
 
   return (
     <>
-      <div className="container flex flex-col items-center py-4 max-w-6xl px-4 md:px-4">
-        <div className="text-2xl md:text-4xl my-2">Projects</div>
-        <div className='my-4 font-bold'>Filter by project type</div>
+      <div className="container flex flex-col items-center max-w-6xl px-1 md:px-4 md:py-2">
+        <div className='my-4 font-bold'>Filter projects by type</div>
         <ProjectFilter tags={['UX Design', 'Data Science', 'Web Development', 'AI / ML', 'Digital Art']} onTagClick={handleTagClick} />
         <div className="w-full md:max-w-full grid grid-cols-1 md:grid-cols-3 gap-4">
           {filteredProjects.map((project, index) => (

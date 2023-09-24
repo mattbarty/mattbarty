@@ -11,29 +11,16 @@ const Banner = () => {
 
   return (
     <>
-      {/* In development banner */}
-      <div className="flex flex-col items-center bg-yellow-100 border border-yellow-600 w-full">
-        <div className="text-red-800 my-1">
-          <span className="font-bold">🚧 In Development 🚧 </span>
-          <span className="">-- In the meantime check out my ➡️ <a href='https://www.linkedin.com/in/matthew-barty/' className="font-bold underline-offset-4 underline text-blue-500">LinkedIn</a></span>
-        </div>
-      </div>
-      <div className="bg-gray-200 h-auto w-full flex justify-center">
-        <div className="max-w-4xl flex justify-around md:justify-between w-full px-4 md:px-12">
+      <div className="bg-gray-200 h-auto w-full flex justify-center p-2">
+        <div className="max-w-4xl flex justify-around md:justify-between w-full md:px-12">
           <div className="flex w-full h-full items-center">
             <div className="w-full">
-              <div className="my-2 flex flex-col">
+              <a className="my-2 flex flex-col hover:pointer" href="https://www.linkedin.com/in/matthew-barty/" target='_blank'>
                 <span className="font-bold text-lg mx-2">Matthew Barty</span>
-                <span className="font-thin text-sm mx-2">UX Engineer || Creative Technologist</span>
-              </div>
+                <span className="font-thin text-sm mx-2 hidden md:block">UX Engineer || Creative Technologist</span>
+              </a>
             </div>
             <div className="flex">
-              <Link href='/'>
-                <div className="mx-2 p-2">Projects</div>
-              </Link>
-              <Link href='/about'>
-                <div className="mx-2 p-2">About</div>
-              </Link>
               <button className="mx-2 py-2 px-4 bg-blue-500 hover:bg-blue-400 rounded-lg" onClick={handlePdfOpen}>
                 <div className="flex items-center text-white">
                   <FontAwesomeIcon icon={faFileArrowDown} />
@@ -43,7 +30,7 @@ const Banner = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div >
     </>
   );
 };
