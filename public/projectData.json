@@ -5,7 +5,7 @@
     "title": "ArcanaGPT",
     "projectURL": "",
     "description": "This is the description for Project 3.",
-    "tags": ["Midjourney", "Figma", "GPT-3.5"],
+    "tags": ["UX Design", "Web Development", "AI / ML", "Digital Art"],
     "figmaUrl": "https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design"
   },
   {
@@ -13,7 +13,7 @@
     "src": "assets/videos/sudoku-solver-demo.mp4",
     "title": "CV Sudoku Solver",
     "description": "This is the description for Project 3.",
-    "tags": ["Python", "TensorFlow"],
+    "tags": ["AI / ML"],
     "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_machinelearning-tensorflow-artificialintelligence-activity-7101517894634586112-2Xlr?utm_source=share&utm_medium=member_desktop"
   },
   {
@@ -21,7 +21,7 @@
     "src": "assets/gifs/eye-disease-classification-demo.gif",
     "title": "Eye Disease Classifier (TensorFlow)",
     "description": "This is the description for Project 3.",
-    "tags": ["Python", "TensorFlow"],
+    "tags": ["Data Science", "AI / ML"],
     "linkedInUrl": "",
     "githubUrl": "https://github.com/mattbarty/eye_diseases_classification"
   },
@@ -30,7 +30,7 @@
     "src": "assets/gifs/brain-disease-classifier-demo.gif",
     "title": "Brain Disease Classifier (TensorFlow)",
     "description": "This is the description for Project 3.",
-    "tags": ["Python", "TensorFlow"],
+    "tags": ["Data Science", "AI / ML"],
     "linkedInUrl": "",
     "githubUrl": "https://github.com/mattbarty/brain-tumour-categorical-classifier"
   },
@@ -39,7 +39,7 @@
     "src": "assets/videos/ai-art-demo.mp4",
     "title": "AI-Powered Art Workflow",
     "description": "This is the description for Project 3.",
-    "tags": ["Stable Diffusion", "Creative Cloud", "Midjourney"],
+    "tags": ["AI / ML", "Digital Art"],
     "linkedInUrl": "https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop"
   },
     {
@@ -47,7 +47,7 @@
     "src": "assets/videos/stable-diffusion-portrait-demo.mp4",
     "title": "ControlNet Portraits",
     "description": "This is the description for Project 3.",
-    "tags": ["Stable Difussion"],
+    "tags": ["AI / ML", "Digital Art"],
     "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_stablediffusion-ai-aiartwork-activity-7065698539477069825-eaZ8?utm_source=share&utm_medium=member_desktop"
   },
   {
@@ -55,7 +55,7 @@
     "src": "assets/videos/whatsapp-language-features-demo.mp4",
     "title": "WhatsApp Language Extension",
     "description": "This is the description for Project 3.",
-    "tags": ["Typescript", "Google Cloud Translation API"],
+    "tags": ["UX Design", "Web Development", "AI / ML"],
     "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop"
   },
   {
@@ -64,7 +64,7 @@
     "src": "assets/videos/linkedinfluencer-demo.mp4",
     "title": "LinkedInfluencer",
     "description": "This is the description for Project 3.",
-    "tags": ["React", "Typescript", "NextJS 13", "GPT-3.5", "BLIP-2"],
+    "tags": ["UX Design", "Web Development", "AI / ML"],
     "webUrl": "https://linkedinfluencer.app",
     "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_ai-project-webdev-activity-7063114429814460416-OIMn?utm_source=share&utm_medium=member_desktop"
   },
@@ -73,7 +73,7 @@
     "src": "assets/videos/plotemall-demo.mp4",
     "title": "Pokemon Data Visualisation",
     "description": "This is the description for Project 3.",
-    "tags": ["Data Visualisation", "Python", "Data Science"],
+    "tags": ["Data Science", "Digital Art"],
     "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_python-datavisualization-pokemon-activity-7106628329021034496-Cvnm?utm_source=share&utm_medium=member_desktop"
   }
 ]

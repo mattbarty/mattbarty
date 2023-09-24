@@ -9,9 +9,11 @@ const Banner = () => {
           </div>
           <div className="flex">
             <Link href='/'>
-              <div className="max-4">Projects</div>
+              <div className="max-4">Home</div>
             </Link>
-            <div className="mx-4">About</div>
+            <Link href='/about'>
+              <div className="mx-4">About</div>
+            </Link>
           </div>
         </div>
       </div>
