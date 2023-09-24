@@ -11,6 +11,10 @@ const Banner = () => {
 
   return (
     <>
+      <div className="flex bg-yellow-200 w-full justify-center">
+        <span></span>🚧 WIP - beware bugs, see
+        <a href="https://www.linkedin.com/in/matthew-barty/" className="mx-1 underline underline-offset-2 text-blue-500 font-bold">LinkedIn</a> in meantime.
+      </div>
       <div className="bg-gray-200 h-auto w-full flex justify-center p-2">
         <div className="max-w-4xl flex justify-around md:justify-between w-full md:px-12">
           <div className="flex w-full h-full items-center">
