@@ -25,9 +25,9 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <>
-      <div className='flex flex-row md:flex-col overflow-clip rounded-lg border border-gray-200 shadow-sm'>
+      <div className='relative flex flex-row md:flex-col overflow-clip rounded-lg border border-gray-200 shadow-sm'>
         <div className="md:rounded elative overflow-clip">
-          <div className="flex justify-center items-center w-[250px] md:w-full aspect-[8/6] bg-gray-800 z-0 overflow-clip">
+          <div className="flex justify-center items-center w-[250px] md:w-full aspect-[7/6] bg-gray-800 z-0 overflow-clip">
             {project.type === 'image' && (
               <img src={project.src} alt={project.title} className="w-full  object-cover" />
             )}
@@ -39,12 +39,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             )}
           </div>
         </div>
-        <div className='flex flex-col mx-2 justify-between'>
+        <div className='flex flex-col mx-2 md:mx-0 md:p-4 justify-between md:absolute md:justify-end md:h-full md:opacity-0 md:hover:opacity-100 transition-all md:bg-black md:bg-opacity-60 md:backdrop-blur-sm md:text-white'>
           <div>
             <div className='font-semibold mt-2 text-base md:text-base'>{project.title}</div>
             <div className='mt-2 text-sm md:text-base'>{project.description}</div>
           </div>
-          <div className='my-2 flex md:flex'>
+          <div className='my-2 pt-4 flex md:flex border-t-2'>
             <div className={`flex items-center justify-center rounded-lg w-10 h-6 mx-1 text-[white] ${project.webUrl ? 'bg-blue-500' : 'bg-gray-300'}`}>
               {project.webUrl ? (
                 <a href={project.webUrl} target='_blank' rel='noopener noreferrer'>

@@ -20,7 +20,7 @@
   {
     "type": "gif",
     "src": "assets/gifs/eye-disease-classification-demo.gif",
-    "title": "Eye Disease Classifier (TensorFlow)",
+    "title": "Eye Disease Classifier (ML)",
     "description": "This is the description for Project 3.",
     "tags": ["Data Science", "AI / ML"],
     "linkedInUrl": "",
@@ -29,7 +29,7 @@
     {
     "type": "gif",
     "src": "assets/gifs/brain-disease-classifier-demo.gif",
-    "title": "Brain Disease Classifier (TensorFlow)",
+    "title": "Brain Disease Classifier (ML)",
     "description": "This is the description for Project 3.",
     "tags": ["Data Science", "AI / ML"],
     "linkedInUrl": "",
