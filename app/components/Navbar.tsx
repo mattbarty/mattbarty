@@ -1,8 +1,17 @@
 import Link from "next/link";
+import { faDownload, faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Banner = () => {
   return (
     <>
+      {/* In development banner */}
+      <div className="flex flex-col items-center bg-yellow-100 border border-yellow-600 w-full">
+        <div className="text-red-800 my-1">
+          <span className="font-bold">🚧 In Development 🚧 </span>
+          <span className="">-- In the meantime check out my ➡️ <a href='https://www.linkedin.com/in/matthew-barty/' className="font-bold underline-offset-4 underline text-blue-500">LinkedIn</a></span>
+        </div>
+      </div>
       <div className="bg-gray-200 h-auto w-full flex justify-center">
         <div className="max-w-4xl flex justify-around md:justify-between w-full px-4 md:px-12">
           <div className="flex w-full h-full items-center">
@@ -14,20 +23,19 @@ const Banner = () => {
             </div>
             <div className="flex">
               <Link href='/'>
-                <div className="mx-2">Projects</div>
+                <div className="mx-2 p-2">Projects</div>
               </Link>
               <Link href='/about'>
-                <div className="mx-2">About</div>
+                <div className="mx-2 p-2">About</div>
               </Link>
+              <div className="mx-2 py-2 px-4 bg-green-500 rounded-lg">
+                <div className="flex items-center text-white">
+                  <FontAwesomeIcon icon={faFileArrowDown} />
+                  <div className="ml-2">Resume</div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      {/* In development banner */}
-      <div className="flex flex-col items-center bg-yellow-100 border border-yellow-600 w-full">
-        <div className="text-red-800 my-1">
-          <span className="font-bold">🚧 In Development 🚧 </span>
-          <span className="">-- In the meantime check out my ➡️ <a href='https://www.linkedin.com/in/matthew-barty/' className="font-bold underline-offset-4 underline text-blue-500">LinkedIn</a></span>
         </div>
       </div>
     </>

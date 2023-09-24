@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  basePath: "",
+	images: { unoptimized: true },
+	basePath: '',
 };
 
 module.exports = nextConfig;

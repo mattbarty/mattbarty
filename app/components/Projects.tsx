@@ -70,7 +70,7 @@ const Projects = () => {
 
   return (
     <>
-      <div className="container flex flex-col items-center py-4 max-w-6xl px-4 md:px-4 border-t-2">
+      <div className="container flex flex-col items-center py-4 max-w-6xl px-4 md:px-4">
         <div className="text-2xl md:text-4xl my-2">Projects</div>
         <div className='my-4 font-bold'>Filter by project type</div>
         <ProjectFilter tags={['UX Design', 'Data Science', 'Web Development', 'AI / ML', 'Digital Art']} onTagClick={handleTagClick} />
