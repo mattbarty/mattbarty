@@ -26,8 +26,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <>
       <div className='relative flex flex-row md:flex-col overflow-clip rounded-lg border border-gray-200 shadow-sm md:items-center'>
-        <div className="md:rounded elative overflow-clip">
-          <div className="flex justify-center items-center w-[250px] md:w-full aspect-[7/6] bg-gray-800 z-0 overflow-clip">
+        <div className="md:rounded elative overflow-clip min-w-[250px] md:min-w-full">
+          <div className="flex justify-center items-center w-full bg-gray-800 z-0 overflow-clip aspect-square h-[250px] md:aspect-[7/6]">
             {project.type === 'image' && (
               <img src={project.src} alt={project.title} className="w-full  object-cover" />
             )}
@@ -40,7 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </div>
         </div>
         <div className='md:absolute md:justify-end md:h-full md:w-full md:opacity-0 md:hover:opacity-100 transition-all md:bg-black md:bg-opacity-60 md:backdrop-blur-sm md:text-white'>
-          <div className='flex flex-col mx-2 md:mx-4 lg:mx-8 md:p-4 md:h-full justify-between md:justify-end'>
+          <div className='flex flex-col mx-2 md:mx-4 lg:mx-6 md:p-4 md:h-full justify-between md:justify-end'>
             <div>
               <div className='font-semibold mt-2 text-base md:text-base'>{project.title}</div>
               <div className='mt-2 text-sm md:text-gray-300 md:text-sm'>{project.description}</div>
@@ -85,7 +85,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div >
     </>
   );
 };

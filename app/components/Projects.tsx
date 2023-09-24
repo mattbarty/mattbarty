@@ -73,7 +73,7 @@ const Projects = () => {
       <div className="container flex flex-col items-center max-w-6xl px-1 md:px-4 md:py-2">
         <div className='my-4 font-bold'>Filter projects by type</div>
         <ProjectFilter tags={['UX Design', 'Data Science', 'Web Development', 'AI / ML', 'Digital Art']} onTagClick={handleTagClick} />
-        <div className="w-full md:max-w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="w-full md:max-w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {filteredProjects.map((project, index) => (
             <div key={project.title}>
               <ProjectCard project={project} />
