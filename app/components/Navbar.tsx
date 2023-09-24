@@ -1,8 +1,14 @@
+"use client";
 import Link from "next/link";
 import { faDownload, faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Banner = () => {
+
+  const handlePdfOpen = () => {
+    window.open('assets/pdf/matthew_barty_resume_2023.pdf', '_blank');
+  };
+
   return (
     <>
       {/* In development banner */}
@@ -28,12 +34,12 @@ const Banner = () => {
               <Link href='/about'>
                 <div className="mx-2 p-2">About</div>
               </Link>
-              <div className="mx-2 py-2 px-4 bg-green-500 rounded-lg">
+              <button className="mx-2 py-2 px-4 bg-blue-500 hover:bg-blue-400 rounded-lg" onClick={handlePdfOpen}>
                 <div className="flex items-center text-white">
                   <FontAwesomeIcon icon={faFileArrowDown} />
                   <div className="ml-2">Resume</div>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>
