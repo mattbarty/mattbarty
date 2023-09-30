@@ -1,27 +1,26 @@
-import Image, { type ImageProps } from 'next/image'
-import Link from 'next/link'
-import clsx from 'clsx'
+import Image, { type ImageProps } from 'next/image';
+import Link from 'next/link';
+import clsx from 'clsx';
 
-import { Button } from '@/components/Button'
-import { Card } from '@/components/Card'
-import { Container } from '@/components/Container'
+import { Button } from '@/components/Button';
+import { Card } from '@/components/Card';
+import { Container } from '@/components/Container';
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
-  TwitterIcon,
-} from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
-import { formatDate } from '@/lib/formatDate'
+  MediumIcon,
+} from '@/components/SocialIcons';
+import logoAirbnb from '@/images/logos/airbnb.svg';
+import logoFacebook from '@/images/logos/facebook.svg';
+import logoPlanetaria from '@/images/logos/planetaria.svg';
+import logoStarbucks from '@/images/logos/starbucks.svg';
+import image1 from '@/images/photos/image-1.jpg';
+import image2 from '@/images/photos/image-2.jpg';
+import image3 from '@/images/photos/image-3.jpg';
+import image4 from '@/images/photos/image-4.jpg';
+import image5 from '@/images/photos/image-5.jpg';
+import { type ArticleWithSlug, getAllArticles } from '@/lib/articles';
+import { formatDate } from '@/lib/formatDate';
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -43,7 +42,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         className="stroke-zinc-400 dark:stroke-zinc-500"
       />
     </svg>
-  )
+  );
 }
 
 function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -66,7 +65,7 @@ function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         className="stroke-zinc-400 dark:stroke-zinc-500"
       />
     </svg>
-  )
+  );
 }
 
 function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -79,10 +78,10 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
-function Article({ article }: { article: ArticleWithSlug }) {
+function Article({ article }: { article: ArticleWithSlug; }) {
   return (
     <Card as="article">
       <Card.Title href={`/articles/${article.slug}`}>
@@ -94,20 +93,20 @@ function Article({ article }: { article: ArticleWithSlug }) {
       <Card.Description>{article.description}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
-  )
+  );
 }
 
 function SocialLink({
   icon: Icon,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Link> & {
-  icon: React.ComponentType<{ className?: string }>
+  icon: React.ComponentType<{ className?: string; }>;
 }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
-  )
+  );
 }
 
 function Newsletter() {
@@ -136,25 +135,25 @@ function Newsletter() {
         </Button>
       </div>
     </form>
-  )
+  );
 }
 
 interface Role {
-  company: string
-  title: string
-  logo: ImageProps['src']
-  start: string | { label: string; dateTime: string }
-  end: string | { label: string; dateTime: string }
+  company: string;
+  title: string;
+  logo: ImageProps['src'];
+  start: string | { label: string; dateTime: string; };
+  end: string | { label: string; dateTime: string; };
 }
 
-function Role({ role }: { role: Role }) {
+function Role({ role }: { role: Role; }) {
   let startLabel =
-    typeof role.start === 'string' ? role.start : role.start.label
+    typeof role.start === 'string' ? role.start : role.start.label;
   let startDate =
-    typeof role.start === 'string' ? role.start : role.start.dateTime
+    typeof role.start === 'string' ? role.start : role.start.dateTime;
 
-  let endLabel = typeof role.end === 'string' ? role.end : role.end.label
-  let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime
+  let endLabel = typeof role.end === 'string' ? role.end : role.end.label;
+  let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime;
 
   return (
     <li className="flex gap-4">
@@ -181,7 +180,7 @@ function Role({ role }: { role: Role }) {
         </dd>
       </dl>
     </li>
-  )
+  );
 }
 
 function Resume() {
@@ -217,7 +216,7 @@ function Resume() {
       start: '2008',
       end: '2011',
     },
-  ]
+  ];
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
@@ -235,11 +234,11 @@ function Resume() {
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
-  )
+  );
 }
 
 function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2'];
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -262,45 +261,42 @@ function Photos() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default async function Home() {
-  let articles = (await getAllArticles()).slice(0, 4)
+  let articles = (await getAllArticles()).slice(0, 4);
 
   return (
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Matt Barty ~ <br />
           </h1>
+          <p className='font-thin text-3xl'>UX Engineer & Creative Technologist</p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            6 years of cross-functional experience in UXR/D, Data Science, and Programming ✨ -
+            <br />
+            I’ve lead and contributed to projects across HealthTech, including, digital health interfaces, consumer
+            diagnostics, chronic-disease management systems, therapeutic implants, surgical intervention & imaging
+            equipment, and a world-class surgical robotic system (Versius) 🦾
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
+              href="https://github.com/mattbarty/"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/matthew-barty/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
+            />
+            <SocialLink
+              href="https://mattbarty.medium.com"
+              aria-label="Follow on LinkedIn"
+              icon={MediumIcon}
             />
           </div>
         </div>
@@ -320,5 +316,5 @@ export default async function Home() {
         </div>
       </Container>
     </>
-  )
+  );
 }
