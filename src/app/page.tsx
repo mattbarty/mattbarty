@@ -10,6 +10,7 @@ import {
   LinkedInIcon,
   MediumIcon,
 } from '@/components/SocialIcons';
+import publicSpeakingImage from '@/images/photos/banner-img.jpeg';
 import logoAirbnb from '@/images/logos/airbnb.svg';
 import logoFacebook from '@/images/logos/facebook.svg';
 import logoPlanetaria from '@/images/logos/planetaria.svg';
@@ -76,6 +77,20 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   );
 }
 
+function Divider({ title }: { title: string; }) {
+  return (
+    <div className="relative mt-24 lg:mt-28">
+      <div className="absolute inset-0 flex items-center" aria-hidden="true">
+        <div className="w-full border-t border-zinc-600 dark:border-zinc-400"></div>
+      </div>
+      <div className="relative flex justify-start">
+        <span className="bg-white dark:bg-zinc-900 pr-3 text-base font-semibold leading-6 text-zinc-600 dark:text-zinc-400">{title}</span>
+      </div>
+    </div>
+  );
+}
+// stroke - zinc - 400 transition group - active: stroke - zinc - 600 dark: group - hover: stroke - zinc - 50 dark: group - active: stroke - zinc - 50;
+
 function Article({ article }: { article: ArticleWithSlug; }) {
   return (
     <Card as="article">
@@ -101,6 +116,20 @@ function SocialLink({
     <Link className="group -m-1 p-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
+  );
+}
+
+function VideoAutoplay({ src, ...props }: { src: string; }) {
+  return (
+    <video
+      className='w-full h-full'
+      loop
+      autoPlay
+      muted
+      playsInline
+      style={{ width: "100%", height: "100%" }}>
+      <source src={src} type="video/mp4" />
+    </video>
   );
 }
 
@@ -268,7 +297,30 @@ export default async function Home() {
             />
           </div>
         </div>
+        <Divider title='Professional work' />
+        <div className='grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 gap-0 md:gap-6 mt-24 md:mt-28'>
+          <Card as="article">
+            <VideoAutoplay src={'videos/versius-demo.mp4'} />
+            <div className='my-2'></div>
+            <Card.Title>
+              Solving complex MedTech systems
+            </Card.Title>
+            <Card.Description>I solve</Card.Description>
+            <Card.Cta>Read article</Card.Cta>
+          </Card>
+          <Card as="article">
+            <VideoAutoplay src={'videos/collab-demo.mp4'} />
+            <div className='my-2'></div>
+            <Card.Title>
+              How I design, develop, & lead
+            </Card.Title>
+            <Card.Description>I solve</Card.Description>
+            <Card.Cta>Read article</Card.Cta>
+          </Card>
+        </div>
+        <Divider title='Personal projects' />
       </Container>
+
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
