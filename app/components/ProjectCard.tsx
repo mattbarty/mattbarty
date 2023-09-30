@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div className='w-full'>
         </div>
         <div className="md:rounded md:min-w-full">
-          <div className="flex justify-center items-center w-full bg-gray-800 z-0 overflow-clip aspect-video md:aspect-square rounded-lg">
+          <div className="flex justify-center items-center w-full bg-gray-800 z-0 overflow-clip aspect-[6/5] md:aspect-square rounded-lg">
             {project.type === 'image' && (
               <img src={project.src} alt={project.title} className="w-full  object-cover" />
             )}
