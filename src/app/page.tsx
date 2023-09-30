@@ -305,7 +305,7 @@ export default async function Home() {
             <Card.Title>
               Solving complex MedTech systems
             </Card.Title>
-            <Card.Description>I solve</Card.Description>
+            <Card.Description>placeholder text</Card.Description>
             <Card.Cta>Read article</Card.Cta>
           </Card>
           <Card as="article">
@@ -314,7 +314,7 @@ export default async function Home() {
             <Card.Title>
               How I design, develop, & lead
             </Card.Title>
-            <Card.Description>I solve</Card.Description>
+            <Card.Description>placeholder text</Card.Description>
             <Card.Cta>Read article</Card.Cta>
           </Card>
         </div>
