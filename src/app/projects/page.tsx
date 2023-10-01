@@ -121,7 +121,9 @@ export default function Projects() {
                 <img src={project.gif} alt="" />
               ) : (
                 <Image
-                  src={project.logo}
+                  // src={project.img}
+                  // temp img ref
+                  src={'/images/avatar.jpg'}
                   alt=""
                   className="h-8 w-8"
                   unoptimized

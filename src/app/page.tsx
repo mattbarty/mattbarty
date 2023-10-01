@@ -90,6 +90,17 @@ function ChevronRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   );
 }
 
+function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
 function Divider({ title }: { title: string; }) {
   return (
     <div className="relative mt-24 lg:mt-28">
@@ -338,7 +349,7 @@ export default async function Home() {
               <Card.VideoAutoplay src={'videos/sudoku-solver-demo.mp4'} />
             </div>
             <div className='my-2'></div>
-            <Card.Title href={`/articles/how-i-work`}>
+            <Card.Title href={`https://github.com/mattbarty/cv_sudoku_solver`}>
               CV Sudoku Solver
             </Card.Title>
             <Card.Description>
@@ -346,14 +357,18 @@ export default async function Home() {
               built using my own CNN model written in Python, using OpenCV, TensorFlow,
               and Numpy.
             </Card.Description>
-            <Card.Cta>See project</Card.Cta>
+            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+              <LinkIcon className="h-6 w-6 flex-none" />
+              <span className="ml-2">github.com</span>
+            </p>
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip'>
               <Card.VideoAutoplay src={'videos/arcanagpt-demo.mp4'} />
             </div>
             <div className='my-2'></div>
-            <Card.Title href={`/articles/how-i-work`}>
+            <Card.Title href={`https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design",
+    "linkedInUrl": "https://www.linkedin.com/posts/matthew-barty_figmadesign-figma-midjourney-activity-7103756584387792896-J3Wr?utm_source=share&utm_medium=member_desktop`}>
               ArcanaGPT
             </Card.Title>
             <Card.Description>
@@ -361,11 +376,14 @@ export default async function Home() {
               uses GPT-3.5 to give users unique readings with all art assets generated using
               Midjourney.
             </Card.Description>
-            <Card.Cta>See project</Card.Cta>
+            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+              <LinkIcon className="h-6 w-6 flex-none" />
+              <span className="ml-2">figma.com</span>
+            </p>
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip'>
-              <Card.VideoAutoplay src={'videos/ai-art-demo.mp4'} />
+              <Card.VideoAutoplay src={'https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop'} />
             </div>
             <div className='my-2'></div>
             <Card.Title href={`/articles/how-i-work`}>
@@ -375,7 +393,10 @@ export default async function Home() {
               Leveraging modern AI tools to rapidly produce digital art - Combines the power of
               Adobe generative fill, Midjourney, and a opensource Stable Diffusion plugin.
             </Card.Description>
-            <Card.Cta>See project</Card.Cta>
+            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+              <LinkIcon className="h-6 w-6 flex-none" />
+              <span className="ml-2">linkedin.com</span>
+            </p>
           </Card>
         </div>
         <div className='flex w-full justify-center mt-16'>
