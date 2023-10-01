@@ -132,20 +132,6 @@ function SocialLink({
   );
 }
 
-function VideoAutoplay({ src, ...props }: { src: string; }) {
-  return (
-    <video
-      className='w-full h-full object-cover'
-      loop
-      autoPlay
-      muted
-      playsInline
-      style={{ width: "100%", height: "100%" }}>
-      <source src={src} type="video/mp4" />
-    </video>
-  );
-}
-
 function Newsletter() {
   return (
     <form
@@ -316,7 +302,7 @@ export default async function Home() {
         <Divider title='Professional work' />
         <div className='grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
-            <VideoAutoplay src={'videos/versius-demo.mp4'} />
+            <Card.VideoAutoplay src={'videos/versius-demo.mp4'} />
             <div className='my-2'></div>
             <Card.Title href={`/articles/my-work-on-versius`}>
               My work on Versius
@@ -329,7 +315,7 @@ export default async function Home() {
             <Card.Cta>Read article</Card.Cta>
           </Card>
           <Card as="article">
-            <VideoAutoplay src={'videos/collab-demo.mp4'} />
+            <Card.VideoAutoplay src={'videos/collab-demo.mp4'} />
             <div className='my-2'></div>
             <Card.Title href={`/articles/how-i-work`}>
               How I design, develop, & lead in MedTech
@@ -349,7 +335,7 @@ export default async function Home() {
         <div className='grid max-w-xl grid-cols-1 gap-y-6 lg:max-w-none lg:grid-cols-3 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip'>
-              <VideoAutoplay src={'videos/sudoku-solver-demo.mp4'} />
+              <Card.VideoAutoplay src={'videos/sudoku-solver-demo.mp4'} />
             </div>
             <div className='my-2'></div>
             <Card.Title href={`/articles/how-i-work`}>
@@ -364,7 +350,7 @@ export default async function Home() {
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip'>
-              <VideoAutoplay src={'videos/arcanagpt-demo.mp4'} />
+              <Card.VideoAutoplay src={'videos/arcanagpt-demo.mp4'} />
             </div>
             <div className='my-2'></div>
             <Card.Title href={`/articles/how-i-work`}>
@@ -379,7 +365,7 @@ export default async function Home() {
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip'>
-              <VideoAutoplay src={'videos/ai-art-demo.mp4'} />
+              <Card.VideoAutoplay src={'videos/ai-art-demo.mp4'} />
             </div>
             <div className='my-2'></div>
             <Card.Title href={`/articles/how-i-work`}>

@@ -33,13 +33,28 @@ export function Card<T extends React.ElementType = 'div'>({
   );
 }
 
+Card.VideoAutoplay = function VideoLink({ src, ...props }: { src: string; }) {
+  return (
+    <video
+      className='w-full h-full object-cover z-100'
+      loop
+      autoPlay
+      muted
+      playsInline
+      style={{ width: "100%", height: "100%" }}
+      {...props}>
+      <source src={src} type="video/mp4" />
+    </video>
+  );
+};
+
 Card.Link = function CardLink({
   children,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Link>) {
   return (
     <>
-      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
+      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-60 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
       <Link {...props}>
         <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
