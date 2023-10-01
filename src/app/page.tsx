@@ -383,10 +383,10 @@ export default async function Home() {
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip'>
-              <Card.VideoAutoplay src={'https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop'} />
+              <Card.VideoAutoplay src={'videos/ai-art-demo.mp4'} />
             </div>
             <div className='my-2'></div>
-            <Card.Title href={`/articles/how-i-work`}>
+            <Card.Title href={`https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop`}>
               AI-Driven Digital Art
             </Card.Title>
             <Card.Description>
