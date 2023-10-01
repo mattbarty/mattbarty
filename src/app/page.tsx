@@ -10,7 +10,7 @@ import {
   LinkedInIcon,
   MediumIcon,
 } from '@/components/SocialIcons';
-import publicSpeakingImage from '@/images/photos/banner-img.jpeg';
+import avatar from '@/images/avatar.jpg';
 import logoAirbnb from '@/images/logos/airbnb.svg';
 import logoFacebook from '@/images/logos/facebook.svg';
 import logoPlanetaria from '@/images/logos/planetaria.svg';
@@ -280,11 +280,14 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
+        <div className='h-[9rem] mb-8 -translate-y-[4rem] inset-20'>
+          <Image src={avatar} alt="" className=" object-cover h-[200px] w-[200px] rounded-full" unoptimized />
+        </div>
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Matt Barty ~ <br />
+            Matt Barty<br />
           </h1>
-          <p className='font-thin text-3xl'>UX Engineer & Creative Technologist</p>
+          <p className='font-thin text-xl md:text-3xl'>UX Engineer & Creative Technologist</p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             6 years of cross-functional experience in UXR/D, Data Science, and Programming ✨ -
             <br />
@@ -390,13 +393,14 @@ export default async function Home() {
           </Card>
         </div>
         <div className='flex w-full justify-center mt-16'>
-          <div
+          <Link
             aria-hidden="true"
+            href="/projects"
             className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500 hover:text-teal-300"
           >
             See more projects
             <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
-          </div>
+          </Link>
         </div>
       </Container>
 
