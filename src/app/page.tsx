@@ -77,6 +77,19 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   );
 }
 
+function ChevronRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M6.75 5.75 9.25 8l-2.5 2.25"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 function Divider({ title }: { title: string; }) {
   return (
     <div className="relative mt-24 lg:mt-28">
@@ -122,7 +135,7 @@ function SocialLink({
 function VideoAutoplay({ src, ...props }: { src: string; }) {
   return (
     <video
-      className='w-full h-full'
+      className='w-full h-full object-cover'
       loop
       autoPlay
       muted
@@ -275,9 +288,9 @@ export default async function Home() {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             6 years of cross-functional experience in UXR/D, Data Science, and Programming ✨ -
             <br />
-            I’ve lead and contributed to projects across HealthTech, including, digital health interfaces, consumer
-            diagnostics, chronic-disease management systems, therapeutic implants, surgical intervention & imaging
-            equipment, and a world-class surgical robotic system (Versius) 🦾
+            Professionally I design, develop, and test complex MedTech products (hardware & software),
+            but my passion lies in the intersection of technology, design, and human behaviour -
+            Wherever that takes me 🚀
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -298,31 +311,98 @@ export default async function Home() {
           </div>
         </div>
         <Divider title='Professional work' />
-        <div className='grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 gap-0 md:gap-6 mt-24 md:mt-28'>
+        <div className='grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
             <VideoAutoplay src={'videos/versius-demo.mp4'} />
             <div className='my-2'></div>
-            <Card.Title>
-              Solving complex MedTech systems
+            <Card.Title href={`/articles/my-work-on-versius`}>
+              My work on Versius
             </Card.Title>
-            <Card.Description>placeholder text</Card.Description>
+            <Card.Description>
+              I worked as a Human Factors Engineer and Clinical Data Scientist
+              on a next-gen surgical robotic system, Versius. Versius
+              is designed to be portable, modular, and cost-effective - Transforming surgery, for good.
+            </Card.Description>
             <Card.Cta>Read article</Card.Cta>
           </Card>
           <Card as="article">
             <VideoAutoplay src={'videos/collab-demo.mp4'} />
             <div className='my-2'></div>
-            <Card.Title>
-              How I design, develop, & lead
+            <Card.Title href={`/articles/how-i-work`}>
+              How I design, develop, & lead in MedTech
             </Card.Title>
-            <Card.Description>placeholder text</Card.Description>
+            <Card.Description>
+              I've worked on a wide range of projects, from consumer diagnostics,
+              chronic-disease management, therapeutic implants, surgical intervention
+              & imaging equipment, and a world-class surgical robotic system (Versius).
+            </Card.Description>
             <Card.Cta>Read article</Card.Cta>
           </Card>
         </div>
-        <Divider title='Personal projects' />
       </Container>
 
       <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+        <Divider title='Personal projects' />
+        <div className='grid max-w-xl grid-cols-1 gap-y-6 lg:max-w-none lg:grid-cols-3 gap-0 md:gap-12 mt-24 md:mt-28'>
+          <Card as="article">
+            <div className='bg-black aspect-[6/5] overflow-clip'>
+              <VideoAutoplay src={'videos/sudoku-solver-demo.mp4'} />
+            </div>
+            <div className='my-2'></div>
+            <Card.Title href={`/articles/how-i-work`}>
+              CV Sudoku Solver
+            </Card.Title>
+            <Card.Description>
+              Using computer vision to solve physical sudoku puzzles in realtime.
+              built using my own CNN model written in Python, using OpenCV, TensorFlow,
+              and Numpy.
+            </Card.Description>
+            <Card.Cta>See project</Card.Cta>
+          </Card>
+          <Card as="article">
+            <div className='bg-black aspect-[6/5] overflow-clip'>
+              <VideoAutoplay src={'videos/arcanagpt-demo.mp4'} />
+            </div>
+            <div className='my-2'></div>
+            <Card.Title href={`/articles/how-i-work`}>
+              ArcanaGPT
+            </Card.Title>
+            <Card.Description>
+              Tarot-inspired card game webapp prototype. Prototyped in Figma, this project
+              uses GPT-3.5 to give users unique readings with all art assets generated using
+              Midjourney.
+            </Card.Description>
+            <Card.Cta>See project</Card.Cta>
+          </Card>
+          <Card as="article">
+            <div className='bg-black aspect-[6/5] overflow-clip'>
+              <VideoAutoplay src={'videos/ai-art-demo.mp4'} />
+            </div>
+            <div className='my-2'></div>
+            <Card.Title href={`/articles/how-i-work`}>
+              AI-Driven Digital Art
+            </Card.Title>
+            <Card.Description>
+              Leveraging modern AI tools to rapidly produce digital art - Combines the power of
+              Adobe generative fill, Midjourney, and a opensource Stable Diffusion plugin.
+            </Card.Description>
+            <Card.Cta>See project</Card.Cta>
+          </Card>
+        </div>
+        <div className='flex w-full justify-center mt-16'>
+          <div
+            aria-hidden="true"
+            className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500 hover:text-teal-300"
+          >
+            See more projects
+            <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
+          </div>
+        </div>
+      </Container>
+
+      <Container className="mt-24 md:mt-28">
+        <Divider title='Resume' />
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 mt-24 md:mt-28">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
