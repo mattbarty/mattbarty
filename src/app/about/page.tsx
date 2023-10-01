@@ -78,7 +78,7 @@ export default function About() {
             </p>
             <p>
               At heart, I'm a UX engineer. However, necessity, experience, and a profound
-              passion have also shaped me into a skilled product designer, software engineer, and data scientist.
+              passion for creating has also shaped me into a skilled product designer, software engineer, and data scientist.
               I thrive on building products that keep people engaged, healthy, and happy.
             </p>
             <p>
@@ -88,7 +88,7 @@ export default function About() {
             </p>
             <p>
               I've mainly worked in the MedTech industry, developing hardware and software for
-              a wide breadth of medical devices, including: consumer diagnostic devices and wearables,
+              a breadth of medical devices, including: consumer diagnostic devices and wearables,
               drug delivery devices, therapeutic implants, and a world-class surgical robotics system (Versius).
             </p>
             <p>

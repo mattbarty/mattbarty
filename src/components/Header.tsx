@@ -10,6 +10,7 @@ import clsx from 'clsx';
 
 import { Container } from '@/components/Container';
 import avatarImage from '@/images/avatar.jpg';
+import { text } from 'stream/consumers';
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -64,6 +65,25 @@ function MoonIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
         d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+function OpenFileIcon({ ...props }: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="1em"
+      viewBox="0 0 512 512"
+      aria-hidden="true"
+      {...props}>
+      <path
+        d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -133,8 +153,15 @@ function MobileNavigation(
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="/about">About</MobileNavItem>
-                <MobileNavItem href="/articles">Articles</MobileNavItem>
+                {/* <MobileNavItem href="/articles">Articles</MobileNavItem> */}
                 <MobileNavItem href="/projects">Projects</MobileNavItem>
+                <a href='/docs/matthew_barty_resume_2023.pdf'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='relative py-2 transition hover:text-teal-500 dark:hover:text-teal-400 flex'>
+                  Resume
+                  {/* <OpenFileIcon className='h-4 w-4 text-zinc-500 dark:text-zinc-400' fill={``} /> */}
+                </a>
                 {/* <MobileNavItem href="/speaking">Speaking</MobileNavItem>
                 <MobileNavItem href="/uses">Uses</MobileNavItem> */}
               </ul>
@@ -149,6 +176,7 @@ function MobileNavigation(
 function NavItem({
   href,
   children,
+  ...props
 }: {
   href: string;
   children: React.ReactNode;
@@ -165,6 +193,7 @@ function NavItem({
             ? 'text-teal-500 dark:text-teal-400'
             : 'hover:text-teal-500 dark:hover:text-teal-400',
         )}
+        {...props}
       >
         {children}
         {isActive && (
@@ -180,8 +209,14 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/about">About</NavItem>
-        <NavItem href="/articles">Articles</NavItem>
+        {/* <NavItem href="/articles">Articles</NavItem> */}
         <NavItem href="/projects">Projects</NavItem>
+        <a href='/docs/matthew_barty_resume_2023.pdf'
+          target="_blank"
+          rel="noopener noreferrer"
+          className='relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400'>
+          Resume
+        </a>
         {/* <NavItem href="/speaking">Speaking</NavItem>
         <NavItem href="/uses">Uses</NavItem> */}
       </ul>
