@@ -3,47 +3,85 @@ import Image from 'next/image';
 
 import { Card } from '@/components/Card';
 import { SimpleLayout } from '@/components/SimpleLayout';
-import logoAnimaginary from '@/images/logos/animaginary.svg';
-import logoCosmos from '@/images/logos/cosmos.svg';
-import logoHelioStream from '@/images/logos/helio-stream.svg';
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg';
-import logoPlanetaria from '@/images/logos/planetaria.svg';
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'CV Sudoku Solver',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Using computer vision to solve sudoku puzzles in realtime.',
+    link: { href: 'https://github.com/mattbarty/cv_sudoku_solver', label: 'github.com' },
+    video: '/videos/sudoku-solver-demo.mp4'
   },
   {
-    name: 'Animaginary',
+    name: 'ArcanaGPT (Figma Prototype)',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'LLM-enabled Tarot webapp. Designed and protoyped in Figma.',
+    link: {
+      href: 'https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design',
+      label: 'figma.com'
+    },
+    video: '/videos/arcanagpt-demo.mp4'
   },
   {
-    name: 'HelioStream',
+    name: 'ControlNet Portraits',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'Using Stable Diffusion to create portraits of my myself.',
+    link: {
+      href: 'https://www.linkedin.com/posts/matthew-barty_stablediffusion-ai-aiartwork-activity-7065698539477069825-eaZ8?utm_source=share&utm_medium=member_desktop',
+      label: 'github.com'
+    },
+    video: '/videos/stable-diffusion-portrait-demo.mp4'
   },
   {
-    name: 'cosmOS',
+    name: 'Brain Disease Classifier (ML)',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+      'Training a DNN to classify brain tumour type from scans.',
+    link: { href: 'https://github.com/mattbarty/brain-tumour-categorical-classifier', label: 'github.com' },
+    gif: 'gifs/brain-disease-classifier-demo.gif'
   },
   {
-    name: 'OpenShuttle',
+    name: 'Eye Disease Classifier (ML)',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'Training a DNN to diagnose my own retina scan.',
+    link: { href: 'https://github.com/mattbarty/eye_diseases_classification', label: 'github.com' },
+    gif: 'gifs/eye-disease-classifier-demo.gif'
+  },
+  {
+    name: 'AI-Powered Art Workflow',
+    description:
+      'Combining Midjourney, Stable Diffusion, and Photoshop GenAI models to rapidly create digital art.',
+    link: {
+      href: 'https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop',
+      label: 'linkedin.com'
+    },
+    video: 'videos/ai-art-demo.mp4'
+  },
+  {
+    name: 'WhatsApp Language Extension',
+    description:
+      'Augmenting WhatsApp web with language features.',
+    link: {
+      href: 'https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop',
+      label: 'linkedin.com'
+    },
+    video: 'videos/whatsapp-language-features-demo.mp4'
+  },
+  {
+    name: 'LinkedInfluencer',
+    description:
+      'WebApp that uses BLIP-2 and GPT-3.5 to generate parody LinkedIn posts.',
+    link: { href: 'https://linkedinfluencer.app', label: 'linkedinfluencer.app' },
+    video: 'videos/linkedinfluencer-demo.mp4'
+  },
+  {
+    name: 'Pokemon Sprites Data Visualisation',
+    description:
+      'Visualising Pokemon data using sprite art.',
+    link: {
+      href: 'https://www.kaggle.com/code/mattbarty/gotta-plot-em-all',
+      label: 'kaggle.com'
+    },
+    video: 'videos/plotemall-demo.mp4'
   },
 ];
 
@@ -66,8 +104,9 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Things I’ve built"
+      intro="In my spare time I’ve worked on tons of little projects to experiment with new tech, 
+      solve a personal problem, or just to do something fun! Here are a few of my favorites"
     >
       <ul
         role="list"
@@ -75,13 +114,19 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={project.logo}
-                alt=""
-                className="h-8 w-8"
-                unoptimized
-              />
+            <div className='bg-black aspect-[6/5] overflow-clip'>
+              {project.video ? (
+                <Card.VideoAutoplay src={project.video} />
+              ) : project.gif ? (
+                <img src={project.gif} alt="" />
+              ) : (
+                <Image
+                  src={project.logo}
+                  alt=""
+                  className="h-8 w-8"
+                  unoptimized
+                />
+              )}
             </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
               <Card.Link href={project.link.href}>{project.name}</Card.Link>
