@@ -88,7 +88,7 @@ export default function About() {
             </p>
             <p>
               I've mainly worked in the MedTech industry, developing hardware and software for
-              a breadth of medical devices, including: consumer diagnostic devices and wearables,
+              a breadth of medical devices, including: consumer diagnostic devices,
               drug delivery devices, therapeutic implants, and a world-class surgical robotics system (Versius).
             </p>
             <p>

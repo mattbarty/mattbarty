@@ -44,7 +44,7 @@ const projects = [
     description:
       'Training a DNN to diagnose my own retina scan.',
     link: { href: 'https://github.com/mattbarty/eye_diseases_classification', label: 'github.com' },
-    gif: 'gifs/eye-disease-classifier-demo.gif'
+    gif: 'gifs/eye-disease-classification-demo.gif'
   },
   {
     name: 'AI-Powered Art Workflow',
