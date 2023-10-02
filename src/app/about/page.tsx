@@ -71,7 +71,7 @@ export default function About() {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             I’m Matt Barty - <br />
           </h1>
-          <p className='text-3xl sm:text-4xl text-thin'>Build cool things, solve hard problems</p>
+          <p className='text-2xl sm:text-4xl text-thin'>I want to build the coolest things in the world!</p>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               I love design, technology, and people.
@@ -93,7 +93,7 @@ export default function About() {
             </p>
             <p>
               Professionally, I work as a UX & Human Factors Consultant in Cambridge, UK. In my spare time,
-              I play with emerging technology and work on (a lot) personal projects.
+              I play with emerging technology and work <i className=' font-bold'>a lot </i>of personal projects.
             </p>
             <p>
               If you've got a cool idea, let me know - Let's grab coffee and talk about it! ☕️

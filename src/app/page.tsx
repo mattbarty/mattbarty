@@ -278,7 +278,12 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className='h-[6rem] md:h-[9rem] mb-8 -translate-y-[4rem] inset-20'>
-          <Image src={avatar} alt="" className=" object-cover h-[160px] w-[160px] md:h-[200px] md:w-[200px] rounded-full" unoptimized />
+          <Link href='/about'>
+            <div className='h-[160px] w-[160px] md:h-[200px] md:w-[200px] rounded-full overflow-clip 
+            border-2 border-zinc-600'>
+              <Image src={avatar} alt="" className=" object-cover hover:scale-105 transition-all hover:opacity-70 " unoptimized />
+            </div>
+          </Link>
         </div>
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
