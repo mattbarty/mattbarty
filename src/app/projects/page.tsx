@@ -25,7 +25,7 @@ const projects = [
   {
     name: 'ControlNet Portraits',
     description:
-      'Using Stable Diffusion to create portraits of my myself.',
+      'Using Stable Diffusion to create portraits of myself.',
     link: {
       href: 'https://www.linkedin.com/posts/matthew-barty_stablediffusion-ai-aiartwork-activity-7065698539477069825-eaZ8?utm_source=share&utm_medium=member_desktop',
       label: 'github.com'
