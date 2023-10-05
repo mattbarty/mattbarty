@@ -404,6 +404,7 @@ export function Header() {
 
   return (
     <>
+
       <header
         className="pointer-events-none relative z-50 flex flex-none flex-col"
         style={{

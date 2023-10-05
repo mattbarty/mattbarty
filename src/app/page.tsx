@@ -291,11 +291,13 @@ export default async function Home() {
           </h1>
           <p className='font-thin text-xl md:text-3xl'>UX Engineer & Creative Technologist</p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            6 years of cross-functional experience in UXR/D, Data Science, and Programming ✨ -
-            <br />
-            Professionally I design, develop, and test complex MedTech products (hardware & software),
-            but my passion lies in the intersection of technology, design, and human behaviour -
-            Wherever that takes me 🚀
+            <div>
+              6 years of cross-functional experience in UXR/D, Data Science, and Programming ✨ -
+              <br />
+              Professionally I design, develop, and test complex MedTech products (hardware & software),
+              but my passion lies in the intersection of technology, design, and human behaviour -
+              Wherever that takes me 🚀
+            </div>
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -308,11 +310,11 @@ export default async function Home() {
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
-            <SocialLink
+            {/* <SocialLink
               href="https://mattbarty.medium.com"
               aria-label="Follow on Medium"
               icon={MediumIcon}
-            />
+            /> */}
           </div>
         </div>
         <Divider title='Professional work' />
@@ -320,7 +322,8 @@ export default async function Home() {
           <Card as="article">
             <Card.VideoAutoplay src={'videos/versius-demo.mp4'} />
             <div className='my-2'></div>
-            <Card.Title href={`/articles/my-work-on-versius`}>
+            {/* <Card.Title href={`/articles/my-work-on-versius`}> */}
+            <Card.Title>
               My work on Versius
             </Card.Title>
             <Card.Description>
@@ -328,12 +331,13 @@ export default async function Home() {
               on a next-gen surgical robotic system, Versius. Versius
               is designed to be portable, modular, and cost-effective - Transforming surgery, for good.
             </Card.Description>
-            <Card.Cta>Read article</Card.Cta>
+            <Card.Cta className='text-gray-500'>Read article (🚧 In development)</Card.Cta>
           </Card>
           <Card as="article">
             <Card.VideoAutoplay src={'videos/collab-demo.mp4'} />
             <div className='my-2'></div>
-            <Card.Title href={`/articles/how-i-work`}>
+            {/* <Card.Title href={`/articles/how-i-work`}> */}
+            <Card.Title>
               How I design, develop, & lead in MedTech
             </Card.Title>
             <Card.Description>
@@ -341,7 +345,7 @@ export default async function Home() {
               chronic-disease management, therapeutic implants, surgical intervention
               & imaging equipment, and a world-class surgical robotic system (Versius).
             </Card.Description>
-            <Card.Cta>Read article</Card.Cta>
+            <Card.Cta className='text-gray-500'>Read article  (🚧 In development)</Card.Cta>
           </Card>
         </div>
       </Container>
