@@ -320,8 +320,7 @@ export default async function Home() {
           <Card as="article">
             <Card.VideoAutoplay src={'videos/versius-demo.mp4'} />
             <div className='my-2'></div>
-            {/* <Card.Title href={`/articles/my-work-on-versius`}> */}
-            <Card.Title>
+            <Card.Title href={`/articles/my-work-on-versius`}>
               My work on Versius
             </Card.Title>
             <Card.Description>
@@ -329,7 +328,7 @@ export default async function Home() {
               on a next-gen surgical robotic system, Versius. Versius
               is designed to be portable, modular, and cost-effective - Transforming surgery, for good.
             </Card.Description>
-            <Card.Cta className='text-gray-500'>Read article (🚧 In development)</Card.Cta>
+            <Card.Cta className='text-gray-500'>Read article</Card.Cta>
           </Card>
           <Card as="article">
             <Card.VideoAutoplay src={'videos/collab-demo.mp4'} />
@@ -343,7 +342,8 @@ export default async function Home() {
               chronic-disease management, therapeutic implants, surgical intervention
               & imaging equipment, and a world-class surgical robotic system (Versius).
             </Card.Description>
-            <Card.Cta className='text-gray-500'>Read article  (🚧 In development)</Card.Cta>
+            {/* <Card.Cta>Read article </Card.Cta> */}
+            <p className='relative z-10 mt-4 flex items-center text-sm font-medium text-gray-500'>Read article  ( 🚧 In development )</p>
           </Card>
         </div>
       </Container>
