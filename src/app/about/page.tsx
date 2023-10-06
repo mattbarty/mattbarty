@@ -71,7 +71,7 @@ export default function About() {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             I’m Matt Barty - <br />
           </h1>
-          <p className='text-2xl sm:text-4xl text-thin'>Build cool things, solve hard problems ✨</p>
+          <p className='text-2xl sm:text-4xl text-thin'>Building cool things, solving hard problems ✨</p>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               I love design, technology, and people.
