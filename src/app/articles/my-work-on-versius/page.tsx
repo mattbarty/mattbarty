@@ -77,7 +77,7 @@ export default function articleBody() {
           <Image src={mattUsingVersius} alt="Matthew Barty using the Versius surgical robotic system" className='rounded-lg' />
 
           <p>
-            Transitioning to Clinical Data Science, my focus shifted to data-driven, real world evidence side of Versius.
+            Transitioning to Clinical Data Science, my focus shifted to the data-driven, real world evidence side of Versius.
             I analyzed data from surgical cases to discern patterns, visualize information, and provide insights that fine-tuned surgical procedures
             and supported product development.
           </p>
