@@ -2,6 +2,7 @@ import { ArticleLayout } from '@/components/ArticleLayout';
 import Image from 'next/image';
 import versiusStudy from './versius-study-team.jpg';
 import mattUsingVersius from './matt-using-versius.jpg';
+import teamPhoto from './team-meal.jpg';
 
 export const article = {
   author: 'Matthew Barty',
@@ -52,7 +53,7 @@ export default function articleBody() {
         </div>
         <div>
           <Divider title='Human Factors Engineering' />
-          <Image src={versiusStudy} alt="" className='rounded-lg' />
+          <Image src={versiusStudy} alt="Usability study scene featuring Versius" className='rounded-lg' />
           <p>
             As a Human Factors Engineer, my job was to ensure that the entire surgical system was safe and effective for use. That meant having intimate knowledge
             of the entire system, including its hardware (console, arms ("BSU"), instruments, etc.), software (GUIs), and the cultural, practical, and regulatory context in which it would be used.
@@ -98,9 +99,11 @@ export default function articleBody() {
         </div>
         <div>
           <Divider title='On Reflection' />
+          <Image src={teamPhoto} alt="CMR Surgical Clinical Engineering team having lunch" className='rounded-lg' />
           <p>
-            I&apos;m grateful for my time at CMR, and am proud to have played my part in tranforming surgery, for good. It in genuinely surreal to see Versius out in the world,
-            changing the lives of patients, surgeons, and the wider surgical community - Just awesome !!
+            I&apos;m grateful for my time at CMR, and am proud to have played my part in tranforming surgery, for good - In addition to having the
+            privledge to have worked with some of the most fun, ambitious, and talented people I&apos;ve ever met!
+            It in genuinely surreal to see Versius out in the world, changing the lives of patients, surgeons, and the wider surgical community - Just awesome !!
           </p>
           <p>
             CMR presented a unique platform where I honed my skills in human factors engineering and clinical data science.
