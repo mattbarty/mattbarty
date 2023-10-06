@@ -9,7 +9,7 @@ export const article = {
   date: '2023-10-01',
   title: 'My Work on Versius',
   description:
-    'When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.',
+    'Describing my work as a Human Factors Engineer and Clinical Data Scientist at CMR Surgical, developing the Versius surgical robotic system.',
   slug: 'my-work-on-versius',
 };
 

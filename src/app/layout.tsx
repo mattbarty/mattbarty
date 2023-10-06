@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       'Matt Barty - UX Engineer & Creative Technologist',
   },
   description:
-    'Hey! I&apos;m Matt Barty, a UX Engineer & Creative Technologist based in Cambridge, UK. I’m passionate about building inclusive, accessible and performant experiences',
+    "Hey! I'm Matt Barty, a UX Engineer & Creative Technologist based in Cambridge, UK. I’m passionate about building inclusive, accessible and performant experiences",
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
