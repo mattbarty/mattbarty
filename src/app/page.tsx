@@ -354,10 +354,9 @@ export default async function Home() {
         <Divider title='Personal projects' />
         <div className='grid max-w-xl grid-cols-1 gap-y-6 lg:max-w-none lg:grid-cols-3 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip'>
+            <div className='bg-black aspect-[6/5] overflow-clip mb-2'>
               <Card.VideoAutoplay src={'videos/sudoku-solver-demo.mp4'} />
             </div>
-            <div className='my-2'></div>
             <Card.Title
               href={`https://github.com/mattbarty/cv_sudoku_solver`}
               target='_blank'>
@@ -374,10 +373,9 @@ export default async function Home() {
             </p>
           </Card>
           <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip'>
+            <div className='bg-black aspect-[6/5] overflow-clip mb-2'>
               <Card.VideoAutoplay src={'videos/arcanagpt-demo.mp4'} />
             </div>
-            <div className='my-2'></div>
             <Card.Title
               href={`https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design`}
               target='_blank'>
@@ -394,10 +392,9 @@ export default async function Home() {
             </p>
           </Card>
           <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip'>
+            <div className='bg-black aspect-[6/5] overflow-clip mb-2'>
               <Card.VideoAutoplay src={'videos/ai-art-demo.mp4'} />
             </div>
-            <div className='my-2'></div>
             <Card.Title
               href={`https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop`}
               target='_blank'
