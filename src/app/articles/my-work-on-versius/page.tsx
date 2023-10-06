@@ -55,8 +55,9 @@ export default function articleBody() {
           <Divider title='Human Factors Engineering' />
           <Image src={versiusStudy} alt="Usability study scene featuring Versius" className='rounded-lg' />
           <p>
-            As a Human Factors Engineer, my job was to ensure that the entire surgical system was safe and effective for use. That meant having intimate knowledge
-            of the entire system, including its hardware (console, arms ("BSU"), instruments, etc.), software (GUIs), and the cultural, practical, and regulatory context in which it would be used.
+            As a Human Factors Engineer, my job was to ensure that Versius was safe and effective for use. That meant having intimate knowledge
+            of the entire surgical system, including its hardware (console, arms ("BSU"), instruments, etc.), software (GUIs), and the cultural,
+            practical, and regulatory context in which it would be used.
           </p>
           <div>
             <p>
@@ -76,8 +77,8 @@ export default function articleBody() {
           <Image src={mattUsingVersius} alt="Matthew Barty using the Versius surgical robotic system" className='rounded-lg' />
 
           <p>
-            Transitioning to a Clinical Data Scientist role, I delved deeper into the analytical side of the Versius&apos; development.
-            I analyzed data from surgical cases to discern patterns, visualize information, and provide insights that fine-tuned surgical procedures.
+            Transitioning to Clinical Data Science, my focus shifted to the analytical realm of Versius. I analyzed data from surgical cases to discern patterns, visualize information,
+            and provide insights that fine-tuned surgical procedures.
           </p>
 
           <p>
@@ -91,7 +92,7 @@ export default function articleBody() {
 
           <ul>
             <li>Standardizing the data collection process from surgeries,</li>
-            <li>Applying statistical methods to affirm the Versius system's real-world effectiveness and safety,</li>
+            <li>Applying statistical methods to affirm the Versius system&apos;s real-world effectiveness and safety,</li>
             <li>Producing reports for regulatory bodies, stakeholders, and customers highlighting Versius's safety and performance, and</li>
             <li>Partnering with diverse teams to embed data-driven insights into product development</li>
           </ul>
