@@ -291,13 +291,11 @@ export default async function Home() {
           </h1>
           <p className='font-thin text-xl md:text-3xl'>UX Engineer & Creative Technologist</p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            <div>
-              6 years of cross-functional experience in UXR/D, Data Science, and Programming ✨ -
-              <br />
-              Professionally I design, develop, and test complex MedTech products (hardware & software),
-              but my passion lies in the intersection of technology, design, and human behaviour -
-              Wherever that takes me 🚀
-            </div>
+            6 years of cross-functional experience in UXR/D, Data Science, and Programming ✨ -
+            <br />
+            Professionally I design, develop, and test complex MedTech products (hardware & software),
+            but my passion lies in the intersection of technology, design, and human behaviour -
+            Wherever that takes me 🚀
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -322,8 +320,7 @@ export default async function Home() {
           <Card as="article">
             <Card.VideoAutoplay src={'videos/versius-demo.mp4'} />
             <div className='my-2'></div>
-            {/* <Card.Title href={`/articles/my-work-on-versius`}> */}
-            <Card.Title>
+            <Card.Title href={`/articles/my-work-on-versius`}>
               My work on Versius
             </Card.Title>
             <Card.Description>
@@ -331,7 +328,7 @@ export default async function Home() {
               on a next-gen surgical robotic system, Versius. Versius
               is designed to be portable, modular, and cost-effective - Transforming surgery, for good.
             </Card.Description>
-            <Card.Cta className='text-gray-500'>Read article (🚧 In development)</Card.Cta>
+            <Card.Cta className='text-gray-500'>Read article</Card.Cta>
           </Card>
           <Card as="article">
             <Card.VideoAutoplay src={'videos/collab-demo.mp4'} />
@@ -345,7 +342,8 @@ export default async function Home() {
               chronic-disease management, therapeutic implants, surgical intervention
               & imaging equipment, and a world-class surgical robotic system (Versius).
             </Card.Description>
-            <Card.Cta className='text-gray-500'>Read article  (🚧 In development)</Card.Cta>
+            {/* <Card.Cta>Read article </Card.Cta> */}
+            <p className='relative z-10 mt-4 flex items-center text-sm font-medium text-gray-500'>Read article  ( 🚧 In development )</p>
           </Card>
         </div>
       </Container>
@@ -354,10 +352,9 @@ export default async function Home() {
         <Divider title='Personal projects' />
         <div className='grid max-w-xl grid-cols-1 gap-y-6 lg:max-w-none lg:grid-cols-3 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip'>
+            <div className='bg-black aspect-[6/5] overflow-clip mb-2'>
               <Card.VideoAutoplay src={'videos/sudoku-solver-demo.mp4'} />
             </div>
-            <div className='my-2'></div>
             <Card.Title
               href={`https://github.com/mattbarty/cv_sudoku_solver`}
               target='_blank'>
@@ -374,10 +371,9 @@ export default async function Home() {
             </p>
           </Card>
           <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip'>
+            <div className='bg-black aspect-[6/5] overflow-clip mb-2'>
               <Card.VideoAutoplay src={'videos/arcanagpt-demo.mp4'} />
             </div>
-            <div className='my-2'></div>
             <Card.Title
               href={`https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design`}
               target='_blank'>
@@ -394,10 +390,9 @@ export default async function Home() {
             </p>
           </Card>
           <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip'>
+            <div className='bg-black aspect-[6/5] overflow-clip mb-2'>
               <Card.VideoAutoplay src={'videos/ai-art-demo.mp4'} />
             </div>
-            <div className='my-2'></div>
             <Card.Title
               href={`https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop`}
               target='_blank'
