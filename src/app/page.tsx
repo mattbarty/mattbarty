@@ -291,13 +291,11 @@ export default async function Home() {
           </h1>
           <p className='font-thin text-xl md:text-3xl'>UX Engineer & Creative Technologist</p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            <div>
-              6 years of cross-functional experience in UXR/D, Data Science, and Programming ✨ -
-              <br />
-              Professionally I design, develop, and test complex MedTech products (hardware & software),
-              but my passion lies in the intersection of technology, design, and human behaviour -
-              Wherever that takes me 🚀
-            </div>
+            6 years of cross-functional experience in UXR/D, Data Science, and Programming ✨ -
+            <br />
+            Professionally I design, develop, and test complex MedTech products (hardware & software),
+            but my passion lies in the intersection of technology, design, and human behaviour -
+            Wherever that takes me 🚀
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
