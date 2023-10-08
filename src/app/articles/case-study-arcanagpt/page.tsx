@@ -1,6 +1,6 @@
 import { ArticleLayout } from '@/components/ArticleLayout';
 import clsx from 'clsx';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import PersonaA from './persona-a.jpg';
 import PersonaB from './persona-b.jpg';
 import PersonaC from './persona-c.jpg';
@@ -174,7 +174,7 @@ interface PersonaProps {
   description: string;
   age: string;
   quote: string;
-  image: string;
+  image: StaticImageData;
   goals: string[];
   painPoints: string[];
 }
