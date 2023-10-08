@@ -342,9 +342,9 @@ export default async function Home() {
               ArcanaGPT - UX Case Study
             </Card.Title>
             <Card.Description>
-              ArcanaGPT - Bridging Tradition with Modern Technology - This project looks to
-              make tarot reading accessible, convenient, and insightful by leveraging modern AI tools
-              with industry-standard UX research and design.
+              ArcanaGPT merges Tarot Tradition with Cutting-Edge AI -
+              In this case study I discuss how I use designing thinking and UXR/D techniques
+              to create an experience that is accessible, intuitive, and most importantly - Fun!
             </Card.Description>
             <Card.Cta>Read article </Card.Cta>
           </Card>
