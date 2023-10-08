@@ -53,7 +53,7 @@ export default function articleBody() {
         </div>
         <div>
           <Divider title='Human Factors Engineering' />
-          <Image src={versiusStudy} alt="Usability study scene featuring Versius" className='rounded-lg' />
+          <Image src={versiusStudy} alt="Usability study scene featuring Versius" className='rounded-lg lg:px-24' />
           <p>
             As a Human Factors Engineer, my job was to ensure that Versius was safe and effective for use. That meant having intimate knowledge
             of the entire surgical system, including its hardware (console, arms ("BSU"), instruments, etc.), software (GUIs), and the cultural,
@@ -74,7 +74,7 @@ export default function articleBody() {
         </div>
         <div>
           <Divider title='Clinical Data Science' />
-          <Image src={mattUsingVersius} alt="Matthew Barty using the Versius surgical robotic system" className='rounded-lg' />
+          <Image src={mattUsingVersius} alt="Matthew Barty using the Versius surgical robotic system" className='rounded-lg lg:px-24' />
 
           <p>
             Transitioning to Clinical Data Science, my focus shifted to the data-driven, real world evidence side of Versius.
@@ -101,7 +101,7 @@ export default function articleBody() {
         </div>
         <div>
           <Divider title='On Reflection' />
-          <Image src={teamPhoto} alt="CMR Surgical Clinical Engineering team having lunch" className='rounded-lg' />
+          <Image src={teamPhoto} alt="CMR Surgical Clinical Engineering team having lunch" className='rounded-lg lg:px-24' />
           <p>
             I&apos;m grateful for my time at CMR, and am proud to have played my part in tranforming surgery, for good - In addition to having the
             privledge to have worked with some of the most fun, ambitious, and talented people I&apos;ve ever met!
