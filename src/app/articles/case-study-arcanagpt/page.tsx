@@ -1,6 +1,9 @@
 import { ArticleLayout } from '@/components/ArticleLayout';
 import clsx from 'clsx';
 import Image from 'next/image';
+import PersonaA from './persona-a.jpg';
+import PersonaB from './persona-b.jpg';
+import PersonaC from './persona-c.jpg';
 
 export const article = {
   author: 'Matthew Barty',
@@ -15,6 +18,55 @@ export const metadata = {
   title: article.title,
   description: article.description,
 };
+
+const personaData = [
+  {
+    "name": "Mia",
+    "archetype": "New & Curious",
+    "age": "20",
+    "description": "Recent college graduate intrigued by tarot. Seeks an intuitive, beginner-friendly platform for personal growth.",
+    "quote": "I've always been curious about tarot, but where do I even start without feeling lost?",
+    "image": PersonaA,
+    "goals": [
+      "Wants to learn tarot without getting overwhelmed.",
+      "Seeks a beginner-friendly platform.",
+      "Wants to use tarot for personal growth and introspection."
+    ],
+    "painPoints": [
+      "Feels overwhelmed by vast information.",
+      "Worried about online resources' accuracy.",
+      "Needs an accessible, step-by-step introduction."
+    ],
+    "arcanaGpthelps": [
+      "Offers an intuitive interface that doesn’t intimidate.",
+      "Provides concise and accurate readings.",
+      "Allows progressive learning and practice."
+    ]
+  },
+  {
+    "name": "Jake",
+    "archetype": "Reactive User",
+    "age": "31",
+    "description": "Tech worker familiar with tarot, seeking immediate insights during emotional distress.",
+    "quote": "Life's thrown me a curveball. I just need something to help me make sense of it all.",
+    "image": PersonaB,
+    "goals": ["Needs quick and meaningful readings.", "Wants insights for emotional navigation.", "Prefers a responsive, immediate tool."],
+    "painPoints": ["Doesn't want long readings.", "Wants resonating readings.", "Needs an immediate responsive tool."],
+    "arcanaGpthelps": ["Delivers instant, tailored readings.", "Offers depth and nuance.", "Acts as an immediate reflection source."]
+  },
+  {
+    "name": "Lorraine",
+    "archetype": "Seasoned Reader",
+    "age": "52",
+    "description": "A librarian and tarot enthusiast for decades. Seeks depth and detailed interpretations for self-reflection.",
+    "quote": "Over the years, tarot has been my anchor. I'm always seeking new depths and perspectives to my understanding.",
+    "image": PersonaC,
+    "goals": ["Enhance tarot reading skills.", "Use ArcanaGPT as a companion.", "Seeks detailed interpretations."],
+    "painPoints": ["Avoids generic readings.", "Seeks a complementing tool.", "Needs a platform respecting traditional nuances."],
+    "arcanaGpthelps": ["Provides in-depth analysis.", "Offers alternative perspectives.", "Allows deep reflection on meanings."]
+  }
+];
+
 
 function ArcanagptIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -115,6 +167,55 @@ const VideoAutoplay = ({ src, className, ...props }: { src: string; className: s
   );
 };
 
+
+interface PersonaProps {
+  name: string;
+  archetype: string;
+  description: string;
+  age: string;
+  quote: string;
+  image: string;
+  goals: string[];
+  painPoints: string[];
+}
+
+const PersonaCard: React.FC<PersonaProps> = ({ name, archetype, description, age, quote, image, goals, painPoints }) => {
+  return (
+    <div className="my-6 card shadow-md rounded-lg p-2 md:p-6 border border-slate-600 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className=''>
+        <Image src={image} alt='Persona A - Mia' className='md:w-[300px] aspect-square rounded-lg mb-4 ' />
+        <div>
+          <div className="text-4xl font-bold dark:text-white my-2">{name}</div>
+          <div>{age} yo. || {archetype}</div>
+          <div className="my-4">{description}</div>
+        </div>
+      </div>
+      <div className='flex flex-col h-full justify-between'>
+        <div className='font-semibold dark:text-white border-t border-b p-4'>"{quote}"</div>
+        <div className="persona-section my-4">
+          <div className="text-lg font-semibold mb-2 pt-4">| Goals</div>
+          <ul>
+            {goals.map((goal, idx) => (
+              <li key={idx} className="my-2">{goal}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="persona-section my-4">
+          <div className="text-lg font-semibold mb-2">| Pain Points</div>
+          <ul>
+            {painPoints.map((point, idx) => (
+              <li key={idx} className="my-2">{point}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
 export default function articleBody() {
   return (
     <>
@@ -152,7 +253,7 @@ export default function articleBody() {
           </div>
         </div>
         <Divider title='Project Summary' />
-        <h1 className='text-xl text-slate-100 font-bold'>Context</h1>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Context</h1>
         <p>Tarot reading, with its rich history and mystique, has long been a tool for introspection. Typically done by a trained reader,
           it involves drawing cards from a deck and interpreting their meanings in the context of a question or situation - In my personal life,
           I've found it a convenient and fun prompt for self-reflection.
@@ -166,14 +267,14 @@ export default function articleBody() {
           Therefore, I decided to create ArcanaGPT, a webapp that uses contemporary AI to deliver instant, tailored Tarot readings using cutting edge
           LLM technology.
         </p>
-        <h1 className='text-xl text-slate-100 font-bold'>Problem Statement</h1>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Problem Statement</h1>
         <ul>
           <li>🧙‍♀️ Traditional tarot reading requires a trained interpreter and can be inaccessible to newcomers.</li>
           <li>😵‍💫 Acting as both reader and querent is mentally taxing.</li>
           <li>💤 Automated tarot services are generic and lack the depth and nuance of human readers.</li>
           <li>🤖 There's a gap for a solution that blends automation convenience with human-like depth.</li>
         </ul>
-        <h1 className='text-xl text-slate-100 font-bold'>Solution</h1>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Solution</h1>
         <p>
           Introducing <strong>ArcanaGPT</strong> - Bridging Tradition with Modern Technology - a revolutionary
           digital platform designed to make tarot reading accessible, convenient, and insightful.
@@ -186,12 +287,19 @@ export default function articleBody() {
           <li>⚙️❤️ <strong>Blend of Tradition and Technology</strong>: At the heart of ArcanaGPT is a unique blend of automation convenience with the warmth, depth, and sensitivity of human-like interpretation. It's the best of both worlds, ensuring you get the most out of your tarot experience.</li>
         </ul>
         <Divider title='Discovery' />
-        <h1 className='text-xl text-slate-100 font-bold'>Landscaping</h1>
-        <h1 className='text-xl text-slate-100 font-bold'>Personas</h1>
-        <h1 className='text-xl text-slate-100 font-bold'>Task Analysis</h1>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Landscaping</h1>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Personas</h1>
+        <div className='flex flex-col w-full justify-around'>
+          <div className="container mx-auto flex flex-wrap justify-center">
+            {personaData.map((persona, idx) => (
+              <PersonaCard key={idx} {...persona} />
+            ))}
+          </div>
+        </div>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Task Analysis</h1>
         <Divider title='Ideation' />
-        <h1 className='text-xl text-slate-100 font-bold'>Paper sketch</h1>
-        <h1 className='text-xl text-slate-100 font-bold'>WireFraming</h1>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Paper sketch</h1>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>WireFraming</h1>
         <Divider title='Design' />
       </ArticleLayout>
     </>
