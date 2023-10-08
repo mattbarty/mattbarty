@@ -68,7 +68,7 @@ const personaData = [
 ];
 
 
-function ArcanagptIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function ArcanagptBackgroundAsset(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg width="428" height="528" viewBox="0 0 428 528" fill="none" xmlns="http://www.w3.org/2000/svg"
       strokeWidth="1.5"
@@ -223,7 +223,7 @@ export default function articleBody() {
         <div className='flex flex-col lg:flex-row w-full h-auto justify-between relative bg-black rounded-xl overflow-clip'>
           <div className='relative flex flex-col justify-center w-auto mx-2 my-2 md:mx-6 items'>
             <div className='absolute top-0 left-0 md:-inset-x-[35%] z-10'>
-              <ArcanagptIcon className='h-[300px] lg:h-auto  absolute mb-8 animate-slow-spin duration-1000' />
+              <ArcanagptBackgroundAsset className='h-[300px] lg:h-auto  absolute mb-8 animate-slow-spin duration-1000' />
             </div>
             <div className='z-20'>
               <h1 className='mt-8 md:mt-2 text-2xl md:text-4xl font-bold text-slate-100'>Your Personal AI-Powered Tarot Reader 🔮</h1>
@@ -247,9 +247,9 @@ export default function articleBody() {
               </div>
             </div>
           </div>
-          <div className='h-[300px] md:h-[600px] min-w-[150px] md:min-w-[450px] relative overflow-hidden'>
-            <div className='absolute w-full h-full bg-gradient-to-r from-black -inset-x-10 md:-inset-x-2 md:opacity-60'></div>
-            <VideoAutoplay className='-z-1' src={'/videos/arcanagpt-demo.mp4'} />
+          <div className='relative h-[300px] md:h-[600px] min-w-[150px] md:min-w-[450px] overflow-clip'>
+            <div className='absolute w-full h-full bg-gradient-to-r from-black -inset-x-10 md:-inset-x-2'></div>
+            <VideoAutoplay className='-z-1 bg-black min-h-[350px]' src={'/videos/arcanagpt-demo.mp4'} />
           </div>
         </div>
         <Divider title='Project Summary' />
