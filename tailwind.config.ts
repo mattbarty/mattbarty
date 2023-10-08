@@ -24,5 +24,15 @@ export default {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     typography: typographyStyles,
+    extend: {
+      keyframes: {
+        'slow-spin': {
+          to: { transform: 'rotate(360deg)' }
+        }
+      },
+      animation: {
+        'slow-spin': 'slow-spin 60s linear infinite'
+      }
+    }
   },
 } satisfies Config
