@@ -133,15 +133,17 @@ export default function articleBody() {
                 By bridging the traditional mystique of Tarot with cutting-edge technology and UX design,
                 ArcanaGPT promises an experience that is both personal and in tune with modern-day needs.
               </p>
-              <a
-                href='https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design'
-                target='_blank'
-                className='bg-[#00A67E] hover:bg-[#49b99f] w-fit text-slate-100 py-2 px-4 rounded-md flex items-center mb-8'>
-                <FigmaIcon className='fill-slate-100 w-6 h-6 mr-2' />
-                <div>
-                  See demo
-                </div>
-              </a>
+              <div className='flex w-full justify-center items-center md:block'>
+                <a
+                  href='https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design'
+                  target='_blank'
+                  className='bg-[#00A67E] hover:bg-[#49b99f] w-fit text-slate-100 py-2 px-4 rounded-md flex items-center mb-8'>
+                  <FigmaIcon className='fill-slate-100 w-6 h-6 mr-2' />
+                  <div>
+                    See demo
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
           <div className='h-[300px] md:h-[600px] min-w-[150px] md:min-w-[450px] relative overflow-hidden'>
@@ -149,7 +151,48 @@ export default function articleBody() {
             <VideoAutoplay className='-z-1' src={'/videos/arcanagpt-demo.mp4'} />
           </div>
         </div>
-
+        <Divider title='Project Summary' />
+        <h1 className='text-xl text-slate-100 font-bold'>Context</h1>
+        <p>Tarot reading, with its rich history and mystique, has long been a tool for introspection. Typically done by a trained reader,
+          it involves drawing cards from a deck and interpreting their meanings in the context of a question or situation - In my personal life,
+          I've found it a convenient and fun prompt for self-reflection.
+        </p>
+        <p>
+          However, I've also found that the experience of getting a reading can be quite inaccessible, especially for those who are new to the practice -
+          And it typically required a lot of time and mental charge to be both the reader and the querent.
+        </p>
+        <p>
+          Services exist that offer automated readings, but they are often generic and impersonal, and lack the nuance and depth of a human reader.
+          Therefore, I decided to create ArcanaGPT, a webapp that uses contemporary AI to deliver instant, tailored Tarot readings using cutting edge
+          LLM technology.
+        </p>
+        <h1 className='text-xl text-slate-100 font-bold'>Problem Statement</h1>
+        <ul>
+          <li>🧙‍♀️ Traditional tarot reading requires a trained interpreter and can be inaccessible to newcomers.</li>
+          <li>😵‍💫 Acting as both reader and querent is mentally taxing.</li>
+          <li>💤 Automated tarot services are generic and lack the depth and nuance of human readers.</li>
+          <li>🤖 There's a gap for a solution that blends automation convenience with human-like depth.</li>
+        </ul>
+        <h1 className='text-xl text-slate-100 font-bold'>Solution</h1>
+        <p>
+          Introducing <strong>ArcanaGPT</strong> - Bridging Tradition with Modern Technology - a revolutionary
+          digital platform designed to make tarot reading accessible, convenient, and insightful.
+          Our aim is to merge the age-old wisdom of traditional tarot reading with the power of contemporary AI.
+        </p>
+        <ul>
+          <li>🃏 <strong>Intuitive and User-Friendly</strong>: Gone are the days of needing extensive training to understand tarot. ArcanaGPT offers a user-friendly interface, ideal for both newcomers and seasoned practitioners.</li>
+          <li>🤯 <strong>Mental Ease</strong>: With ArcanaGPT, you no longer have to juggle the roles of reader and querent. Get readings without the mental strain, freeing you to focus on introspection and self-reflection.</li>
+          <li>🤖💬 <strong>Depth and Nuance</strong>: While automation is at its core, ArcanaGPT is not just another generic tarot bot. Powered by cutting-edge LLM technology, it delivers readings that are personalized, deep, and nuanced, rivaling the insights of human readers.</li>
+          <li>⚙️❤️ <strong>Blend of Tradition and Technology</strong>: At the heart of ArcanaGPT is a unique blend of automation convenience with the warmth, depth, and sensitivity of human-like interpretation. It's the best of both worlds, ensuring you get the most out of your tarot experience.</li>
+        </ul>
+        <Divider title='Discovery' />
+        <h1 className='text-xl text-slate-100 font-bold'>Landscaping</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>Personas</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>Task Analysis</h1>
+        <Divider title='Ideation' />
+        <h1 className='text-xl text-slate-100 font-bold'>Paper sketch</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>WireFraming</h1>
+        <Divider title='Design' />
       </ArticleLayout>
     </>
   );
