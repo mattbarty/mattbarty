@@ -318,7 +318,9 @@ export default async function Home() {
         <Divider title='Professional work' />
         <div className='grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
-            <Card.VideoAutoplay src={'videos/versius-demo.mp4'} />
+            <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
+              <Card.VideoAutoplay src={'videos/versius-demo.mp4'} />
+            </div>
             <div className='my-2'></div>
             <Card.Title href={`/articles/my-work-on-versius`}>
               My work on Versius
@@ -331,19 +333,20 @@ export default async function Home() {
             <Card.Cta className='text-gray-500'>Read article</Card.Cta>
           </Card>
           <Card as="article">
-            <Card.VideoAutoplay src={'videos/collab-demo.mp4'} />
+            <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
+              <Card.VideoAutoplay src={'videos/arcanagpt-demo.mp4'} />
+            </div>
             <div className='my-2'></div>
             {/* <Card.Title href={`/articles/how-i-work`}> */}
-            <Card.Title>
-              How I design, develop, & lead in MedTech
+            <Card.Title href={`/articles/case-study-arcanagpt`}>
+              ArcanaGPT - UX Case Study
             </Card.Title>
             <Card.Description>
-              I've worked on a wide range of projects, from consumer diagnostics,
-              chronic-disease management, therapeutic implants, surgical intervention
-              & imaging equipment, and a world-class surgical robotic system (Versius).
+              ArcanaGPT - Bridging Tradition with Modern Technology - This project looks to
+              make tarot reading accessible, convenient, and insightful by leveraging modern AI tools
+              with industry-standard UX research and design.
             </Card.Description>
-            {/* <Card.Cta>Read article </Card.Cta> */}
-            <p className='relative z-10 mt-4 flex items-center text-sm font-medium text-gray-500'>Read article  ( 🚧 In development )</p>
+            <Card.Cta>Read article </Card.Cta>
           </Card>
         </div>
       </Container>
