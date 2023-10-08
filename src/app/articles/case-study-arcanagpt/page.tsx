@@ -1,9 +1,11 @@
 import { ArticleLayout } from '@/components/ArticleLayout';
 import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
+import TarotScreens from './tartogpt-screens.png';
 import PersonaA from './persona-a.jpg';
 import PersonaB from './persona-b.jpg';
 import PersonaC from './persona-c.jpg';
+
 
 export const article = {
   author: 'Matthew Barty',
@@ -241,7 +243,7 @@ export default function articleBody() {
                   className='bg-[#00A67E] hover:bg-[#49b99f] w-fit text-slate-100 py-2 px-4 rounded-md flex items-center mb-8'>
                   <FigmaIcon className='fill-slate-100 w-6 h-6 mr-2' />
                   <div>
-                    See demo
+                    Try demo
                   </div>
                 </a>
               </div>
@@ -280,14 +282,25 @@ export default function articleBody() {
           digital platform designed to make tarot reading accessible, convenient, and insightful.
           Our aim is to merge the age-old wisdom of traditional tarot reading with the power of contemporary AI.
         </p>
-        <ul>
-          <li>🃏 <strong>Intuitive and User-Friendly</strong>: Gone are the days of needing extensive training to understand tarot. ArcanaGPT offers a user-friendly interface, ideal for both newcomers and seasoned practitioners.</li>
-          <li>🤯 <strong>Mental Ease</strong>: With ArcanaGPT, you no longer have to juggle the roles of reader and querent. Get readings without the mental strain, freeing you to focus on introspection and self-reflection.</li>
-          <li>🤖💬 <strong>Depth and Nuance</strong>: While automation is at its core, ArcanaGPT is not just another generic tarot bot. Powered by cutting-edge LLM technology, it delivers readings that are personalized, deep, and nuanced, rivaling the insights of human readers.</li>
-          <li>⚙️❤️ <strong>Blend of Tradition and Technology</strong>: At the heart of ArcanaGPT is a unique blend of automation convenience with the warmth, depth, and sensitivity of human-like interpretation. It's the best of both worlds, ensuring you get the most out of your tarot experience.</li>
-        </ul>
+        <Image src={TarotScreens} alt='TarotGPT screen samples' />
+        <p>It's really easiest shown than explained - <br />
+          Click the link below to give it a go for yourself! ( and let me know what you think! )</p>
+        <a
+          href='https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design'
+          target='_blank'
+          className='bg-[#00A67E] hover:bg-[#49b99f] w-fit text-slate-100 py-2 px-4 rounded-md flex items-center mb-8'>
+          <FigmaIcon className='fill-slate-100 w-6 h-6 mr-2' />
+          <div>
+            Try demo
+          </div>
+        </a>
         <Divider title='Discovery' />
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Landscaping</h1>
+        <p>
+          As with any serious development, its important to model, define, and understand the user, task, and environment factors of what we are developing.
+          In this case, we are developing a digital product that will be used by a wide range of users, each with their own unique needs and goals - Therefore,
+          well be using three exploratory methods to help us understand the landscape of our product; Personas, Task Analysis, and Competitive Analysis.
+        </p>
+        <p>Then, we'll summarise all our findings into a set of <span className='font-bold'>user requirements</span> we can take forward into ideation.</p>
         <h1 className='text-xl dark:text-slate-100 font-bold'>Personas</h1>
         <div className='flex flex-col w-full justify-around'>
           <div className="container mx-auto flex flex-wrap justify-center">
@@ -297,10 +310,42 @@ export default function articleBody() {
           </div>
         </div>
         <h1 className='text-xl dark:text-slate-100 font-bold'>Task Analysis</h1>
+        <p>( 🚧 section tbc - watch this space! )</p>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Competitor Analysis</h1>
+        <p>
+          <ul>
+            <li>
+              <strong>Digital Apps:</strong>
+              <p>In our pockets and at our fingertips, numerous tarot apps offer instant readings. However, most are quite rudimentary. You shuffle, draw, and receive a rather generic interpretation. While they're convenient, they often miss the mark in providing the depth and personal touch of a human reader.</p>
+            </li>
+
+            <li>
+              <strong>The Traditional Experience:</strong>
+              <p>Nothing quite beats the ambiance of a candle-lit room, the tactile sensation of shuffling cards, and the empathetic gaze of a seasoned tarot reader. This real-life interaction creates a bond, making the reading deeply personal and resonant.</p>
+            </li>
+
+            <li>
+              <strong>YouTube and Online Learning:</strong>
+              <p>For budding tarot enthusiasts, YouTube is a goldmine. From deciphering the symbolism of the Fool to mastering complex spreads, it's all there. Yet, while these tutorials are informative, they lack the personal connection essential for tarot.</p>
+            </li>
+
+            <li>
+              <strong>Public Perception:</strong>
+              <p>Tarot is much more than predicting the future. Each card, rich in symbolism, acts as a mirror reflecting our inner psyche. However, the varied interpretations and esoteric nature often lead to skepticism.</p>
+            </li>
+          </ul>
+        </p>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Requirements Specification</h1>
         <Divider title='Ideation' />
         <h1 className='text-xl dark:text-slate-100 font-bold'>Paper sketch</h1>
+        <p>( 🚧 section tbc - watch this space! )</p>
         <h1 className='text-xl dark:text-slate-100 font-bold'>WireFraming</h1>
+        <p>( 🚧 section tbc - watch this space! )</p>
         <Divider title='Design' />
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Design Walkthrough</h1>
+        <p>( 🚧 section tbc - watch this space! )</p>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Next Steps & Reflections</h1>
+        <p>( 🚧 section tbc - watch this space! )</p>
       </ArticleLayout>
     </>
   );
