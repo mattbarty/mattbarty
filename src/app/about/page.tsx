@@ -93,7 +93,7 @@ export default function About() {
             </p>
             <p>
               Professionally, I work as a UX & Human Factors Consultant in Cambridge, UK. In my spare time,
-              I play with emerging technology and work <i className=' font-bold'>a lot </i>of personal projects.
+              I play with emerging technology and work on <i className=' font-bold'>a lot </i>of personal projects.
             </p>
             <p>
               If you've got a cool idea, let me know - Let's grab coffee and talk about it! ☕️

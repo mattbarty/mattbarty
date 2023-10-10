@@ -315,7 +315,7 @@ export default async function Home() {
             /> */}
           </div>
         </div>
-        <Divider title='Professional work' />
+        <Divider title='Case Study Articles' />
         <div className='grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
@@ -352,7 +352,7 @@ export default async function Home() {
       </Container>
 
       <Container className="mt-24 md:mt-28">
-        <Divider title='Personal projects' />
+        <Divider title='Personal Projects' />
         <div className='grid max-w-xl grid-cols-1 gap-y-6 lg:max-w-none lg:grid-cols-3 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip mb-2'>
