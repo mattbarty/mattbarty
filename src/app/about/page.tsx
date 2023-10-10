@@ -116,13 +116,13 @@ export default function About() {
               Follow on LinkedIn
             </SocialLink>
 
-            <SocialLink
+            {/* <SocialLink
               href="https://mattbarty.medium.com"
               aria-label="Follow on Medium"
               icon={MediumIcon}
               className='mt-4'>
               Follow on Medium
-            </SocialLink>
+            </SocialLink> */}
 
             <SocialLink
               href="mailto:matthew.barty@outlook.com"
