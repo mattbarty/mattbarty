@@ -23,14 +23,48 @@ const projects = [
     video: '/videos/arcanagpt-demo.mp4'
   },
   {
-    name: 'ControlNet Portraits',
+    name: 'WhatsApp Language Extension',
     description:
-      'Using Stable Diffusion to create portraits of myself.',
+      'Augmenting WhatsApp web with language features.',
     link: {
-      href: 'https://www.linkedin.com/posts/matthew-barty_stablediffusion-ai-aiartwork-activity-7065698539477069825-eaZ8?utm_source=share&utm_medium=member_desktop',
-      label: 'github.com'
+      href: 'https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop',
+      label: 'linkedin.com'
     },
-    video: '/videos/stable-diffusion-portrait-demo.mp4'
+    video: 'videos/whatsapp-language-features-demo.mp4'
+  },
+  {
+    name: 'LinkedInfluencer.app',
+    description:
+      'WebApp that uses BLIP-2 and GPT-3.5 to generate parody LinkedIn posts.',
+    link: { href: 'https://linkedinfluencer.app', label: 'linkedinfluencer.app' },
+    video: 'videos/linkedinfluencer-demo.mp4'
+  },
+  {
+    name: 'AI-Powered Art Workflow',
+    description:
+      'Combining Midjourney, Stable Diffusion, and Photoshop GenAI models to rapidly create digital art.',
+    link: {
+      href: 'https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop',
+      label: 'linkedin.com'
+    },
+    video: 'videos/ai-art-demo.mp4'
+  },
+  {
+    name: 'Pokemon Sprites Data Visualisation',
+    description:
+      'Visualising Pokemon data using sprite art.',
+    link: {
+      href: 'https://www.kaggle.com/code/mattbarty/gotta-plot-em-all',
+      label: 'kaggle.com'
+    },
+    video: 'videos/plotemall-demo.mp4'
+  },
+  {
+    name: 'AI-Generated & Narrated Short Story',
+    description:
+      'A demo that combines cutting-edge LLM, Image Diffusion, and text-to-voice models to tell an entirely original horror story.',
+    link: { href: 'https://www.linkedin.com/feed/update/urn:li:activity:7110525573034033153/', label: 'linkedin.com' },
+    video: 'videos/ai-story-demo.mp4'
   },
   {
     name: 'Brain Disease Classifier (ML)',
@@ -47,41 +81,14 @@ const projects = [
     gif: 'gifs/eye-disease-classification-demo.gif'
   },
   {
-    name: 'AI-Powered Art Workflow',
+    name: 'ControlNet Portraits',
     description:
-      'Combining Midjourney, Stable Diffusion, and Photoshop GenAI models to rapidly create digital art.',
+      'Using Stable Diffusion to create portraits of myself.',
     link: {
-      href: 'https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop',
+      href: 'https://www.linkedin.com/posts/matthew-barty_stablediffusion-ai-aiartwork-activity-7065698539477069825-eaZ8?utm_source=share&utm_medium=member_desktop',
       label: 'linkedin.com'
     },
-    video: 'videos/ai-art-demo.mp4'
-  },
-  {
-    name: 'WhatsApp Language Extension',
-    description:
-      'Augmenting WhatsApp web with language features.',
-    link: {
-      href: 'https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop',
-      label: 'linkedin.com'
-    },
-    video: 'videos/whatsapp-language-features-demo.mp4'
-  },
-  {
-    name: 'LinkedInfluencer',
-    description:
-      'WebApp that uses BLIP-2 and GPT-3.5 to generate parody LinkedIn posts.',
-    link: { href: 'https://linkedinfluencer.app', label: 'linkedinfluencer.app' },
-    video: 'videos/linkedinfluencer-demo.mp4'
-  },
-  {
-    name: 'Pokemon Sprites Data Visualisation',
-    description:
-      'Visualising Pokemon data using sprite art.',
-    link: {
-      href: 'https://www.kaggle.com/code/mattbarty/gotta-plot-em-all',
-      label: 'kaggle.com'
-    },
-    video: 'videos/plotemall-demo.mp4'
+    video: '/videos/stable-diffusion-portrait-demo.mp4'
   },
 ];
 
@@ -114,7 +121,7 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <div className='bg-black aspect-[6/5] overflow-clip'>
+            <div className='bg-black aspect-[5/5] overflow-clip'>
               {project.video ? (
                 <Card.VideoAutoplay src={project.video} />
               ) : project.gif ? (
