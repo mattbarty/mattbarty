@@ -355,7 +355,7 @@ export default async function Home() {
         <Divider title='Personal Projects' />
         <div className='grid max-w-xl grid-cols-1 gap-y-6 lg:max-w-none lg:grid-cols-3 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip mb-2'>
+            <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
               <Card.VideoAutoplay src={'videos/sudoku-solver-demo.mp4'} />
             </div>
             <Card.Title
@@ -374,7 +374,7 @@ export default async function Home() {
             </p>
           </Card>
           <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip mb-2'>
+            <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
               <Card.VideoAutoplay src={'videos/arcanagpt-demo.mp4'} />
             </div>
             <Card.Title
@@ -393,8 +393,8 @@ export default async function Home() {
             </p>
           </Card>
           <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip mb-2'>
-              <Card.VideoAutoplay src={'videos/ai-art-demo.mp4'} />
+            <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
+              <Card.VideoAutoplay src={'videos/whatsapp-language-features-demo.mp4'} />
             </div>
             <Card.Title
               href={`https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop`}
