@@ -397,14 +397,14 @@ export default async function Home() {
               <Card.VideoAutoplay src={'videos/ai-art-demo.mp4'} />
             </div>
             <Card.Title
-              href={`https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop`}
+              href={`https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop`}
               target='_blank'
             >
-              AI-Driven Digital Art
+              WhatsApp Language Extension
             </Card.Title>
             <Card.Description>
-              Leveraging modern AI tools to rapidly produce digital art - Combines the power of
-              Adobe generative fill, Midjourney, and a opensource Stable Diffusion plugin.
+              A chrome extension that augments whatsapp.web with live translations.
+              The idea was to make language learning more ambient and personally-relevant to me, my interests, and my language-level.
             </Card.Description>
             <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
               <LinkIcon className="h-6 w-6 flex-none" />
