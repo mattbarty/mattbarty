@@ -2,6 +2,7 @@ import { ArticleLayout } from '@/components/ArticleLayout';
 import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 import TarotScreens from './tartogpt-screens.png';
+import TarotWorkflow from './tarot-workflow.png';
 import PersonaA from './persona-a.jpg';
 import PersonaB from './persona-b.jpg';
 import PersonaC from './persona-c.jpg';
@@ -10,7 +11,7 @@ import PersonaC from './persona-c.jpg';
 export const article = {
   author: 'Matthew Barty',
   date: '2023-10-10',
-  title: 'ArcanaGPT - UX case study',
+  title: 'ArcanaGPT - UX case study (wip)',
   description:
     'Describing the UX design workflow of ArcanaGPT - An AI-powered Tarot reader.',
   slug: 'case-study-arcanagpt',
@@ -20,6 +21,7 @@ export const metadata = {
   title: article.title,
   description: article.description,
 };
+
 
 const personaData = [
   {
@@ -270,6 +272,11 @@ export default function articleBody() {
           LLM technology.
         </p>
         <h1 className='text-xl dark:text-slate-100 font-bold'>Problem Statement</h1>
+        <div className='font-semibold dark:text-white border-t border-b p-4'>
+          <p className='text-xl md:text-3xl'>
+            "I don't understand Tarot, but I'm open to it - It seems like a fun way to reflect on my life, but I don't know where to start."
+          </p>
+        </div>
         <ul>
           <li>🧙‍♀️ Traditional tarot reading requires a trained interpreter and can be inaccessible to newcomers.</li>
           <li>😵‍💫 Acting as both reader and querent is mentally taxing.</li>
@@ -282,7 +289,7 @@ export default function articleBody() {
           digital platform designed to make tarot reading accessible, convenient, and insightful.
           Our aim is to merge the age-old wisdom of traditional tarot reading with the power of contemporary AI.
         </p>
-        <Image src={TarotScreens} alt='TarotGPT screen samples' />
+        <Image src={TarotScreens} alt='TarotGPT screen samples' className='rounded-none' />
         <p>It's really easiest shown than explained - <br />
           Click the link below to give it a go for yourself! ( and let me know what you think! )</p>
         <a
@@ -301,6 +308,10 @@ export default function articleBody() {
           well be using three exploratory methods to help us understand the landscape of our product; Personas, Task Analysis, and Competitive Analysis.
         </p>
         <p>Then, we'll summarise all our findings into a set of <span className='font-bold'>user requirements</span> we can take forward into ideation.</p>
+        <h1 className='text-xl dark:text-slate-100 font-bold'>Task Analysis</h1>
+        <p>( 🚧 section tbc - watch this space! )</p>
+        <VideoAutoplay className='-z-1 bg-black min-h-[225px] aspect-[6/3] rounded-lg' src={'/videos/tarot-live-demo.mp4'} />
+        <Image src={TarotWorkflow} alt='TarotGPT screen samples' />
         <h1 className='text-xl dark:text-slate-100 font-bold'>Personas</h1>
         <div className='flex flex-col w-full justify-around'>
           <div className="container mx-auto flex flex-wrap justify-center">
@@ -309,32 +320,9 @@ export default function articleBody() {
             ))}
           </div>
         </div>
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Task Analysis</h1>
         <p>( 🚧 section tbc - watch this space! )</p>
         <h1 className='text-xl dark:text-slate-100 font-bold'>Competitor Analysis</h1>
-        <p>
-          <ul>
-            <li>
-              <strong>Digital Apps:</strong>
-              <p>In our pockets and at our fingertips, numerous tarot apps offer instant readings. However, most are quite rudimentary. You shuffle, draw, and receive a rather generic interpretation. While they're convenient, they often miss the mark in providing the depth and personal touch of a human reader.</p>
-            </li>
-
-            <li>
-              <strong>The Traditional Experience:</strong>
-              <p>Nothing quite beats the ambiance of a candle-lit room, the tactile sensation of shuffling cards, and the empathetic gaze of a seasoned tarot reader. This real-life interaction creates a bond, making the reading deeply personal and resonant.</p>
-            </li>
-
-            <li>
-              <strong>YouTube and Online Learning:</strong>
-              <p>For budding tarot enthusiasts, YouTube is a goldmine. From deciphering the symbolism of the Fool to mastering complex spreads, it's all there. Yet, while these tutorials are informative, they lack the personal connection essential for tarot.</p>
-            </li>
-
-            <li>
-              <strong>Public Perception:</strong>
-              <p>Tarot is much more than predicting the future. Each card, rich in symbolism, acts as a mirror reflecting our inner psyche. However, the varied interpretations and esoteric nature often lead to skepticism.</p>
-            </li>
-          </ul>
-        </p>
+        <p>( 🚧 section tbc - watch this space! )</p>
         <h1 className='text-xl dark:text-slate-100 font-bold'>Requirements Specification</h1>
         <Divider title='Ideation' />
         <h1 className='text-xl dark:text-slate-100 font-bold'>Paper sketch</h1>
