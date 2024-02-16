@@ -147,10 +147,10 @@ function Divider({ title }: { title: string; }) {
   return (
     <div className="relative my-20 lg:my-24">
       <div className="absolute inset-0 flex items-center" aria-hidden="true">
-        <div className="w-full border-t border-zinc-600 dark:border-zinc-400"></div>
+        <div className="w-full border-t border-zinc-600 border-zinc-400"></div>
       </div>
       <div className="relative flex justify-start">
-        <span className="bg-white dark:bg-zinc-900 pr-3 text-xl font-semibold leading-6 text-zinc-600 dark:text-zinc-400">{title}</span>
+        <span className="bg-white bg-zinc-900 pr-3 text-xl font-semibold leading-6 text-zinc-600 text-zinc-400">{title}</span>
       </div>
     </div>
   );
@@ -189,13 +189,13 @@ const PersonaCard: React.FC<PersonaProps> = ({ name, archetype, description, age
       <div className=''>
         <Image src={image} alt='Persona A - Mia' className='md:w-[300px] aspect-square rounded-lg mb-4 ' />
         <div>
-          <div className="text-4xl font-bold dark:text-white my-2">{name}</div>
+          <div className="text-4xl font-bold text-white my-2">{name}</div>
           <div>{age} yo. || {archetype}</div>
           <div className="my-4">{description}</div>
         </div>
       </div>
       <div className='flex flex-col h-full justify-between'>
-        <div className='font-semibold dark:text-white border-t border-b p-4'>"{quote}"</div>
+        <div className='font-semibold text-white border-t border-b p-4'>"{quote}"</div>
         <div className="persona-section my-4">
           <div className="text-lg font-semibold mb-2 pt-4">| Goals</div>
           <ul>
@@ -224,7 +224,7 @@ export default function articleBody() {
   return (
     <>
       <ArticleLayout article={article}>
-        <div className='flex flex-col lg:flex-row w-full h-auto justify-between relative bg-black rounded-xl overflow-clip'>
+        <div className='flex flex-col lg:flex-row w-full h-auto justify-between relative bg-black rounded-xl overflow-clip '>
           <div className='relative flex flex-col justify-center w-auto mx-2 my-2 md:mx-6 items'>
             <div className='absolute top-0 left-0 md:-inset-x-[35%] z-10'>
               <ArcanagptBackgroundAsset className='h-[300px] lg:h-auto  absolute mb-8 animate-slow-spin duration-1000' />
@@ -253,11 +253,11 @@ export default function articleBody() {
           </div>
           <div className='relative h-[300px] md:h-[600px] min-w-[150px] md:min-w-[450px] overflow-clip'>
             <div className='absolute w-full h-full bg-gradient-to-r from-black -inset-x-10 md:-inset-x-2'></div>
-            <VideoAutoplay className='-z-1 bg-black min-h-[350px]' src={'/videos/arcanagpt-demo.mp4'} />
+            <VideoAutoplay className='-z-1 bg-black min-h-[350px]' src={'https://dixog9cdtdsmc.cloudfront.net/arcanaGPT.mp4'} />
           </div>
         </div>
         <Divider title='Project Summary' />
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Context</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>Context</h1>
         <p>Tarot reading, with its rich history and mystique, has long been a tool for introspection. Typically done by a trained reader,
           it involves drawing cards from a deck and interpreting their meanings in the context of a question or situation - In my personal life,
           I've found it a convenient and fun prompt for self-reflection.
@@ -271,8 +271,8 @@ export default function articleBody() {
           Therefore, I decided to create ArcanaGPT, a webapp that uses contemporary AI to deliver instant, tailored Tarot readings using cutting edge
           LLM technology.
         </p>
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Problem Statement</h1>
-        <div className='font-semibold dark:text-white border-t border-b p-4'>
+        <h1 className='text-xl text-slate-100 font-bold'>Problem Statement</h1>
+        <div className='font-semibold text-white border-t border-b p-4'>
           <p className='text-xl md:text-3xl'>
             "I don't understand Tarot, but I'm open to it - It seems like a fun way to reflect on my life, but I don't know where to start."
           </p>
@@ -283,7 +283,7 @@ export default function articleBody() {
           <li>💤 Automated tarot services are generic and lack the depth and nuance of human readers.</li>
           <li>🤖 There's a gap for a solution that blends automation convenience with human-like depth.</li>
         </ul>
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Solution</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>Solution</h1>
         <p>
           Introducing <strong>ArcanaGPT</strong> - Bridging Tradition with Modern Technology - a revolutionary
           digital platform designed to make tarot reading accessible, convenient, and insightful.
@@ -308,11 +308,11 @@ export default function articleBody() {
           well be using three exploratory methods to help us understand the landscape of our product; Personas, Task Analysis, and Competitive Analysis.
         </p>
         <p>Then, we'll summarise all our findings into a set of <span className='font-bold'>user requirements</span> we can take forward into ideation.</p>
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Task Analysis</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>Task Analysis</h1>
         <p>( 🚧 section tbc - watch this space! )</p>
         <VideoAutoplay className='-z-1 bg-black min-h-[225px] aspect-[6/3] rounded-lg' src={'/videos/tarot-live-demo.mp4'} />
         <Image src={TarotWorkflow} alt='TarotGPT screen samples' />
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Personas</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>Personas</h1>
         <div className='flex flex-col w-full justify-around'>
           <div className="container mx-auto flex flex-wrap justify-center">
             {personaData.map((persona, idx) => (
@@ -321,18 +321,18 @@ export default function articleBody() {
           </div>
         </div>
         <p>( 🚧 section tbc - watch this space! )</p>
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Competitor Analysis</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>Competitor Analysis</h1>
         <p>( 🚧 section tbc - watch this space! )</p>
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Requirements Specification</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>Requirements Specification</h1>
         <Divider title='Ideation' />
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Paper sketch</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>Paper sketch</h1>
         <p>( 🚧 section tbc - watch this space! )</p>
-        <h1 className='text-xl dark:text-slate-100 font-bold'>WireFraming</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>WireFraming</h1>
         <p>( 🚧 section tbc - watch this space! )</p>
         <Divider title='Design' />
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Design Walkthrough</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>Design Walkthrough</h1>
         <p>( 🚧 section tbc - watch this space! )</p>
-        <h1 className='text-xl dark:text-slate-100 font-bold'>Next Steps & Reflections</h1>
+        <h1 className='text-xl text-slate-100 font-bold'>Next Steps & Reflections</h1>
         <p>( 🚧 section tbc - watch this space! )</p>
       </ArticleLayout>
     </>

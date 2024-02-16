@@ -22,10 +22,10 @@ function Divider({ title }: { title: string; }) {
   return (
     <div className="relative my-20 lg:my-24">
       <div className="absolute inset-0 flex items-center" aria-hidden="true">
-        <div className="w-full border-t border-zinc-600 dark:border-zinc-400"></div>
+        <div className="w-full border-t  border-zinc-400"></div>
       </div>
       <div className="relative flex justify-start">
-        <span className="bg-white dark:bg-zinc-900 pr-3 text-xl font-semibold leading-6 text-zinc-600 dark:text-zinc-400">{title}</span>
+        <span className=" bg-zinc-900 pr-3 text-xl font-semibold leading-6  text-zinc-400">{title}</span>
       </div>
     </div>
   );
@@ -53,7 +53,7 @@ export default function articleBody() {
         </div>
         <div>
           <Divider title='Human Factors Engineering' />
-          <Image src={versiusStudy} alt="Usability study scene featuring Versius" className='rounded-lg lg:px-24' />
+          <Image src='https://dixog9cdtdsmc.cloudfront.net/tarot-live-demo.mp4' alt="Usability study scene featuring Versius" className='rounded-lg lg:px-24' />
           <p>
             As a Human Factors Engineer, my job was to ensure that Versius was safe and effective for use. That meant having intimate knowledge
             of the entire surgical system, including its hardware (console, arms ("BSU"), instruments, etc.), software (GUIs), and the cultural,
