@@ -61,7 +61,6 @@ Card.VideoAutoplay = function VideoLink({ src, ...props }: { src: string; }) {
       autoPlay
       muted
       playsInline
-      controls
       style={{ width: "100%", height: "100%" }}
       {...props}>
       <source src={src} type="video/mp4" />
@@ -72,35 +71,25 @@ Card.VideoAutoplay = function VideoLink({ src, ...props }: { src: string; }) {
 export default function About() {
   return (
     <Container className="mt-16 sm:mt-32">
+      <div className='w-full relative flex lg:justify-end h-full items-center'>
+        <div className='absolute w-full h-full bg-[rgba(0,0,0,0.6)] p-4 lg:rounded-l-md lg:w-auto lg:h-auto z-10'>
+          <div className='flex flex-col h-full justify-center md:justify-around w-full z-50 max-w-lg'>
+            <h1 className="text-4xl font-bold tracking-tight  text-zinc-100 sm:text-5xl">
+              Hey! I'm Matt - <br />
+            </h1>
+            <p className='text-xl sm:text-2xl font-light text-zinc-100 mt-2'>My passion is learning, building, and teaching all things Tech ✨ - I'm also big into videography, painting, and coffee ☕️</p>
+          </div>
+        </div>
+        <div className='bg-black overflow-clip w-full aspect-[3/2] md:aspect-auto rounded-md'>
+          < Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/hero-banner-2-compressed.mp4'} />
+        </div>
+      </div>
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
         <div className="lg:pl-20">
           <div className="md:max-w-xs px-2.5 lg:max-w-none">
-            <Image
-              src='https://dixog9cdtdsmc.cloudfront.net/avatar.jpg'
-              alt=""
-              sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rounded-2xl object-cover bg-zinc-800"
-              width={320}
-              height={320}
-            />
-            {/* <div className='w-full'>
-              < Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/stable-diffusion-portrait-demo.mp4'} />
-              <p
-                className='text-zinc-100 italic text-xs mt-2 block transition'>
-                * Portraits generated using StableDiffusion Model with ControlNet framework <a
-                  target='_blank'
-                  href="https://www.linkedin.com/posts/matthew-barty_stablediffusion-ai-aiartwork-activity-7065698539477069825-eaZ8?utm_source=share&utm_medium=member_desktop'"
-                  className='text-teal-500 hover:underline transition hover:font-bold '
-                >(see project)</a>.
-              </p>
-            </div> */}
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight  text-zinc-100 sm:text-5xl">
-            I’m Matt Barty - <br />
-          </h1>
-          <p className='text-2xl sm:text-4xl text-thin text-zinc-100'>Building cool things, solving hard problems ✨</p>
           <div className="mt-6 space-y-7 text-base  text-zinc-400">
             <p>
               I love design, technology, and people.
