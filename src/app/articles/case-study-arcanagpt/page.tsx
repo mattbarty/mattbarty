@@ -1,11 +1,6 @@
 import { ArticleLayout } from '@/components/ArticleLayout';
 import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
-import TarotScreens from './tartogpt-screens.png';
-import TarotWorkflow from './tarot-workflow.png';
-import PersonaA from './persona-a.jpg';
-import PersonaB from './persona-b.jpg';
-import PersonaC from './persona-c.jpg';
 
 
 export const article = {
@@ -30,7 +25,7 @@ const personaData = [
     "age": "20",
     "description": "Recent college graduate intrigued by tarot. Seeks an intuitive, beginner-friendly platform for personal growth.",
     "quote": "I've always been curious about tarot, but where do I even start without feeling lost?",
-    "image": PersonaA,
+    "image": "https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/persona-a.jpg",
     "goals": [
       "Wants to learn tarot without getting overwhelmed.",
       "Seeks a beginner-friendly platform.",
@@ -53,7 +48,7 @@ const personaData = [
     "age": "31",
     "description": "Tech worker familiar with tarot, seeking immediate insights during emotional distress.",
     "quote": "Life's thrown me a curveball. I just need something to help me make sense of it all.",
-    "image": PersonaB,
+    "image": "https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/persona-b.jpg",
     "goals": ["Needs quick and meaningful readings.", "Wants insights for emotional navigation.", "Prefers a responsive, immediate tool."],
     "painPoints": ["Doesn't want long readings.", "Wants resonating readings.", "Needs an immediate responsive tool."],
     "arcanaGpthelps": ["Delivers instant, tailored readings.", "Offers depth and nuance.", "Acts as an immediate reflection source."]
@@ -64,7 +59,7 @@ const personaData = [
     "age": "52",
     "description": "A librarian and tarot enthusiast for decades. Seeks depth and detailed interpretations for self-reflection.",
     "quote": "Over the years, tarot has been my anchor. I'm always seeking new depths and perspectives to my understanding.",
-    "image": PersonaC,
+    "image": "https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/persona-c.jpg",
     "goals": ["Enhance tarot reading skills.", "Use ArcanaGPT as a companion.", "Seeks detailed interpretations."],
     "painPoints": ["Avoids generic readings.", "Seeks a complementing tool.", "Needs a platform respecting traditional nuances."],
     "arcanaGpthelps": ["Provides in-depth analysis.", "Offers alternative perspectives.", "Allows deep reflection on meanings."]
@@ -147,10 +142,10 @@ function Divider({ title }: { title: string; }) {
   return (
     <div className="relative my-20 lg:my-24">
       <div className="absolute inset-0 flex items-center" aria-hidden="true">
-        <div className="w-full border-t border-zinc-600 border-zinc-400"></div>
+        <div className="w-full border-t  border-zinc-400"></div>
       </div>
       <div className="relative flex justify-start">
-        <span className="bg-white bg-zinc-900 pr-3 text-xl font-semibold leading-6 text-zinc-600 text-zinc-400">{title}</span>
+        <span className=" bg-zinc-900 pr-3 text-xl font-semibold leading-6  text-zinc-400">{title}</span>
       </div>
     </div>
   );
@@ -178,7 +173,7 @@ interface PersonaProps {
   description: string;
   age: string;
   quote: string;
-  image: StaticImageData;
+  image: string;
   goals: string[];
   painPoints: string[];
 }
@@ -187,7 +182,17 @@ const PersonaCard: React.FC<PersonaProps> = ({ name, archetype, description, age
   return (
     <div className="my-6 card shadow-md rounded-lg p-2 md:p-6 border border-slate-600 grid grid-cols-1 md:grid-cols-2 gap-4">
       <div className=''>
-        <Image src={image} alt='Persona A - Mia' className='md:w-[300px] aspect-square rounded-lg mb-4 ' />
+        <div className='w-40'>
+          <Image
+            src={image}
+            alt={`Persona ${name}`}
+            className='w-full h-auto aspect-square rounded-lg mb-4 '
+            width={0}
+            height={0}
+            sizes="100vw"
+            unoptimized
+          />
+        </div>
         <div>
           <div className="text-4xl font-bold text-white my-2">{name}</div>
           <div>{age} yo. || {archetype}</div>
@@ -253,7 +258,7 @@ export default function articleBody() {
           </div>
           <div className='relative h-[300px] md:h-[600px] min-w-[150px] md:min-w-[450px] overflow-clip'>
             <div className='absolute w-full h-full bg-gradient-to-r from-black -inset-x-10 md:-inset-x-2'></div>
-            <VideoAutoplay className='-z-1 bg-black min-h-[350px]' src={'https://dixog9cdtdsmc.cloudfront.net/arcanaGPT.mp4'} />
+            <VideoAutoplay className='-z-1 bg-black min-h-[350px]' src={'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'} />
           </div>
         </div>
         <Divider title='Project Summary' />
@@ -289,7 +294,16 @@ export default function articleBody() {
           digital platform designed to make tarot reading accessible, convenient, and insightful.
           Our aim is to merge the age-old wisdom of traditional tarot reading with the power of contemporary AI.
         </p>
-        <Image src={TarotScreens} alt='TarotGPT screen samples' className='rounded-none' />
+        <Image
+          src='https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/tartogpt-screens.png'
+          alt='TarotGPT screen samples'
+          className='rounded-none'
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }}
+          unoptimized
+        />
         <p>It's really easiest shown than explained - <br />
           Click the link below to give it a go for yourself! ( and let me know what you think! )</p>
         <a
@@ -311,7 +325,15 @@ export default function articleBody() {
         <h1 className='text-xl text-slate-100 font-bold'>Task Analysis</h1>
         <p>( 🚧 section tbc - watch this space! )</p>
         <VideoAutoplay className='-z-1 bg-black min-h-[225px] aspect-[6/3] rounded-lg' src={'/videos/tarot-live-demo.mp4'} />
-        <Image src={TarotWorkflow} alt='TarotGPT screen samples' />
+        <Image
+          src='https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/tarot-workflow.png'
+          alt='TarotGPT screen samples'
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }}
+          unoptimized
+        />
         <h1 className='text-xl text-slate-100 font-bold'>Personas</h1>
         <div className='flex flex-col w-full justify-around'>
           <div className="container mx-auto flex flex-wrap justify-center">

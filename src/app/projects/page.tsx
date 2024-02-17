@@ -10,7 +10,7 @@ const projects = [
     description:
       'Using computer vision to solve sudoku puzzles in realtime.',
     link: { href: 'https://github.com/mattbarty/cv_sudoku_solver', label: 'github.com' },
-    video: 'https://dixog9cdtdsmc.cloudfront.net/sudoku-solver-demo.mp4'
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/sudoku-solver-demo.mp4'
   },
   {
     name: 'ArcanaGPT (Figma Prototype)',
@@ -20,7 +20,7 @@ const projects = [
       href: 'https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design',
       label: 'figma.com'
     },
-    video: 'https://dixog9cdtdsmc.cloudfront.net/arcanaGPT.mp4'
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'
   },
   {
     name: 'WhatsApp Language Extension',
@@ -30,14 +30,14 @@ const projects = [
       href: 'https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop',
       label: 'linkedin.com'
     },
-    video: 'https://dixog9cdtdsmc.cloudfront.net/whatsapp-1-demo.mp4'
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/whatsapp-1-demo.mp4'
   },
   {
     name: 'LinkedInfluencer.app',
     description:
       'WebApp that uses BLIP-2 and GPT-3.5 to generate parody LinkedIn posts.',
     link: { href: 'https://linkedinfluencer.app', label: 'linkedinfluencer.app' },
-    video: 'https://dixog9cdtdsmc.cloudfront.net/linkedinfluencer-demo.mp4'
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/linkedinfluencer-demo.mp4'
   },
   {
     name: 'AI-Powered Art Workflow',
@@ -47,7 +47,7 @@ const projects = [
       href: 'https://www.linkedin.com/posts/matthew-bartsy_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop',
       label: 'linkedin.com'
     },
-    video: 'https://dixog9cdtdsmc.cloudfront.net/art-art-demo.mp4'
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/art-art-demo.mp4'
   },
   {
     name: 'Pokemon Sprites Data Visualisation',
@@ -57,28 +57,28 @@ const projects = [
       href: 'https://www.kaggle.com/code/mattbarty/gotta-plot-em-all',
       label: 'kaggle.com'
     },
-    video: 'https://dixog9cdtdsmc.cloudfront.net/plotemall-demo.mp4'
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/plotemall-demo.mp4'
   },
   {
     name: 'AI-Generated & Narrated Short Story',
     description:
       'A demo that combines cutting-edge LLM, Image Diffusion, and text-to-voice models to tell an entirely original horror story.',
     link: { href: 'https://www.linkedin.com/feed/update/urn:li:activity:7110525573034033153/', label: 'linkedin.com' },
-    video: 'https://dixog9cdtdsmc.cloudfront.net/ai-story-demo.mp4'
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/ai-story-demo.mp4'
   },
   {
     name: 'Brain Disease Classifier (ML)',
     description:
       'Training a DNN to classify brain tumour type from scans.',
     link: { href: 'https://github.com/mattbarty/brain-tumour-categorical-classifier', label: 'github.com' },
-    gif: 'https://dixog9cdtdsmc.cloudfront.net/brain-disease-classifier-demo.gif'
+    gif: 'https://dixog9cdtdsmc.cloudfront.net/projects/brain-disease-classifier-demo.gif'
   },
   {
     name: 'Eye Disease Classifier (ML)',
     description:
       'Training a DNN to diagnose my own retina scan.',
     link: { href: 'https://github.com/mattbarty/eye_diseases_classification', label: 'github.com' },
-    gif: 'https://dixog9cdtdsmc.cloudfront.net/eye-disease-classification-demo.gif'
+    gif: 'https://dixog9cdtdsmc.cloudfront.net/projects/eye-disease-classification-demo.gif'
   },
   {
     name: 'ControlNet Portraits',
@@ -88,7 +88,7 @@ const projects = [
       href: 'https://www.linkedin.com/posts/matthew-barty_stablediffusion-ai-aiartwork-activity-7065698539477069825-eaZ8?utm_source=share&utm_medium=member_desktop',
       label: 'linkedin.com'
     },
-    video: 'https://dixog9cdtdsmc.cloudfront.net/stable-diffusion-portrait-demo.mp4'
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/stable-diffusion-portrait-demo.mp4'
   },
 ];
 

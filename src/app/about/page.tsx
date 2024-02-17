@@ -9,7 +9,6 @@ import {
   LinkedInIcon,
   MediumIcon,
 } from '@/components/SocialIcons';
-import portraitImage from '@/images/avatar.jpg';
 import ResumeButton from '@/components/ResumeButton';
 
 function SocialLink({
@@ -60,10 +59,12 @@ export default function About() {
         <div className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
-              src={portraitImage}
+              src='https://dixog9cdtdsmc.cloudfront.net/avatar.jpg'
               alt=""
               sizes="(min-width: 1024px) 32rem, 20rem"
               className="aspect-square rounded-2xl object-cover bg-zinc-800"
+              width={320}
+              height={320}
             />
           </div>
         </div>

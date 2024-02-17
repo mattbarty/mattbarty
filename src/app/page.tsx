@@ -7,7 +7,6 @@ import {
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons';
-import avatar from '@/images/avatar.jpg';
 
 function ChevronRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -113,7 +112,7 @@ export default async function Home() {
           <Link href='/about'>
             <div className='h-[160px] w-[160px] md:h-[200px] md:w-[200px] rounded-full overflow-clip 
             border-2 border-zinc-600'>
-              <Image src={avatar} alt="" className=" object-cover hover:scale-105 transition-all hover:opacity-70 " unoptimized />
+              <Image src='https://dixog9cdtdsmc.cloudfront.net/avatar.jpg' alt="" className=" object-cover hover:scale-105 transition-all hover:opacity-70" width={500} height={500} unoptimized />
             </div>
           </Link>
         </div>
@@ -161,7 +160,7 @@ export default async function Home() {
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/arcanaGPT.mp4'} />
+              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'} />
             </div>
             <div className='my-2'></div>
             {/* <Card.Title href={`/articles/how-i-work`}> */}
@@ -183,7 +182,7 @@ export default async function Home() {
         <div className='grid max-w-xl grid-cols-1 gap-y-6 lg:max-w-none lg:grid-cols-3 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
             <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/sudoku-solver-demo.mp4'} />
+              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/sudoku-solver-demo.mp4'} />
             </div>
             <Card.Title
               href={`https://github.com/mattbarty/cv_sudoku_solver`}
@@ -202,7 +201,7 @@ export default async function Home() {
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/arcanaGPT.mp4'} />
+              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'} />
             </div>
             <Card.Title
               href={`https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design`}
@@ -221,7 +220,7 @@ export default async function Home() {
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/whatsapp-1-demo.mp4'} />
+              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/whatsapp-1-demo.mp4'} />
             </div>
             <Card.Title
               href={`https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop`}

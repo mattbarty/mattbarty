@@ -4,13 +4,10 @@ import { Fragment, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useTheme } from 'next-themes';
 import { Popover, Transition } from '@headlessui/react';
 import clsx from 'clsx';
 
 import { Container } from '@/components/Container';
-import avatarImage from '@/images/avatar.jpg';
-import { text } from 'stream/consumers';
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -177,7 +174,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
         <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/projects">Projects</NavItem>
         <a
-          href='https://dixog9cdtdsmc.cloudfront.net/matthew_barty_resume_2023.pdf'
+          href='./pdf/matthew_barty_resume_2024.pdf'
           target="_blank"
           rel="noopener noreferrer"
           className='group relative flex px-3 py-2 transition items-center  hover:text-teal-400 '>
@@ -228,13 +225,16 @@ function Avatar({
       {...props}
     >
       <Image
-        src={avatarImage}
+        src='https://dixog9cdtdsmc.cloudfront.net/avatar.jpg'
         alt=""
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
           'rounded-full object-cover bg-zinc-800',
           large ? 'h-16 w-16' : 'h-9 w-9',
         )}
+        width={0}
+        height={0}
+        unoptimized
         priority
       />
     </Link>
