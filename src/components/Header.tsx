@@ -117,7 +117,7 @@ function MobileNavigation(
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
                 <MobileNavItem href="/projects">Projects</MobileNavItem>
-                <a href='/docs/matthew_barty_resume_2023.pdf'
+                <a href='/pdf/matthew_barty_resume_2024.pdf'
                   target="_blank"
                   rel="noopener noreferrer"
                   className='relative py-2 transition flex items-center'>
