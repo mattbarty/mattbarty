@@ -21,6 +21,17 @@ function ChevronRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   );
 }
 
+function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        fillRule="evenodd"
+        d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
+      />
+    </svg>
+  );
+}
+
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -53,7 +64,7 @@ function SocialLink({
 }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 transition  fill-zinc-400 group-hover:fill-zinc-300" />
+      <Icon className="h-6 w-6 flex-none fill-zinc-400 transition hover:fill-teal-500" />
     </Link>
   );
 }
@@ -108,77 +119,67 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
-        <div className='h-[6rem] md:h-[9rem] mb-8 -translate-y-[4rem] inset-20'>
-          <Link href='/about'>
-            <div className='h-[160px] w-[160px] md:h-[200px] md:w-[200px] rounded-full overflow-clip 
-            border-2 border-zinc-600'>
-              <Image src='https://dixog9cdtdsmc.cloudfront.net/avatar.jpg' alt="" className=" object-cover hover:scale-105 transition-all hover:opacity-70" width={500} height={500} unoptimized />
+        <div className='w-full relative flex lg:justify-end h-full items-center'>
+          <div className='absolute w-full h-full bg-[rgba(0,0,0,0.6)] p-4 lg:rounded-l-md lg:w-auto lg:h-auto z-10'>
+            <div className='flex flex-col h-full justify-center md:justify-around w-full z-50 max-w-lg'>
+              <Link
+                href={`/about`}
+                className=' '
+              >
+                <div className='group'>
+                  <h2 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl z-10 group-hover:text-teal-400">
+                    Matt Barty
+                  </h2>
+                  <div className='flex font-light text-lg lg:text-xl text-zinc-100 z-10 group-hover:text-teal-400 gap-2'>
+                    <p className=''>UX Engineer |</p>
+                    <p className='flex gap-2' ><span className='hidden sm:block'>Full-Stack</span> Developer |</p>
+                    <p>Data Scientist</p>
+                  </div>
+                </div>
+              </Link>
+              <p className="mt-6 text-base text-zinc-400 z-10 hidden sm:block">
+                My passion is learning, building, and teaching all things Tech ✨ - I'm also big into videography, painting, and coffee ☕️
+              </p>
+              <div className="mt-6 flex gap-6 items-center h-auto w-full justify-center md:justify-start">
+                <Link
+                  href={"/projects"}
+                >
+                  <div
+                    className='bg-teal-500 text-zinc-100 px-4 py-2 rounded-md font-semibold transition hover:bg-teal-400 hover:text-zinc-200 z-10'
+                  >See projects
+                  </div>
+                </Link>
+                <div className='flex gap-4 bg-zinc-900 py-2 px-4 rounded-md'>
+                  <SocialLink
+                    href="mailto:matthew.barty@outlook.com"
+                    icon={MailIcon}
+                    className="z-10 hover:fill-teal-400"
+                  >
+                    matthew.barty@outlook.com
+                  </SocialLink>
+                  <SocialLink
+                    href="https://github.com/mattbarty"
+                    target='_blank'
+                    aria-label="Follow on GitHub"
+                    icon={GitHubIcon}
+                    className='z-10 hover:fill-teal-400'
+                  />
+                  <SocialLink
+                    href="https://www.linkedin.com/in/matthew-barty/"
+                    target='_blank'
+                    aria-label="Follow on LinkedIn"
+                    icon={LinkedInIcon}
+                    className='z-10 hover:fill-teal-400'
+                  />
+                </div>
+              </div>
             </div>
-          </Link>
-        </div>
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
-            Matt Barty<br />
-          </h1>
-          <p className='font-thin text-xl md:text-3xl text-zinc-100'>UX Engineer & Creative Technologist</p>
-          <p className="mt-6 text-base text-zinc-400">
-            6 years of cross-functional experience in UXR/D, Data Science, and Programming ✨ -
-            <br />
-            Professionally I design, develop, and test complex MedTech products (hardware & software),
-            but my passion lies in the intersection of technology, design, and human behaviour -
-            Wherever that takes me 🚀
-          </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://github.com/mattbarty"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://www.linkedin.com/in/matthew-barty/"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
+          </div>
+          <div className='bg-black overflow-clip w-full aspect-[3/2] md:aspect-auto rounded-md'>
+            < Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/hero-banner-2-compressed.mp4'} />
           </div>
         </div>
-        <Divider title='Case Study Articles' />
-        <div className='grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 gap-0 md:gap-12 mt-24 md:mt-28'>
-          <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/VersiusPage-FinalBanner-xCompressed.mp4'} />
-            </div>
-            <div className='my-2'></div>
-            <Card.Title href={`/articles/my-work-on-versius`}>
-              My work on Versius
-            </Card.Title>
-            <Card.Description>
-              I worked as a Human Factors Engineer and Clinical Data Scientist
-              on a next-gen surgical robotic system, Versius. Versius
-              is designed to be portable, modular, and cost-effective - Transforming surgery, for good.
-            </Card.Description>
-            <Card.Cta className='text-gray-500'>Read article</Card.Cta>
-          </Card>
-          <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'} />
-            </div>
-            <div className='my-2'></div>
-            {/* <Card.Title href={`/articles/how-i-work`}> */}
-            <Card.Title href={`/articles/case-study-arcanagpt`}>
-              ArcanaGPT - UX Case Study
-            </Card.Title>
-            <Card.Description>
-              ArcanaGPT merges Tarot Tradition with Cutting-Edge AI -
-              In this case study I discuss how I use designing thinking and UXR/D techniques
-              to create an experience that is accessible, intuitive, and most importantly - Fun!
-            </Card.Description>
-            <Card.Cta>Read article </Card.Cta>
-          </Card>
-        </div>
-      </Container>
-
-      <Container className="mt-24 md:mt-28">
-        <Divider title='Personal Projects' />
+        <Divider title='Projects Highlights' />
         <div className='grid max-w-xl grid-cols-1 gap-y-6 lg:max-w-none lg:grid-cols-3 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
             <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
@@ -247,6 +248,41 @@ export default async function Home() {
             See more projects
             <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
           </Link>
+        </div>
+
+        <Divider title='Case Study Articles' />
+        <div className='grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 gap-0 md:gap-12 mt-24 md:mt-28'>
+          <Card as="article">
+            <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
+              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/VersiusPage-FinalBanner-xCompressed.mp4'} />
+            </div>
+            <div className='my-2'></div>
+            <Card.Title href={`/articles/my-work-on-versius`}>
+              My work on Versius
+            </Card.Title>
+            <Card.Description>
+              I worked as a Human Factors Engineer and Clinical Data Scientist
+              on a next-gen surgical robotic system, Versius. Versius
+              is designed to be portable, modular, and cost-effective - Transforming surgery, for good.
+            </Card.Description>
+            <Card.Cta className='text-gray-500'>Read article</Card.Cta>
+          </Card>
+          <Card as="article">
+            <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
+              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'} />
+            </div>
+            <div className='my-2'></div>
+            {/* <Card.Title href={`/articles/how-i-work`}> */}
+            <Card.Title href={`/articles/case-study-arcanagpt`}>
+              ArcanaGPT - UX Case Study
+            </Card.Title>
+            <Card.Description>
+              ArcanaGPT merges Tarot Tradition with Cutting-Edge AI -
+              In this case study I discuss how I use designing thinking and UXR/D techniques
+              to create an experience that is accessible, intuitive, and most importantly - Fun!
+            </Card.Description>
+            <Card.Cta>Read article </Card.Cta>
+          </Card>
         </div>
       </Container>
     </>

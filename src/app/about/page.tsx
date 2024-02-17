@@ -2,6 +2,7 @@ import { type Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { Card } from '@/components/Card';
 
 import { Container } from '@/components/Container';
 import {
@@ -52,12 +53,28 @@ export const metadata: Metadata = {
     'I’m Matt Barty - I build cool things and solve hard problems.',
 };
 
+Card.VideoAutoplay = function VideoLink({ src, ...props }: { src: string; }) {
+  return (
+    <video
+      className='w-full h-full object-cover z-100'
+      loop
+      autoPlay
+      muted
+      playsInline
+      controls
+      style={{ width: "100%", height: "100%" }}
+      {...props}>
+      <source src={src} type="video/mp4" />
+    </video>
+  );
+};
+
 export default function About() {
   return (
     <Container className="mt-16 sm:mt-32">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
         <div className="lg:pl-20">
-          <div className="max-w-xs px-2.5 lg:max-w-none">
+          <div className="md:max-w-xs px-2.5 lg:max-w-none">
             <Image
               src='https://dixog9cdtdsmc.cloudfront.net/avatar.jpg'
               alt=""
@@ -66,6 +83,17 @@ export default function About() {
               width={320}
               height={320}
             />
+            {/* <div className='w-full'>
+              < Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/stable-diffusion-portrait-demo.mp4'} />
+              <p
+                className='text-zinc-100 italic text-xs mt-2 block transition'>
+                * Portraits generated using StableDiffusion Model with ControlNet framework <a
+                  target='_blank'
+                  href="https://www.linkedin.com/posts/matthew-barty_stablediffusion-ai-aiartwork-activity-7065698539477069825-eaZ8?utm_source=share&utm_medium=member_desktop'"
+                  className='text-teal-500 hover:underline transition hover:font-bold '
+                >(see project)</a>.
+              </p>
+            </div> */}
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">

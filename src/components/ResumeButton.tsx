@@ -6,8 +6,8 @@ import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 
 const handleDownloadResume = () => {
   const link = document.createElement('a');
-  link.href = 'docs/matthew_barty_resume_2023.pdf';
-  link.download = 'docs/matthew_barty_resume_2023.pdf';
+  link.href = 'pdf/matthew_barty_resume_2024.pdf';
+  link.download = 'pdf/matthew_barty_resume_2024.pdf';
   link.target = '_blank';
   document.body.appendChild(link);
   link.click();
