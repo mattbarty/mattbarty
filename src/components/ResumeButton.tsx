@@ -23,7 +23,7 @@ export default function ResumeButton({ className, ...props }: ResumeButtonProps)
   return (
     <button className={clsx(
       className,
-      'bg-teal-600 hover:bg-teal-500 p-3 rounded-lg',
+      'bg-teal-600 hover:bg-teal-500 p-3 rounded-lg text-zinc-100',
     )}
       onClick={handleDownloadResume}
       {...props}

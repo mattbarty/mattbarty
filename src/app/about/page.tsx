@@ -1,4 +1,5 @@
-import { type Metadata } from 'next';
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
@@ -23,15 +24,28 @@ function SocialLink({
   icon: React.ComponentType<{ className?: string; }>;
   children: React.ReactNode;
 }) {
+
+  const stopPropagation = (e: any) => {
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
+  };
+
   return (
+
+
+
     <li className={clsx(className, 'flex')}>
-      <Link
-        href={href}
-        className="group flex text-sm font-medium  transition text-zinc-200 hover:text-teal-500"
-      >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
-        <span className="ml-4">{children}</span>
-      </Link>
+      <Link legacyBehavior href={href}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex text-sm font-medium  transition text-zinc-200 hover:text-teal-500"
+          onClick={stopPropagation}
+        >
+          <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+          <span className="ml-4">{children}</span>
+        </a>
+      </Link >
     </li>
   );
 }
@@ -46,12 +60,6 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     </svg>
   );
 }
-
-export const metadata: Metadata = {
-  title: 'About',
-  description:
-    'I’m Matt Barty - I build cool things and solve hard problems.',
-};
 
 Card.VideoAutoplay = function VideoLink({ src, ...props }: { src: string; }) {
   return (
@@ -72,7 +80,7 @@ export default function About() {
   return (
     <Container className="mt-16 sm:mt-32">
       <div className='w-full relative flex lg:justify-end h-full items-center'>
-        <div className='absolute w-full h-full bg-[rgba(0,0,0,0.6)] p-4 lg:rounded-l-md lg:w-auto lg:h-auto z-10'>
+        <div className='absolute w-full h-full rounded-lg bg-[rgba(0,0,0,0.6)] md:bg-[rgba(0,0,0,0.3)] p-4 lg:rounded-l-md lg:w-auto lg:h-auto z-10'>
           <div className='flex flex-col h-full justify-center md:justify-around w-full z-50 max-w-lg'>
             <h1 className="text-4xl font-bold tracking-tight  text-zinc-100 sm:text-5xl">
               Hey! I'm Matt - <br />
