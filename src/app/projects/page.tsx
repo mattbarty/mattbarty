@@ -47,6 +47,13 @@ const projects = [
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/linkedinfluencer-demo.mp4'
   },
   {
+    name: 'Wordle Bot',
+    description:
+      'Using python, some complex algorithms, and a webdriver to hack a real-world, online Wordle game.',
+    link: { href: 'https://github.com/mattbarty/wordle-bot', label: 'github.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/wordle-bot.mp4'
+  },
+  {
     name: 'AI-Powered Art Workflow',
     description:
       'Combining Midjourney, Stable Diffusion, and Photoshop GenAI models to rapidly create digital art.',
@@ -71,7 +78,7 @@ const projects = [
     description:
       'A walkthrough tutorial demonstrating how to scrape series data from IMDB.com (ep. 1 of 2).',
     link: {
-      href: 'https://youtu.be/SQ4NgT3jDkE?t=1407',
+      href: 'https://youtu.be/qNfxUsQ70QU',
       label: 'youtube.com'
     },
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/imdb-scraper.mp4'

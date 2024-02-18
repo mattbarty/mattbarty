@@ -50,7 +50,7 @@ function Divider({ title }: { title: string; }) {
         <div className="w-full border-t border-zinc-400"></div>
       </div>
       <div className="relative flex justify-start">
-        <span className="bg-zinc-900 pr-3 text-base font-semibold leading-6 text-zinc-400">{title}</span>
+        <span className="bg-zinc-900 pr-3 text-xl font-semibold leading-6 text-zinc-400">{title}</span>
       </div>
     </div>
   );
@@ -158,7 +158,17 @@ export default async function Home() {
             />
           </div>
         </div>
-        <Divider title='Case Study Articles' />
+        <Divider title='Blog Posts' />
+        <Link
+          aria-hidden="true"
+          href="/blog"
+          className="relative z-10 flex flex-col text-sm font-medium text-teal-500 hover:text-teal-300"
+        >
+          <div className='flex items-center'>
+            <p className='text-base'>See more blog posts</p>
+            <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
+          </div>
+        </Link>
         <div className='grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
@@ -192,8 +202,20 @@ export default async function Home() {
             <Card.Cta>Read article </Card.Cta>
           </Card>
         </div>
+
+
         <Divider title='Projects Highlights' />
-        <div className='grid max-w-xl grid-cols-1 gap-y-6 lg:max-w-none lg:grid-cols-3 gap-0 md:gap-12 mt-24 md:mt-28'>
+        <Link
+          aria-hidden="true"
+          href="/projects"
+          className="relative z-10 flex flex-col text-sm font-medium text-teal-500 hover:text-teal-300"
+        >
+          <div className='flex items-center'>
+            <p className='text-base mt-1'>See more projects</p>
+            <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
+          </div>
+        </Link>
+        <div className='grid max-w-xl grid-cols-1 gap-y-8 lg:max-w-none lg:grid-cols-3 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
             <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
               <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/sudoku-solver-demo.mp4'} />
@@ -215,21 +237,19 @@ export default async function Home() {
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'} />
+              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/gobby-demo.mp4'} />
             </div>
             <Card.Title
-              href={`https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design`}
+              href={`https://youtu.be/IqqvarZpZTM?t=299`}
               target='_blank'>
-              ArcanaGPT
+              Hacking my Roomba to avoid cables
             </Card.Title>
             <Card.Description>
-              Tarot-inspired card game webapp prototype. Prototyped in Figma, this project
-              uses GPT-3.5 to give users unique readings with all art assets generated using
-              Midjourney.
+              We use hacky electronics and a CV model to teach my Roomba into avoiding cables.
             </Card.Description>
             <p className="relative z-10 mt-6 flex text-sm font-medium transition group-hover:text-teal-500 text-zinc-200">
               <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">figma.com</span>
+              <span className="ml-2">youtube.com</span>
             </p>
           </Card>
           <Card as="article">
@@ -251,16 +271,6 @@ export default async function Home() {
               <span className="ml-2">linkedin.com</span>
             </p>
           </Card>
-        </div>
-        <div className='flex w-full justify-center mt-16'>
-          <Link
-            aria-hidden="true"
-            href="/projects"
-            className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500 hover:text-teal-300"
-          >
-            See more projects
-            <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
-          </Link>
         </div>
       </Container>
     </>
