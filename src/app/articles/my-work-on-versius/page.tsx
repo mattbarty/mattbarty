@@ -1,8 +1,5 @@
 import { ArticleLayout } from '@/components/ArticleLayout';
 import Image from 'next/image';
-import versiusStudy from './versius-study-team.jpg';
-import mattUsingVersius from './matt-using-versius.jpg';
-import teamPhoto from './team-meal.jpg';
 
 export const article = {
   author: 'Matthew Barty',
@@ -53,7 +50,15 @@ export default function articleBody() {
         </div>
         <div>
           <Divider title='Human Factors Engineering' />
-          <Image src='https://dixog9cdtdsmc.cloudfront.net/tarot-live-demo.mp4' alt="Usability study scene featuring Versius" className='rounded-lg lg:px-24' />
+          <Image
+            src='https://dixog9cdtdsmc.cloudfront.net/case-study-versius/versius-study-team.jpg'
+            alt="Usability study scene featuring Versius"
+            className='rounded-lg lg:px-24'
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: '100%', height: '100%' }}
+          />
           <p>
             As a Human Factors Engineer, my job was to ensure that Versius was safe and effective for use. That meant having intimate knowledge
             of the entire surgical system, including its hardware (console, arms ("BSU"), instruments, etc.), software (GUIs), and the cultural,
@@ -74,7 +79,15 @@ export default function articleBody() {
         </div>
         <div>
           <Divider title='Clinical Data Science' />
-          <Image src={mattUsingVersius} alt="Matthew Barty using the Versius surgical robotic system" className='rounded-lg lg:px-24' />
+          <Image
+            src='https://dixog9cdtdsmc.cloudfront.net/case-study-versius/matt-using-versius.jpg'
+            alt="Matthew Barty using the Versius surgical robotic system"
+            className='rounded-lg lg:px-24'
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: '100%', height: '100%' }}
+          />
 
           <p>
             Transitioning to Clinical Data Science, my focus shifted to the data-driven, real world evidence side of Versius.
@@ -101,7 +114,15 @@ export default function articleBody() {
         </div>
         <div>
           <Divider title='On Reflection' />
-          <Image src={teamPhoto} alt="CMR Surgical Clinical Engineering team having lunch" className='rounded-lg lg:px-24' />
+          <Image
+            src='https://dixog9cdtdsmc.cloudfront.net/case-study-versius/team-meal.jpg'
+            alt="CMR Surgical Clinical Engineering team having lunch"
+            className='rounded-lg lg:px-24'
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: '100%', height: '100%' }}
+          />
           <p>
             I&apos;m grateful for my time at CMR, and am proud to have played my part in tranforming surgery, for good - In addition to having the
             privledge to have worked with some of the most fun, ambitious, and talented people I&apos;ve ever met!

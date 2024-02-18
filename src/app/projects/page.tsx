@@ -6,6 +6,13 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 
 const projects = [
   {
+    name: 'Hacking my Roomba to avoid cables',
+    description:
+      'We use hacky electronics and a CV model to teach my Roomba into avoiding cables.',
+    link: { href: 'https://youtu.be/IqqvarZpZTM', label: 'youtube.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/gobby-demo.mp4'
+  },
+  {
     name: 'CV Sudoku Solver',
     description:
       'Using computer vision to solve sudoku puzzles in realtime.',
@@ -50,6 +57,26 @@ const projects = [
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/art-art-demo.mp4'
   },
   {
+    name: 'Data Exploration & Visualisation Tutorial',
+    description:
+      'A walkthrough tutorial demonstrating how to scrape data from IMDB.com. (ep. 2 of 2)',
+    link: {
+      href: 'https://youtu.be/SQ4NgT3jDkE?t=1407',
+      label: 'youtube.com'
+    },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/data-viz.mp4'
+  },
+  {
+    name: 'Webscrapping Tutorial',
+    description:
+      'A walkthrough tutorial demonstrating how to scrape series data from IMDB.com (ep. 1 of 2).',
+    link: {
+      href: 'https://youtu.be/SQ4NgT3jDkE?t=1407',
+      label: 'youtube.com'
+    },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/imdb-scraper.mp4'
+  },
+  {
     name: 'Pokemon Sprites Data Visualisation',
     description:
       'Visualising Pokemon data using sprite art.',
@@ -58,13 +85,6 @@ const projects = [
       label: 'kaggle.com'
     },
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/plotemall-demo.mp4'
-  },
-  {
-    name: 'AI-Generated & Narrated Short Story',
-    description:
-      'A demo that combines cutting-edge LLM, Image Diffusion, and text-to-voice models to tell an entirely original horror story.',
-    link: { href: 'https://www.linkedin.com/feed/update/urn:li:activity:7110525573034033153/', label: 'linkedin.com' },
-    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/ai-story-demo.mp4'
   },
   {
     name: 'Brain Disease Classifier (ML)',
@@ -79,6 +99,13 @@ const projects = [
       'Training a DNN to diagnose my own retina scan.',
     link: { href: 'https://github.com/mattbarty/eye_diseases_classification', label: 'github.com' },
     gif: 'https://dixog9cdtdsmc.cloudfront.net/projects/eye-disease-classification-demo.gif'
+  },
+  {
+    name: 'AI-Generated & Narrated Short Story',
+    description:
+      'A demo that combines cutting-edge LLM, Image Diffusion, and text-to-voice models to tell an entirely original horror story.',
+    link: { href: 'https://www.linkedin.com/feed/update/urn:li:activity:7110525573034033153/', label: 'linkedin.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/ai-story-demo.mp4'
   },
   {
     name: 'ControlNet Portraits',

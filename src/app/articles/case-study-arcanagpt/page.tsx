@@ -181,8 +181,8 @@ interface PersonaProps {
 const PersonaCard: React.FC<PersonaProps> = ({ name, archetype, description, age, quote, image, goals, painPoints }) => {
   return (
     <div className="my-6 card shadow-md rounded-lg p-2 md:p-6 border border-slate-600 grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div className=''>
-        <div className='w-40'>
+      <div className='flex flex-col w-full'>
+        <div className='flex max-w-[300px] w-full justify-center'>
           <Image
             src={image}
             alt={`Persona ${name}`}
