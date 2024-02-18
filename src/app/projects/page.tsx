@@ -9,7 +9,7 @@ const projects = [
     name: 'Hacking my Roomba to avoid cables',
     description:
       'We use hacky electronics and a CV model to teach my Roomba into avoiding cables.',
-    link: { href: 'https://youtu.be/IqqvarZpZTM', label: 'youtube.com' },
+    link: { href: 'https://youtu.be/IqqvarZpZTM?t=299', label: 'youtube.com' },
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/gobby-demo.mp4'
   },
   {

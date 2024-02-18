@@ -44,10 +44,10 @@ export function Footer() {
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-200">
                 <NavLink href="/about">About</NavLink>
-                <NavLink href="/articles">Articles</NavLink>
+                <NavLink href="/blog">Blog</NavLink>
                 <NavLink href="/projects">Projects</NavLink>
                 <a
-                  href='/docs/matthew_barty_resume_2023.pdf'
+                  href='/pdf/matthew_barty_resume_2024.pdf'
                   target="_blank"
                   rel="noopener noreferrer"
                   className='group relative flex transition items-center hover:text-teal-400 '>
