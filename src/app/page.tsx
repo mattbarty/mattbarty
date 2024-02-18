@@ -177,12 +177,12 @@ export default async function Home() {
               icon={LinkedInIcon}
               className='hover:fill-teal-400'
             />
-            <SocialLink
+            {/* <SocialLink
               href='./pdf/matthew_barty_resume_2024.pdf'
               aria-label="Download Resume"
               icon={YouTubeIcon}
               className='hover:fill-teal-400'
-            />
+            /> */}
           </div>
         </div>
         <Divider title='Blog Posts' />
