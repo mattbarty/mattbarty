@@ -202,7 +202,7 @@ export default async function Home() {
               <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/VersiusPage-FinalBanner-xCompressed.mp4'} />
             </div>
             <div className='my-2'></div>
-            <Card.Title href={`/articles/my-work-on-versius`}>
+            <Card.Title href={`/blog/my-work-on-versius`}>
               My work on Versius
             </Card.Title>
             <Card.Description>
@@ -218,7 +218,7 @@ export default async function Home() {
             </div>
             <div className='my-2'></div>
             {/* <Card.Title href={`/articles/how-i-work`}> */}
-            <Card.Title href={`/articles/case-study-arcanagpt`}>
+            <Card.Title href={`/blog/case-study-arcanagpt`}>
               ArcanaGPT - UX Case Study
             </Card.Title>
             <Card.Description>
