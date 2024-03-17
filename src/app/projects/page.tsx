@@ -160,7 +160,7 @@ export default function Projects() {
   return (
     <SimpleLayout
       title="Things I’ve built"
-      intro="A lot of what I do is highly confidential, and usually pretty serious, but doesn't mean I don't experiment, build, and learn a bunch of things in my spare time - Here are some personal projects I'm proud to share!"
+      intro="A lot of what I do is highly confidential and usually pretty serious. However, that doesn't mean I don't experiment, build, and learn a bunch of things in my spare time - Here are some personal projects I'm proud to share!"
     >
       <ul
         role="list"
