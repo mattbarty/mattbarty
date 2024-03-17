@@ -6,6 +6,13 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 
 const projects = [
   {
+    name: 'AI-Augmented Product Design',
+    description:
+      'Enhancing the product design process using GenAI (Stable Diffusion), Photoshop, and digital painting techniques.',
+    link: { href: 'https://www.linkedin.com/posts/the-technology-partnership_generativediffusion-aiintegration-productdevelopment-ugcPost-7174018763535601664-P0WD?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/sdps-demo.mp4'
+  },
+  {
     name: 'Hacking my Roomba to avoid cables',
     description:
       'We use hacky electronics and a CV model to teach my Roomba into avoiding cables.',
@@ -18,6 +25,13 @@ const projects = [
       'Using computer vision to solve sudoku puzzles in realtime.',
     link: { href: 'https://github.com/mattbarty/cv_sudoku_solver', label: 'github.com' },
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/sudoku-solver-demo.mp4'
+  },
+  {
+    name: 'Ideas to Domains (GPT-3.5 + GoDaddy)',
+    description:
+      'A webapp that uses GPT-3.5 and GoDaddy API to generate clever domain names based on your idea description.',
+    link: { href: 'https://www.linkedin.com/posts/matthew-barty_turn-your-ideas-into-clever-domains-instantly-activity-7175056135220015104-Ghgo?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/domainsprout-demo.mp4'
   },
   {
     name: 'ArcanaGPT (Figma Prototype)',
