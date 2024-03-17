@@ -108,8 +108,8 @@ export default function About() {
                 className='hover:text-teal-200 text-teal-400 font-semibold hover:undezinc-200 underline-offset-2'>
                 Resume
               </a>&nbsp;for the specifics.</p>
-            <p>Professionally, I've worked as a <span className='font-semibold text-zinc-300'>UX Engineer</span> and <span className='font-semibold text-zinc-300'>Data Scientist</span> on some of the most exciting <span className='font-semibold text-zinc-300'>MedTech systems</span> in the world (including surgical robots, neurological implants, digital health, prostheses, etc.)</p>
-            <p>Personally, I'm a <span className='font-semibold text-zinc-300'>Full-Stack Web Developer, Tinkerer, Videographer, Graphics Artist, Oil Painter</span>, and aspiring <span className='font-semibold text-zinc-300'>Coffee Snob</span> ☕️🤔 - I showcase and document my work on my&nbsp;
+            <p>Professionally, I've worked as a <span className='font-semibold text-zinc-300'>UX Engineer</span> and <span className='font-semibold text-zinc-300'>Data Scientist</span> on some of the most exciting <span className='font-semibold text-zinc-300'>MedTech systems</span> in the world (including surgical robots, neurological implants, digital health, implants and prostheses, etc.)</p>
+            <p>I'm also a <span className='font-semibold text-zinc-300'>Full-Stack Web Developer, Tinkerer, Videographer, Graphics Artist, Oil Painter</span>, and aspiring <span className='font-semibold text-zinc-300'>Coffee Snob</span> ☕️🤔 - I showcase and document my work on my&nbsp;
               <Link
                 href={'/projects'}
                 className='hover:text-teal-200 text-teal-400 font-semibold hover:undezinc-200 underline-offset-2'
