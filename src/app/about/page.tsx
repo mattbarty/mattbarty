@@ -99,7 +99,7 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <div className="mt-6 space-y-7 text-base  text-zinc-400">
-            <p>At heart, I'm a <span className='font-semibold text-zinc-300'>Creative Technologist</span> with a love for design, technology, and making a difference. My profound passion for creating has had me wear many hats, and shaped me into a <span className='font-semibold text-zinc-300'>prolific problem solver.</span></p>
+            <p>My passion for creating has had me wear many hats, and shaped me into a <span className='font-semibold text-zinc-300'>prolific problem solver</span>, with a love for design, technology, people, and making a difference.</p>
             <p className='flex'>- Check out my&nbsp;
               <a
                 href='./pdf/matthew_barty_resume_2024.pdf'
@@ -108,7 +108,7 @@ export default function About() {
                 className='hover:text-teal-200 text-teal-400 font-semibold hover:undezinc-200 underline-offset-2'>
                 Resume
               </a>&nbsp;for the specifics.</p>
-            <p>Professionally, I've worked as a <span className='font-semibold text-zinc-300'>UX Engineer</span> and <span className='font-semibold text-zinc-300'>Data Scientist</span> on some of the most exciting <span className='font-semibold text-zinc-300'>MedTech systems</span> in the world (including surgical robots, neurological implants, digital health, implants and prostheses, etc.)</p>
+            <p>Professionally, I've worked as a <span className='font-semibold text-zinc-300'>UX Engineer</span> and <span className='font-semibold text-zinc-300'>Data Scientist</span> on some of the most exciting <span className='font-semibold text-zinc-300'>MedTech systems</span> in the world (including surgical robots, neurological implants, digital health systems, prostheses, etc.)</p>
             <p>I'm also a <span className='font-semibold text-zinc-300'>Full-Stack Web Developer, Tinkerer, Videographer, Graphics Artist, Oil Painter</span>, and aspiring <span className='font-semibold text-zinc-300'>Coffee Snob</span> ☕️🤔 - I showcase and document my work on my&nbsp;
               <Link
                 href={'/projects'}
