@@ -61,6 +61,13 @@ const projects = [
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/linkedinfluencer-demo.mp4'
   },
   {
+    name: 'Versius - Surgical Robotics',
+    description:
+      'My usability and clinical data science work on the next generation of surgical robotics.',
+    link: { href: 'https://www.mattbarty.com/blog/my-work-on-versius', label: 'mattbarty.com/blog' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/VersiusPage-FinalBanner-xCompressed.mp4'
+  },
+  {
     name: 'Wordle Bot',
     description:
       'Using python, some complex algorithms, and a webdriver to hack a real-world, online Wordle game.',
