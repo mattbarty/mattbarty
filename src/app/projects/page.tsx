@@ -57,7 +57,7 @@ const projects = [
     name: 'LinkedInfluencer.app',
     description:
       'WebApp that uses BLIP-2 and GPT-3.5 to generate parody LinkedIn posts.',
-    link: { href: 'https://linkedinfluencer.app', label: 'linkedinfluencer.app' },
+    link: { href: 'https://linkedinfluencer-one.vercel.app/', label: 'linkedinfluencer.app' },
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/linkedinfluencer-demo.mp4'
   },
   {
