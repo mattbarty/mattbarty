@@ -54,11 +54,11 @@ const projects = [
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/whatsapp-1-demo.mp4'
   },
   {
-    name: 'LinkedInfluencer.app',
+    name: 'Satori - AI-Generated Meditations',
     description:
-      'WebApp that uses BLIP-2 and GPT-3.5 to generate parody LinkedIn posts.',
-    link: { href: 'https://linkedinfluencer-one.vercel.app/', label: 'linkedinfluencer.app' },
-    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/linkedinfluencer-demo.mp4'
+      'Generate bespoke, fully-vocalised meditations using GPT-4o and AWS Polly',
+    link: { href: 'https://satori-iota.vercel.app/', label: 'satori-iota.vercel.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/satori-demo.mp4'
   },
   {
     name: 'Versius - Surgical Robotics',
@@ -66,6 +66,13 @@ const projects = [
       'My usability and clinical data science work on the next generation of surgical robotics.',
     link: { href: 'https://www.mattbarty.com/blog/my-work-on-versius', label: 'mattbarty.com/blog' },
     video: 'https://dixog9cdtdsmc.cloudfront.net/VersiusPage-FinalBanner-xCompressed.mp4'
+  },
+  {
+    name: 'LinkedInfluencer.app',
+    description:
+      'WebApp that uses BLIP-2 and GPT-3.5 to generate parody LinkedIn posts.',
+    link: { href: 'https://linkedinfluencer-one.vercel.app/', label: 'linkedinfluencer.app' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/linkedinfluencer-demo.mp4'
   },
   {
     name: 'Wordle Bot',
