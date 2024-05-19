@@ -68,6 +68,13 @@ const projects = [
     video: 'https://dixog9cdtdsmc.cloudfront.net/VersiusPage-FinalBanner-xCompressed.mp4'
   },
   {
+    name: 'GenPersona - AI-Generated Personas',
+    description:
+      'Generate the perfect user personas for your project using GPT-4o',
+    link: { href: 'https://genpersona.vercel.app/', label: 'genpersona.vercel.app' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/genpersona-demo.mp4'
+  },
+  {
     name: 'LinkedInfluencer.app',
     description:
       'WebApp that uses BLIP-2 and GPT-3.5 to generate parody LinkedIn posts.',
