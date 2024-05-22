@@ -38,7 +38,7 @@ const projects = [
     description:
       'LLM-enabled Tarot webapp. Designed and protoyped in Figma.',
     link: {
-      href: 'https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design',
+      href: '/blog/case-study-arcanagpt',
       label: 'figma.com'
     },
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'
