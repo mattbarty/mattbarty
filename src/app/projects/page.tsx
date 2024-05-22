@@ -39,7 +39,7 @@ const projects = [
       'LLM-enabled Tarot webapp. Designed and protoyped in Figma.',
     link: {
       href: '/blog/case-study-arcanagpt',
-      label: 'figma.com'
+      label: 'mattbarty.com/blog'
     },
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'
   },
