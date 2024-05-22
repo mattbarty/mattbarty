@@ -324,7 +324,7 @@ export default function articleBody() {
         <p>Then, we'll summarise all our findings into a set of <span className='font-bold'>user requirements</span> we can take forward into ideation.</p>
         <h1 className='text-xl text-slate-100 font-bold'>Task Analysis</h1>
         <p>( 🚧 section tbc - watch this space! )</p>
-        <VideoAutoplay className='-z-1 bg-black min-h-[225px] aspect-[6/3] rounded-lg' src={'/videos/tarot-live-demo.mp4'} />
+        <VideoAutoplay className='-z-1 bg-black min-h-[225px] aspect-[6/3] rounded-lg' src={'https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/tarot-live-demo.mp4'} />
         <Image
           src='https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/tarot-workflow.png'
           alt='TarotGPT screen samples'
