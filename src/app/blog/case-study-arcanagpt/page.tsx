@@ -323,8 +323,9 @@ export default function articleBody() {
         </p>
         <p>Then, we'll summarise all our findings into a set of <span className='font-bold'>user requirements</span> we can take forward into ideation.</p>
         <h1 className='text-xl text-slate-100 font-bold'>Task Analysis</h1>
-        <p>( 🚧 section tbc - watch this space! )</p>
         <VideoAutoplay className='-z-1 bg-black min-h-[225px] aspect-[6/3] rounded-lg' src={'https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/tarot-live-demo.mp4'} />
+        <p>A key aspect of developing ArcanaGPT was ensuring that the mystique and ritual of Tarot reading were preserved when translating it into a digital format.
+          This involved careful consideration of each step in the reading process to maintain the traditional experience while leveraging the advantages of modern technology.</p>
         <Image
           src='https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/tarot-workflow.png'
           alt='TarotGPT screen samples'
@@ -334,7 +335,57 @@ export default function articleBody() {
           style={{ width: '100%', height: 'auto' }}
           unoptimized
         />
+        <ul className="list-disc list-inside space-y-6">
+          <li>
+            <div className="font-semibold text-white border-l-2 border-slate-600 pl-2">1. Shuffle</div>
+            <p>
+              <strong className='text-white'>Preserving Ritual:</strong> Users begin by shuffling the virtual Tarot deck, an essential part of the Tarot ritual. This step emulates the tactile experience of handling the cards, reinforcing the connection to the traditional practice.
+            </p>
+            <p>
+              <strong className='text-white'>Digital Enhancement:</strong> The digital shuffle incorporates subtle animations and sounds to enhance the sensory experience, making it feel as engaging as a physical shuffle.
+            </p>
+          </li>
+          <li>
+            <div className="font-semibold text-white border-l-2 border-slate-600 pl-2">2. Draw 3 Cards</div>
+            <p>
+              <strong className='text-white'>Preserving Ritual:</strong> After shuffling, users draw three cards from the deck, a common spread in Tarot readings. The act of selecting cards is deliberate and thoughtful, mirroring the intentionality of physical card draws.
+            </p>
+            <p>
+              <strong className='text-white'>Digital Enhancement:</strong> The interface provides intuitive guidance on how to draw the cards, ensuring users feel confident and connected to the process.
+            </p>
+          </li>
+          <li>
+            <div className="font-semibold text-white border-l-2 border-slate-600 pl-2">3. Reveal Cards</div>
+            <p>
+              <strong className='text-white'>Preserving Ritual:</strong> The drawn cards are revealed one by one, maintaining the suspense and significance of each card’s revelation. This step reflects the traditional practice where each card’s unveiling is a moment of insight.
+            </p>
+            <p>
+              <strong className='text-white'>Digital Enhancement:</strong> Visual effects and animations are used to enhance the moment of revelation, adding to the mystique and excitement.
+            </p>
+          </li>
+          <li>
+            <div className="font-semibold text-white border-l-2 border-slate-600 pl-2">4. Reader Narration</div>
+            <p>
+              <strong className='text-white'>Preserving Ritual:</strong> ArcanaGPT provides a detailed narration for each card, akin to the interpretation given by a human reader. This narration respects the depth and nuance of traditional Tarot readings.
+            </p>
+            <p>
+              <strong className='text-white'>Digital Enhancement:</strong> The AI’s advanced natural language processing allows for highly personalized and context-aware interpretations, offering users a reading that feels tailored to their unique situation.
+            </p>
+          </li>
+          <li>
+            <div className="font-semibold text-white border-l-2 border-slate-600 pl-2">5. Discussion & Querent Self-Reflection</div>
+            <p>
+              <strong className='text-white'>Preserving Ritual:</strong> Users are encouraged to reflect on the reading and its relevance to their lives. This introspective aspect is a core part of the Tarot experience.
+            </p>
+            <p>
+              <strong className='text-white'>Digital Enhancement:</strong> The app prompts users with questions and discussion points, fostering deeper self-reflection and engagement with the reading.
+            </p>
+          </li>
+        </ul>
         <h1 className='text-xl text-slate-100 font-bold'>Personas</h1>
+        <p>Personas are essential for understanding our diverse user base and designing an app that meets their needs.
+          ArcanaGPT attracts a wide range of users, from curious beginners to seasoned readers.
+          Common trends include the need for accessible, accurate, and meaningful readings that support personal growth and emotional navigation.</p>
         <div className='flex flex-col w-full justify-around'>
           <div className="container mx-auto flex flex-wrap justify-center">
             {personaData.map((persona, idx) => (
@@ -342,7 +393,9 @@ export default function articleBody() {
             ))}
           </div>
         </div>
-        <p>( 🚧 section tbc - watch this space! )</p>
+        <p>By identifying and addressing the diverse needs of our users through these personas,
+          we can ensure that ArcanaGPT remains a valuable tool for anyone interested in Tarot,
+          regardless of their level of experience or their specific goals.</p>
         <h1 className='text-xl text-slate-100 font-bold'>Competitor Analysis</h1>
         <p>( 🚧 section tbc - watch this space! )</p>
         <h1 className='text-xl text-slate-100 font-bold'>Requirements Specification</h1>
