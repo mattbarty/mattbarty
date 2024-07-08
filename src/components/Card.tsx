@@ -36,7 +36,7 @@ export function Card<T extends React.ElementType = 'div'>({
 Card.VideoAutoplay = function VideoLink({ src, ...props }: { src: string; }) {
   return (
     <video
-      className='w-full h-full object-cover'
+      className='w-full h-full object-cover aspect-square'
       loop
       autoPlay
       muted

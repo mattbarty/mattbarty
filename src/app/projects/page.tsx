@@ -34,13 +34,6 @@ const projects = [
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/sudoku-solver-demo.mp4'
   },
   {
-    name: 'Ideas to Domains (GPT-3.5 + GoDaddy)',
-    description:
-      'A webapp that uses GPT-3.5 and GoDaddy API to generate clever domain names based on your idea description.',
-    link: { href: 'https://www.linkedin.com/posts/matthew-barty_turn-your-ideas-into-clever-domains-instantly-activity-7175056135220015104-Ghgo?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
-    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/domainsprout-demo.mp4'
-  },
-  {
     name: 'ArcanaGPT (Figma Prototype)',
     description:
       'LLM-enabled Tarot webapp. Designed and protoyped in Figma.',
@@ -49,6 +42,13 @@ const projects = [
       label: 'mattbarty.com/blog'
     },
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'
+  },
+  {
+    name: 'Ideas to Domains (GPT-3.5 + GoDaddy)',
+    description:
+      'A webapp that uses GPT-3.5 and GoDaddy API to generate clever domain names based on your idea description.',
+    link: { href: 'https://www.linkedin.com/posts/matthew-barty_turn-your-ideas-into-clever-domains-instantly-activity-7175056135220015104-Ghgo?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/domainsprout-demo.mp4'
   },
   {
     name: 'WhatsApp Language Extension',
