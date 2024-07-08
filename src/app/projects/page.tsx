@@ -6,7 +6,7 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 
 const projects = [
   {
-    name: 'Entirely AI Music Video',
+    name: 'Entirely AI-Generated Music Video',
     description:
       'Entirely AI-generated Music Video using Midjourney, Dream Machine, Suno, and Premiere Pro.',
     link: { href: 'https://www.linkedin.com/posts/matthew-barty_luma-lumadreammachine-aiartcommunity-activity-7208024311926812673-m1jg?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
