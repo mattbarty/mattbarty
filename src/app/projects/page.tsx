@@ -6,6 +6,13 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 
 const projects = [
   {
+    name: 'Entirely AI Music Video',
+    description:
+      'Entirely AI-generated Music Video using Midjourney, Dream Machine, Suno, and Premiere Pro.',
+    link: { href: 'https://www.linkedin.com/posts/matthew-barty_luma-lumadreammachine-aiartcommunity-activity-7208024311926812673-m1jg?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/dream_machine_demo.mp4'
+  },
+  {
     name: 'AI-Augmented Product Design',
     description:
       'Enhancing the product design process using GenAI (Stable Diffusion), Photoshop, and digital painting techniques.',
