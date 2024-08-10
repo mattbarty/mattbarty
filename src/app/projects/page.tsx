@@ -6,6 +6,13 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 
 const projects = [
   {
+    name: 'Creative AI - AI for Creative Expression',
+    description:
+      'I gave a company-wide talk on Creative AI - How GenAI is enabling new forms of creative expression.',
+    link: { href: 'https://www.linkedin.com/posts/matthew-barty_aiartcommunity-midjourney-genai-activity-7224769449789140993-m_q0?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/creative-ai-presentation-compressed.mp4'
+  },
+  {
     name: 'Entirely AI-Generated Music Video',
     description:
       'Entirely AI-generated Music Video using Midjourney, Dream Machine, Suno, and Premiere Pro.',

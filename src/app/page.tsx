@@ -133,9 +133,9 @@ export default async function Home() {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
             Matt Barty<br />
           </h1>
-          <p className='font-thin text-xl md:text-2xl text-zinc-100'>UX Engineer | Full Stack Developer | Data Scientist</p>
+          <p className='font-thin text-xl md:text-2xl text-zinc-100'>UX Engineer | Data Scientist | Applied AI</p>
           <div className="flex flex-col gap-2 mt-6 text-base text-zinc-400">
-            <p>6 years of cross-functional experience in product development in the HealthTech sector ✨</p>
+            <p>8 years of cross-functional experience in product development in the HealthTech sector ✨</p>
             <p>I proudly research, design, develop, and test complex and wonderful products - Including surgical robots, neurostim implants, satellite and comms, AI powered applications, and more! <br /> ( <span className='italic font-thin'>And just when you thought you knew me - I also love videography, painting, coding, the outdoors and coffee</span> ☕️ ) </p>
           </div>
           <div className="mt-6 flex gap-6">
