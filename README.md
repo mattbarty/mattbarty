@@ -1,6 +1,6 @@
 <h1>I'm Matt - Welcome to my portfolio!</h1>
 
-<p>6 years of cross-functional experience in product development in the HealthTech sector ✨</p>
+<p>8+ years of cross-functional experience in product development in the HealthTech sector ✨</p>
 
 <p>I proudly research, design, develop, and test complex and wonderful products - Including surgical robots, neurostim implants, satellite and comms, AI powered applications, and more!</p>
 <p><i>( And just when you thought you knew me - I also love videography, painting, coding, the outdoors and coffee ☕️ )</i></p>
