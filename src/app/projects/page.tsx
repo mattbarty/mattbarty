@@ -6,6 +6,20 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 
 const projects = [
   {
+    name: 'LlamaXpat - Meta Hackathon',
+    description:
+      'AI-powered career atlas, explore and chat with countries through an interactive map interface. Built in 24 hours for the Meta Hackathon.',
+    link: { href: 'https://www.linkedin.com/posts/matthew-barty_ai-conversationalai-creativeai-activity-7264532946143875072-d9xf?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/meta_hackathon_showcase_compressed.mp4'
+  },
+  {
+    name: '"Guess Who" with AI Agent (Winner)',
+    description:
+      'The classic party game "Guess who", reimagined using a new conversational AI agent API (Flow by Speechmatics). Winner of the Speechmatics Developer Contest.',
+    link: { href: 'https://www.linkedin.com/posts/matthew-barty_ai-conversationalai-creativeai-activity-7262720946371715073-UCh2?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/speechmatics_flow_showcase_compressed.mp4'
+  },
+  {
     name: 'Creative AI - AI for Creative Expression',
     description:
       'I gave a company-wide talk on Creative AI - How GenAI is enabling new forms of creative expression.',
