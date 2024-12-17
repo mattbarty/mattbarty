@@ -135,7 +135,6 @@ export default async function Home() {
           </h1>
           <p className='font-thin text-xl md:text-2xl text-zinc-100'>UX Engineer | Data Scientist | Applied AI</p>
           <div className="flex flex-col gap-2 mt-6 text-base text-zinc-400">
-            <p>🔗 <a className='font-semibold text-teal-400 hover:underline underline-offset-2' href='./projects'>Projects Portfolio</a></p>
             <p>8 years of cross-functional experience in product development in the HealthTech sector ✨</p>
             <p>I proudly research, design, develop, and test complex and wonderful products - Including surgical robots, neurostim implants, satellite and comms, AI powered applications, and more! <br /> ( <span className='italic font-thin'>And just when you thought you knew me - I also love videography, painting, coding, the outdoors and coffee</span> ☕️ ) </p>
           </div>
