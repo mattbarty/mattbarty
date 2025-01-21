@@ -37,7 +37,7 @@ const projects = [
     name: 'AI-Augmented Product Design',
     description:
       'Enhancing the product design process using GenAI (Stable Diffusion), Photoshop, and digital painting techniques.',
-    link: { href: 'https://www.linkedin.com/posts/the-technology-partnership_generativediffusion-aiintegration-productdevelopment-ugcPost-7174018763535601664-P0WD?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
+    link: { href: 'https://www.linkedin.com/posts/ttp-product-and-technology-consultancy_generativediffusion-aiintegration-productdevelopment-activity-7174018764328325122-DYr6?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/sdps-demo.mp4'
   },
   {
