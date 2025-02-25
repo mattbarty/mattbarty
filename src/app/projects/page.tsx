@@ -6,6 +6,13 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 
 const projects = [
   {
+    name: 'Vox Populi - AI Hackathon (🥉 Winner)',
+    description:
+      '3D sandbox game where you dynamically interact with AI Agents through speech (React + Three.js). Built in 24 hours for the 11Labs Hackathon.',
+    link: { href: 'https://www.linkedin.com/posts/matthew-barty_podium-finish-at-elevenlabs-london-hackathon-activity-7299950987161554945-kob4?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' },
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/voxPopuli-demo.mp4'
+  },
+  {
     name: 'LlamaXpat - Meta Hackathon',
     description:
       'AI-powered career atlas, explore and chat with countries through an interactive map interface. Built in 24 hours for the Meta Hackathon.',
@@ -13,7 +20,7 @@ const projects = [
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/meta_hackathon_showcase_compressed.mp4'
   },
   {
-    name: '"Guess Who" with AI Agent (Winner)',
+    name: '"Guess Who" - AI Hackathon (🥇 Winner)',
     description:
       'The classic party game "Guess who", reimagined using a new conversational AI agent API (Flow by Speechmatics). Winner of the Speechmatics Developer Contest.',
     link: { href: 'https://www.linkedin.com/posts/matthew-barty_ai-conversationalai-creativeai-activity-7262720946371715073-UCh2?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' },
