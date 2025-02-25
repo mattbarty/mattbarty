@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import clsx from 'clsx';
+import { useEffect, useRef, useState } from 'react';
 
 function ChevronRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -33,7 +34,7 @@ export function Card<T extends React.ElementType = 'div'>({
   );
 }
 
-Card.VideoAutoplay = function VideoLink({ src, ...props }: { src: string; }) {
+Card.VideoAutoplay = function VideoLink({ src, priority = false, ...props }: { src: string; priority?: boolean; }) {
   return (
     <video
       className='w-full h-full object-cover aspect-square'
@@ -45,6 +46,64 @@ Card.VideoAutoplay = function VideoLink({ src, ...props }: { src: string; }) {
       {...props}>
       <source src={src} type="video/mp4" />
     </video>
+  );
+};
+
+Card.LazyVideoAutoplay = function LazyVideoAutoplay({ src, priority = false, ...props }: { src: string; priority?: boolean; }) {
+  const [isVisible, setIsVisible] = useState(priority);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const videoRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (priority) {
+      setIsLoaded(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Start loading when the video is about to come into view
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: '200px', // Load when within 200px of viewport
+        threshold: 0.01,
+      }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [priority]);
+
+  return (
+    <div ref={videoRef} className='w-full h-full'>
+      {isVisible && (
+        <video
+          className='w-full h-full object-cover aspect-square'
+          loop
+          autoPlay
+          muted
+          playsInline
+          style={{ width: "100%", height: "100%" }}
+          onLoadedData={() => setIsLoaded(true)}
+          {...props}>
+          <source src={src} type="video/mp4" />
+        </video>
+      )}
+      {!isLoaded && (
+        <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
+          <div className="animate-pulse w-8 h-8 rounded-full bg-zinc-700"></div>
+        </div>
+      )}
+    </div>
   );
 };
 

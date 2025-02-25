@@ -209,34 +209,40 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: "Things I've made trying to put my dent in the universe.",
 };
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve built"
+      title="Things I've built"
       intro="A lot of what I do is highly confidential and usually pretty serious. However, that doesn't mean I don't experiment, build, and learn a bunch of things in my spare time - Here are some personal projects I'm proud to share!"
     >
       <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <Card as="li" key={project.name}>
             <div className='bg-black aspect-[5/5] overflow-clip'>
               {project.video ? (
-                <Card.VideoAutoplay src={project.video} />
+                <Card.LazyVideoAutoplay
+                  src={project.video}
+                  priority={index < 3}
+                />
               ) : project.gif ? (
-                <img src={project.gif} alt="" />
+                <img
+                  src={project.gif}
+                  alt=""
+                  loading={index < 3 ? "eager" : "lazy"}
+                />
               ) : (
                 <Image
-                  // src={project.img}
-                  // temp img ref
                   src={'/images/avatar.jpg'}
                   alt=""
                   className="h-8 w-8"
                   unoptimized
+                  loading={index < 3 ? "eager" : "lazy"}
                 />
               )}
             </div>
