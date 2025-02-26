@@ -10,7 +10,7 @@ export function VideoCard({
   priority?: boolean;
 }) {
   return (
-    <div className="w-full h-full aspect-square">
+    <div className="w-full h-full">
       <Card.VideoAutoplay
         src={src}
         priority={priority}
@@ -27,7 +27,7 @@ export function LazyVideoCard({
   priority?: boolean;
 }) {
   return (
-    <div className="w-full h-full aspect-square">
+    <div className="w-full h-full">
       <Card.LazyVideoAutoplay
         src={src}
         priority={priority}

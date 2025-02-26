@@ -47,10 +47,11 @@ export function Footer() {
                 <NavLink href="/blog">Blog</NavLink>
                 <NavLink href="/projects">Projects</NavLink>
                 <a
-                  href='/pdf/matthew_barty_resume_2024.pdf'
+                  className="group flex text-sm font-medium  transition text-zinc-300 hover:text-teal-500"
+                  href='/pdf/matthew_barty_010225.pdf'
                   target="_blank"
                   rel="noopener noreferrer"
-                  className='group relative flex transition items-center hover:text-teal-400 '>
+                >
                   Resume
                   <OpenFileIcon className='h-3 w-3 transition  fill-zinc-200 ml-2  group-hover:fill-teal-400' />
                 </a>

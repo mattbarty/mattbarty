@@ -39,7 +39,7 @@ export function Card<T extends React.ElementType = 'div'>({
 Card.VideoAutoplay = function VideoLink({ src, priority = false, className, ...props }: { src: string; priority?: boolean; className?: string; }) {
   return (
     <video
-      className={clsx('w-full h-full object-cover aspect-square', className)}
+      className={clsx('w-full h-full object-cover', className)}
       loop
       autoPlay
       muted
@@ -89,7 +89,7 @@ Card.LazyVideoAutoplay = function LazyVideoAutoplay({ src, priority = false, cla
     <div ref={videoRef} className='w-full h-full'>
       {isVisible && (
         <video
-          className={clsx('w-full h-full object-cover aspect-square', className)}
+          className={clsx('w-full h-full object-cover', className)}
           loop
           autoPlay
           muted
@@ -135,6 +135,7 @@ Card.Title = function CardTitle<T extends React.ElementType = 'h2'>({
   as?: T;
   href?: string;
   target?: string;
+  children: React.ReactNode;
 }) {
   let Component = as ?? 'h2';
 
@@ -186,6 +187,7 @@ Card.Eyebrow = function CardEyebrow<T extends React.ElementType = 'p'>({
 }: Omit<React.ComponentPropsWithoutRef<T>, 'as' | 'decorate'> & {
   as?: T;
   decorate?: boolean;
+  children: React.ReactNode;
 }) {
   let Component = as ?? 'p';
 

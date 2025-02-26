@@ -1,13 +1,11 @@
 "use client";
 
 import clsx from "clsx";
-import { PdfIcon } from "./SocialIcons";
-import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 
 const handleDownloadResume = () => {
   const link = document.createElement('a');
-  link.href = 'pdf/matthew_barty_resume_2024.pdf';
-  link.download = 'pdf/matthew_barty_resume_2024.pdf';
+  link.href = 'pdf/matthew_barty_010225.pdf';
+  link.download = 'pdf/matthew_barty_010225.pdf';
   link.target = '_blank';
   document.body.appendChild(link);
   link.click();

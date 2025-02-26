@@ -1,17 +1,13 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
-import { Card } from '@/components/Card';
 import { VideoCard } from '@/components/VideoCard';
-import { CardTitle, CardDescription } from '@/components/CardComponents';
 
 import { Container } from '@/components/Container';
 import {
   GitHubIcon,
   LinkedInIcon,
-  MediumIcon,
 } from '@/components/SocialIcons';
 import ResumeButton from '@/components/ResumeButton';
 
@@ -89,7 +85,7 @@ export default function About() {
             <p>My passion for creating has had me wear many hats, and shaped me into a <span className='font-semibold text-zinc-300'>prolific problem solver</span>, with a love for design, technology, people, and making a difference.</p>
             <p className='flex'>- Check out my&nbsp;
               <a
-                href='./pdf/matthew_barty_resume_2024.pdf'
+                href='./pdf/matthew_barty_010225.pdf'
                 target="_blank"
                 rel="noopener noreferrer"
                 className='hover:text-teal-200 text-teal-400 font-semibold hover:undezinc-200 underline-offset-2'>

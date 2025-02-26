@@ -117,7 +117,7 @@ function MobileNavigation(
                 <MobileNavItem href="/about">About</MobileNavItem>
                 <MobileNavItem href="/projects">Projects</MobileNavItem>
                 <MobileNavItem href="/blog">Blog</MobileNavItem>
-                <a href='/pdf/matthew_barty_resume_2024.pdf'
+                <a href='/pdf/matthew_barty_010225.pdf'
                   target="_blank"
                   rel="noopener noreferrer"
                   className='relative py-2 transition flex items-center'>
@@ -174,7 +174,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
         <NavItem href="/projects">Projects</NavItem>
         <NavItem href="/blog">Blog</NavItem>
         <a
-          href='./pdf/matthew_barty_resume_2024.pdf'
+          href='./pdf/matthew_barty_010225.pdf'
           target="_blank"
           rel="noopener noreferrer"
           className='group relative flex px-3 py-2 transition items-center  hover:text-teal-400 '>

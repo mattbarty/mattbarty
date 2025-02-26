@@ -2,6 +2,7 @@
 
 import { Card } from '@/components/Card';
 import { type ReactNode, type ElementType } from 'react';
+import clsx from 'clsx';
 
 // Wrapper for Card.Title
 export function CardTitle<T extends ElementType = 'h2'>({
@@ -15,11 +16,31 @@ export function CardTitle<T extends ElementType = 'h2'>({
   target?: string;
   children: ReactNode;
 }) {
-  return (
-    <Card.Title as={as} href={href} target={target}>
-      {children}
-    </Card.Title>
-  );
+  const Component = as ?? 'h2';
+
+  if (href && target) {
+    return (
+      <Component className="text-base font-semibold tracking-tight text-zinc-100">
+        <Card.Link href={href} target={target}>
+          {children}
+        </Card.Link>
+      </Component>
+    );
+  } else if (href) {
+    return (
+      <Component className="text-base font-semibold tracking-tight text-zinc-100">
+        <Card.Link href={href}>
+          {children}
+        </Card.Link>
+      </Component>
+    );
+  } else {
+    return (
+      <Component className="text-base font-semibold tracking-tight text-zinc-100">
+        {children}
+      </Component>
+    );
+  }
 }
 
 // Wrapper for Card.Description
@@ -68,16 +89,33 @@ export function CardEyebrow<T extends ElementType = 'p'>({
   dateTime?: string;
   [key: string]: any;
 }) {
+  const Component = as ?? 'p';
+
+  // Create a props object without dateTime if Component is not 'time'
+  const componentProps = { ...props };
+  if (dateTime && Component === 'time') {
+    componentProps.dateTime = dateTime;
+  }
+
   return (
-    <Card.Eyebrow
-      as={as}
-      decorate={decorate}
-      className={className}
-      dateTime={dateTime}
-      {...props}
+    <Component
+      className={clsx(
+        className,
+        'relative z-10 order-first mb-3 flex items-center text-sm text-zinc-500',
+        decorate && 'pl-3.5',
+      )}
+      {...componentProps}
     >
+      {decorate && (
+        <span
+          className="absolute inset-y-0 left-0 flex items-center"
+          aria-hidden="true"
+        >
+          <span className="h-4 w-0.5 rounded-full bg-zinc-500" />
+        </span>
+      )}
       {children}
-    </Card.Eyebrow>
+    </Component>
   );
 }
 

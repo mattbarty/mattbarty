@@ -185,7 +185,7 @@ export default async function Home() {
         </Link>
         <div className='grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
+            <div className='bg-black aspect-[3/2] overflow-clip mb-2 w-full'>
               <VideoCard src={'https://dixog9cdtdsmc.cloudfront.net/VersiusPage-FinalBanner-xCompressed.mp4'} />
             </div>
             <div className='my-2'></div>
@@ -200,7 +200,7 @@ export default async function Home() {
             <CardCta className='text-gray-500'>Read article</CardCta>
           </Card>
           <Card as="article">
-            <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
+            <div className='bg-black aspect-[3/2] overflow-clip mb-2 w-full'>
               <VideoCard src={'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'} />
             </div>
             <div className='my-2'></div>
