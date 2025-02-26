@@ -36,10 +36,10 @@ export function Card<T extends React.ElementType = 'div'>({
   );
 }
 
-Card.VideoAutoplay = function VideoLink({ src, priority = false, ...props }: { src: string; priority?: boolean; }) {
+Card.VideoAutoplay = function VideoLink({ src, priority = false, className, ...props }: { src: string; priority?: boolean; className?: string; }) {
   return (
     <video
-      className='w-full h-full object-cover aspect-square'
+      className={clsx('w-full h-full object-cover aspect-square', className)}
       loop
       autoPlay
       muted
@@ -51,7 +51,7 @@ Card.VideoAutoplay = function VideoLink({ src, priority = false, ...props }: { s
   );
 };
 
-Card.LazyVideoAutoplay = function LazyVideoAutoplay({ src, priority = false, ...props }: { src: string; priority?: boolean; }) {
+Card.LazyVideoAutoplay = function LazyVideoAutoplay({ src, priority = false, className, ...props }: { src: string; priority?: boolean; className?: string; }) {
   const [isVisible, setIsVisible] = useState(priority);
   const [isLoaded, setIsLoaded] = useState(false);
   const videoRef = useRef<HTMLDivElement>(null);
@@ -89,7 +89,7 @@ Card.LazyVideoAutoplay = function LazyVideoAutoplay({ src, priority = false, ...
     <div ref={videoRef} className='w-full h-full'>
       {isVisible && (
         <video
-          className='w-full h-full object-cover aspect-square'
+          className={clsx('w-full h-full object-cover aspect-square', className)}
           loop
           autoPlay
           muted
@@ -151,11 +151,13 @@ Card.Title = function CardTitle<T extends React.ElementType = 'h2'>({
 
 Card.Description = function CardDescription({
   children,
+  className,
 }: {
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
-    <p className="relative z-10 mt-2 text-sm  text-zinc-400">
+    <p className={clsx("relative z-10 mt-2 text-sm text-zinc-400", className)}>
       {children}
     </p>
   );
@@ -206,5 +208,23 @@ Card.Eyebrow = function CardEyebrow<T extends React.ElementType = 'p'>({
       )}
       {children}
     </Component>
+  );
+};
+
+Card.TechTag = function TechTag({ technology }: { technology: string; }) {
+  return (
+    <span className="inline-block bg-zinc-800 text-zinc-300 px-2 py-1 text-xs rounded-full mr-1 mb-1 hover:bg-teal-900 hover:text-teal-200 transition-colors">
+      {technology}
+    </span>
+  );
+};
+
+Card.TechTags = function TechTags({ technologies }: { technologies: string[]; }) {
+  return (
+    <div className="relative z-10 mt-2 flex flex-wrap">
+      {technologies.map((tech) => (
+        <Card.TechTag key={tech} technology={tech} />
+      ))}
+    </div>
   );
 };

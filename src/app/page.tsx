@@ -2,6 +2,8 @@ import Image, { type ImageProps } from 'next/image';
 import Link from 'next/link';
 
 import { Card } from '@/components/Card';
+import { VideoCard } from '@/components/VideoCard';
+import { CardTitle, CardDescription, CardCta } from '@/components/CardComponents';
 import { Container } from '@/components/Container';
 import {
   GitHubIcon,
@@ -180,34 +182,34 @@ export default async function Home() {
         <div className='grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/VersiusPage-FinalBanner-xCompressed.mp4'} />
+              <VideoCard src={'https://dixog9cdtdsmc.cloudfront.net/VersiusPage-FinalBanner-xCompressed.mp4'} />
             </div>
             <div className='my-2'></div>
-            <Card.Title href={`/blog/my-work-on-versius`}>
+            <CardTitle href={`/blog/my-work-on-versius`}>
               My work on Versius
-            </Card.Title>
-            <Card.Description>
+            </CardTitle>
+            <CardDescription>
               I worked as a Human Factors Engineer and Clinical Data Scientist
               on a next-gen surgical robotic system, Versius. Versius
               is designed to be portable, modular, and cost-effective - Transforming surgery, for good.
-            </Card.Description>
-            <Card.Cta className='text-gray-500'>Read article</Card.Cta>
+            </CardDescription>
+            <CardCta className='text-gray-500'>Read article</CardCta>
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[6/5] overflow-clip mb-2 w-full'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'} />
+              <VideoCard src={'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4'} />
             </div>
             <div className='my-2'></div>
             {/* <Card.Title href={`/articles/how-i-work`}> */}
-            <Card.Title href={`/blog/case-study-arcanagpt`}>
+            <CardTitle href={`/blog/case-study-arcanagpt`}>
               ArcanaGPT - UX Case Study
-            </Card.Title>
-            <Card.Description>
+            </CardTitle>
+            <CardDescription>
               ArcanaGPT merges Tarot Tradition with Cutting-Edge AI -
               In this case study I discuss how I use designing thinking and UXR/D techniques
               to create an experience that is accessible, intuitive, and most importantly - Fun!
-            </Card.Description>
-            <Card.Cta>Read article </Card.Cta>
+            </CardDescription>
+            <CardCta>Read article </CardCta>
           </Card>
         </div>
 
@@ -226,18 +228,18 @@ export default async function Home() {
         <div className='grid max-w-xl grid-cols-1 gap-y-8 lg:max-w-none lg:grid-cols-3 gap-0 md:gap-12 mt-24 md:mt-28'>
           <Card as="article">
             <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/sudoku-solver-demo.mp4'} />
+              <VideoCard src={'https://dixog9cdtdsmc.cloudfront.net/projects/sudoku-solver-demo.mp4'} />
             </div>
-            <Card.Title
+            <CardTitle
               href={`https://github.com/mattbarty/cv_sudoku_solver`}
               target='_blank'>
               CV Sudoku Solver
-            </Card.Title>
-            <Card.Description>
+            </CardTitle>
+            <CardDescription>
               Using computer vision to solve physical sudoku puzzles in realtime.
               built using my own CNN model written in Python, using OpenCV, TensorFlow,
               and Numpy.
-            </Card.Description>
+            </CardDescription>
             <p className="relative z-10 mt-6 flex text-sm font-medium transition group-hover:text-teal-500 text-zinc-200">
               <LinkIcon className="h-6 w-6 flex-none" />
               <span className="ml-2">github.com</span>
@@ -245,16 +247,17 @@ export default async function Home() {
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/gobby-demo.mp4'} />
+              <VideoCard src={'https://dixog9cdtdsmc.cloudfront.net/projects/gobby-demo.mp4'} />
             </div>
-            <Card.Title
+            <CardTitle
               href={`https://youtu.be/IqqvarZpZTM?t=299`}
               target='_blank'>
               Hacking my Roomba to avoid cables
-            </Card.Title>
-            <Card.Description>
-              We use hacky electronics and a CV model to teach my Roomba into avoiding cables.
-            </Card.Description>
+            </CardTitle>
+            <CardDescription>
+              We use hacky electronics and and a CV model to teach my Roomba into avoiding cables, which it usually loves to
+              eat and then complain about. The results were... mixed!
+            </CardDescription>
             <p className="relative z-10 mt-6 flex text-sm font-medium transition group-hover:text-teal-500 text-zinc-200">
               <LinkIcon className="h-6 w-6 flex-none" />
               <span className="ml-2">youtube.com</span>
@@ -262,18 +265,18 @@ export default async function Home() {
           </Card>
           <Card as="article">
             <div className='bg-black aspect-[5/5] overflow-clip mb-2'>
-              <Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/projects/whatsapp-1-demo.mp4'} />
+              <VideoCard src={'https://dixog9cdtdsmc.cloudfront.net/projects/whatsapp-1-demo.mp4'} />
             </div>
-            <Card.Title
+            <CardTitle
               href={`https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop`}
               target='_blank'
             >
               WhatsApp Language Extension
-            </Card.Title>
-            <Card.Description>
+            </CardTitle>
+            <CardDescription>
               A chrome extension that augments whatsapp.web with live translations.
               The idea was to make language learning more ambient and personally-relevant to me, my interests, and my language-level.
-            </Card.Description>
+            </CardDescription>
             <p className="relative z-10 mt-6 flex text-sm font-medium transition group-hover:text-teal-500 text-zinc-200">
               <LinkIcon className="h-6 w-6 flex-none" />
               <span className="ml-2">linkedin.com</span>

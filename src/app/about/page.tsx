@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { Card } from '@/components/Card';
+import { VideoCard } from '@/components/VideoCard';
+import { CardTitle, CardDescription } from '@/components/CardComponents';
 
 import { Container } from '@/components/Container';
 import {
@@ -61,21 +63,6 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   );
 }
 
-Card.VideoAutoplay = function VideoLink({ src, ...props }: { src: string; }) {
-  return (
-    <video
-      className='w-full h-full object-cover z-100'
-      loop
-      autoPlay
-      muted
-      playsInline
-      style={{ width: "100%", height: "100%" }}
-      {...props}>
-      <source src={src} type="video/mp4" />
-    </video>
-  );
-};
-
 export default function About() {
   return (
     <Container className="mt-16 sm:mt-32">
@@ -89,7 +76,7 @@ export default function About() {
           </div>
         </div>
         <div className='bg-black overflow-clip w-full aspect-[3/2] md:aspect-auto rounded-md'>
-          < Card.VideoAutoplay src={'https://dixog9cdtdsmc.cloudfront.net/hero-banner-2-compressed.mp4'} />
+          <VideoCard src={'https://dixog9cdtdsmc.cloudfront.net/hero-banner-2-compressed.mp4'} />
         </div>
       </div>
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
