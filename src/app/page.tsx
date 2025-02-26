@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation';
 import Image, { type ImageProps } from 'next/image';
 import Link from 'next/link';
 
@@ -119,7 +120,10 @@ function Role({ role }: { role: Role; }) {
 }
 
 export default async function Home() {
+  // Redirect to projects page
+  redirect('/projects');
 
+  // The code below won't execute due to the redirect
   return (
     <>
       <Container className="mt-9">
