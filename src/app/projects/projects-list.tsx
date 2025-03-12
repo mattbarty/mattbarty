@@ -14,7 +14,7 @@ const projects = [
     description:
       'Developed 3D sandbox game enabling dynamic speech interaction with AI agents in a 24-hour timeframe. Built custom game engine in ThreeJS to facilitate unique AI autonomy and voice-driven gameplay.',
     links: [
-      { href: 'https://www.linkedin.com/posts/matthew-barty_podium-finish-at-elevenlabs-london-hackathon-activity-7299950987161554945-kob4?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' }
+      { href: 'https://www.linkedin.com/posts/mattbarty_elevenlabs-hackathon-genai-activity-7299950987161554945-hyVe?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/voxPopuli-demo.mp4',
     technologies: ['NextJS', 'ReactJS', 'ThreeJS', 'ElevenLabs Conversational AI', 'ElevenLabs TTS API', 'GPT-4o-mini API']
@@ -24,7 +24,8 @@ const projects = [
     description:
       'Created AI-powered career exploration platform combining interactive maps with LLM-driven country insights within 24-hour hackathon constraint. Implemented Llama-2.1 model through Groq for fast, contextual career advice based on location selection.',
     links: [
-      { href: 'https://www.linkedin.com/posts/matthew-barty_ai-conversationalai-creativeai-activity-7264532946143875072-d9xf?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' }
+      { href: 'https://www.linkedin.com/posts/mattbarty_ai-conversationalai-creativeai-activity-7264532946143875072-BFnS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' },
+      { href: 'https://llamaxpat.vercel.app/', label: 'demo - (llamaxpat.vercel.app)' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/meta_hackathon_showcase_compressed.mp4',
     technologies: ['NextJS', 'ReactJS', 'MapBox', 'Llama-2.1', 'Groq API']
@@ -34,7 +35,7 @@ const projects = [
     description:
       'Reimagined the classic "Guess Who" game using Speechmatics\' conversational AI Flow API. Built interactive web interface with real-time speech recognition and character identification. Engineered dynamic game logic combining speech recognition with AI character reasoning.',
     links: [
-      { href: 'https://www.linkedin.com/posts/matthew-barty_ai-conversationalai-creativeai-activity-7262720946371715073-UCh2?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' }
+      { href: 'https://www.linkedin.com/posts/mattbarty_ai-conversationalai-creativeai-activity-7262720946371715073-sk_e?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/speechmatics_flow_showcase_compressed.mp4',
     technologies: ['NextJS', 'ReactJS', 'Speechmatics FLOW API', 'GPT-4o-mini']
@@ -44,7 +45,7 @@ const projects = [
     description:
       'Internal presentation going over the state-of-the-art generative models and how GenAI is enabling new forms of creative expression. A collection of personal and professional projects that I have worked on.',
     links: [
-      { href: 'https://www.linkedin.com/posts/matthew-barty_aiartcommunity-midjourney-genai-activity-7224769449789140993-m_q0?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' }
+      { href: 'https://www.linkedin.com/posts/mattbarty_aiartcommunity-midjourney-genai-activity-7224769449789140993-HLkh?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/creative-ai-presentation-compressed.mp4',
     technologies: ['Generative AI', 'Midjourney', 'Public Speaking', 'Creative Technology']
@@ -54,7 +55,8 @@ const projects = [
     description:
       'One of the first fully AI-directed music videos created just days after public release of txt2vid technologies. Produced with 100% AI-generated visuals and music using cutting-edge generative models, with techniques developed for maintaining character consistency between scenes.',
     links: [
-      { href: 'https://www.linkedin.com/posts/matthew-barty_luma-lumadreammachine-aiartcommunity-activity-7208024311926812673-m1jg?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' }
+      { href: 'https://www.linkedin.com/posts/mattbarty_luma-lumadreammachine-aiartcommunity-activity-7208024311926812673-_gxl?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' },
+      { href: 'https://youtu.be/n9Y0CZ4BOx0?si=BpcZHfQt1fft5Cbd', label: 'youtube.com' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/dream_machine_demo.mp4',
     technologies: ['Midjourney (Generative Diffusion)', 'Luma (img2vid)', 'Suno (txt2Music)', 'Photoshop', 'Premiere']
