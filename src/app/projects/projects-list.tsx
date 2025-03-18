@@ -37,7 +37,8 @@ const projects = [
     description:
       'Developed 3D sandbox game enabling dynamic speech interaction with AI agents in a 24-hour timeframe. Built custom game engine in ThreeJS to facilitate unique AI autonomy and voice-driven gameplay.',
     links: [
-      { href: 'https://www.linkedin.com/posts/mattbarty_elevenlabs-hackathon-genai-activity-7299950987161554945-hyVe?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' }
+      { href: 'https://www.linkedin.com/posts/mattbarty_elevenlabs-hackathon-genai-activity-7299950987161554945-hyVe?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' },
+      { href: 'https://github.com/mattbarty/elevenlabhackathon', label: 'Github' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/voxPopuli-demo.mp4',
     technologies: ['NextJS', 'ReactJS', 'ThreeJS', 'ElevenLabs Conversational AI', 'ElevenLabs TTS API', 'GPT-4o-mini API']
