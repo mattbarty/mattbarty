@@ -10,6 +10,16 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 import { ExternalLink } from 'lucide-react';
 const projects = [
   {
+    name: 'Creative AI - GenAI for Creative Expression',
+    description:
+      'Presentation on the state-of-the-art generative models and how GenAI is enabling new forms of creative expression. A collection of personal and professional projects that I have worked on.',
+    links: [
+      { href: 'https://www.linkedin.com/posts/mattbarty_aiartcommunity-midjourney-genai-activity-7224769449789140993-HLkh?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' }
+    ],
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/creative-ai-presentation-compressed.mp4',
+    technologies: ['Generative AI', 'Midjourney', 'Public Speaking', 'Creative Technology']
+  },
+  {
     name: 'Hex Engine - Procedural World Generator',
     description:
       'Procedurally generate beautiful 3D hexagonal landscapes with realistic terrain generation. Runs in the browser with ThreeJS and React.',
@@ -63,16 +73,6 @@ const projects = [
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/speechmatics_flow_showcase_compressed.mp4',
     technologies: ['NextJS', 'ReactJS', 'Speechmatics FLOW API', 'GPT-4o-mini']
-  },
-  {
-    name: 'Creative AI - AI for Creative Expression',
-    description:
-      'Internal presentation going over the state-of-the-art generative models and how GenAI is enabling new forms of creative expression. A collection of personal and professional projects that I have worked on.',
-    links: [
-      { href: 'https://www.linkedin.com/posts/mattbarty_aiartcommunity-midjourney-genai-activity-7224769449789140993-HLkh?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' }
-    ],
-    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/creative-ai-presentation-compressed.mp4',
-    technologies: ['Generative AI', 'Midjourney', 'Public Speaking', 'Creative Technology']
   },
   {
     name: 'AI Generated Music Video',
