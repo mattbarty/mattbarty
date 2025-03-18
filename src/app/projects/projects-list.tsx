@@ -40,7 +40,7 @@ const projects = [
       { href: 'https://www.linkedin.com/posts/mattbarty_machinelearning-diffusionmodels-generativeai-activity-7301625622647209984-0_Co?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/DiffusionNotebook.mp4',
-    technologies: ['Python', 'PyTorch', 'Diffusion Models', 'Generative AI', 'Generative Diffusion', 'Generative AI']
+    technologies: ['Python', 'PyTorch', 'Diffusion Models', 'Generative AI', 'Generative Diffusion']
   },
   {
     name: 'Vox Populi - AI Hackathon (🥉 Winner)',
