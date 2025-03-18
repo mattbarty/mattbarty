@@ -7,14 +7,37 @@ import { Card } from '@/components/Card';
 import { LazyVideoCard } from '@/components/VideoCard';
 import { CardDescription } from '@/components/CardComponents';
 import { SimpleLayout } from '@/components/SimpleLayout';
-
+import { ExternalLink } from 'lucide-react';
 const projects = [
+  {
+    name: 'Hex Engine - Procedural World Generator',
+    description:
+      'Procedurally generate beautiful 3D hexagonal landscapes with realistic terrain generation. Runs in the browser with ThreeJS and React.',
+    links: [
+      { href: 'https://hexengine.vercel.app/', label: 'Demo - (hexengine.com)' },
+      { href: 'https://github.com/mattbarty/hexengine', label: 'Github' },
+      { href: 'https://www.linkedin.com/posts/mattbarty_creativecoding-react-threejs-activity-7305514623804276737-dsFZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' }
+    ],
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/hexengine-gif-compressed2.mp4',
+    technologies: ['NextJS', 'ReactJS', 'ThreeJS']
+  },
+  {
+    name: 'DDPM Study - Denoising Diffusion Models',
+    description:
+      'Self-study implementation of a Denoising Diffusion Probalistic Model (DDPM) for generating MNIST handwritten digits. This implementation was created as a self-study exercise to understand diffusion models through hands-on practice',
+    links: [
+      { href: 'https://github.com/mattbarty/generativeDiffusionStudy', label: 'Github' },
+      { href: 'https://www.linkedin.com/posts/mattbarty_machinelearning-diffusionmodels-generativeai-activity-7301625622647209984-0_Co?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' }
+    ],
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/DiffusionNotebook.mp4',
+    technologies: ['Python', 'PyTorch', 'Diffusion Models', 'Generative AI', 'Generative Diffusion', 'Generative AI']
+  },
   {
     name: 'Vox Populi - AI Hackathon (🥉 Winner)',
     description:
       'Developed 3D sandbox game enabling dynamic speech interaction with AI agents in a 24-hour timeframe. Built custom game engine in ThreeJS to facilitate unique AI autonomy and voice-driven gameplay.',
     links: [
-      { href: 'https://www.linkedin.com/posts/mattbarty_elevenlabs-hackathon-genai-activity-7299950987161554945-hyVe?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' }
+      { href: 'https://www.linkedin.com/posts/mattbarty_elevenlabs-hackathon-genai-activity-7299950987161554945-hyVe?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/voxPopuli-demo.mp4',
     technologies: ['NextJS', 'ReactJS', 'ThreeJS', 'ElevenLabs Conversational AI', 'ElevenLabs TTS API', 'GPT-4o-mini API']
@@ -24,8 +47,8 @@ const projects = [
     description:
       'Created AI-powered career exploration platform combining interactive maps with LLM-driven country insights within 24-hour hackathon constraint. Implemented Llama-2.1 model through Groq for fast, contextual career advice based on location selection.',
     links: [
-      { href: 'https://www.linkedin.com/posts/mattbarty_ai-conversationalai-creativeai-activity-7264532946143875072-BFnS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' },
-      { href: 'https://llamaxpat.vercel.app/', label: 'demo - (llamaxpat.vercel.app)' }
+      { href: 'https://llamaxpat.vercel.app/', label: 'Demo - (llamaxpat.vercel.app)' },
+      { href: 'https://www.linkedin.com/posts/mattbarty_ai-conversationalai-creativeai-activity-7264532946143875072-BFnS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' },
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/meta_hackathon_showcase_compressed.mp4',
     technologies: ['NextJS', 'ReactJS', 'MapBox', 'Llama-2.1', 'Groq API']
@@ -35,7 +58,7 @@ const projects = [
     description:
       'Reimagined the classic "Guess Who" game using Speechmatics\' conversational AI Flow API. Built interactive web interface with real-time speech recognition and character identification. Engineered dynamic game logic combining speech recognition with AI character reasoning.',
     links: [
-      { href: 'https://www.linkedin.com/posts/mattbarty_ai-conversationalai-creativeai-activity-7262720946371715073-sk_e?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' }
+      { href: 'https://www.linkedin.com/posts/mattbarty_ai-conversationalai-creativeai-activity-7262720946371715073-sk_e?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/speechmatics_flow_showcase_compressed.mp4',
     technologies: ['NextJS', 'ReactJS', 'Speechmatics FLOW API', 'GPT-4o-mini']
@@ -45,7 +68,7 @@ const projects = [
     description:
       'Internal presentation going over the state-of-the-art generative models and how GenAI is enabling new forms of creative expression. A collection of personal and professional projects that I have worked on.',
     links: [
-      { href: 'https://www.linkedin.com/posts/mattbarty_aiartcommunity-midjourney-genai-activity-7224769449789140993-HLkh?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' }
+      { href: 'https://www.linkedin.com/posts/mattbarty_aiartcommunity-midjourney-genai-activity-7224769449789140993-HLkh?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/creative-ai-presentation-compressed.mp4',
     technologies: ['Generative AI', 'Midjourney', 'Public Speaking', 'Creative Technology']
@@ -55,8 +78,8 @@ const projects = [
     description:
       'One of the first fully AI-directed music videos created just days after public release of txt2vid technologies. Produced with 100% AI-generated visuals and music using cutting-edge generative models, with techniques developed for maintaining character consistency between scenes.',
     links: [
-      { href: 'https://www.linkedin.com/posts/mattbarty_luma-lumadreammachine-aiartcommunity-activity-7208024311926812673-_gxl?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' },
-      { href: 'https://youtu.be/n9Y0CZ4BOx0?si=BpcZHfQt1fft5Cbd', label: 'youtube.com' }
+      { href: 'https://www.linkedin.com/posts/mattbarty_luma-lumadreammachine-aiartcommunity-activity-7208024311926812673-_gxl?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' },
+      { href: 'https://youtu.be/n9Y0CZ4BOx0?si=BpcZHfQt1fft5Cbd', label: 'Youtube' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/dream_machine_demo.mp4',
     technologies: ['Midjourney (Generative Diffusion)', 'Luma (img2vid)', 'Suno (txt2Music)', 'Photoshop', 'Premiere']
@@ -66,7 +89,7 @@ const projects = [
     description:
       'Uses Convolutional Neural Networks (CNNs) to analyze MRI scans and classify them according to tumor type. Achieves strong predictive classification (validation accuracy: 63%, test accuracy: 69%, F1-Score: 0.857) using TensorFlow, Keras, and a pre-trained EfficientNetB0 architecture with advanced image preprocessing.',
     links: [
-      { href: 'https://github.com/mattbarty/brain-tumour-categorical-classifier', label: 'github.com' }
+      { href: 'https://github.com/mattbarty/brain-tumour-categorical-classifier', label: 'Github' }
     ],
     gif: 'https://dixog9cdtdsmc.cloudfront.net/projects/brain-disease-classifier-demo.gif',
     technologies: ['Python', 'TensorFlow', 'Keras', 'OpenCV (cv2)', 'NumPy', 'Pandas', 'Matplotlib', 'scikit-learn', 'PIL']
@@ -76,7 +99,18 @@ const projects = [
     description:
       'Established proof-of-concept for AI-assisted product design that improved efficiency and creativity using local Stable Diffusion and Photoshop. Led campaign gathering designer feedback on AI integration and produced marketing content demonstrating AI-augmented design capabilities.',
     links: [
-      { href: 'https://www.linkedin.com/posts/ttp-product-and-technology-consultancy_generativediffusion-aiintegration-productdevelopment-activity-7174018764328325122-DYr6?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' }
+      {
+        href: 'https://www.linkedin.com/posts/ttp-product-and-technology-consultancy_generativediffusion-aiintegration-productdevelopment-activity-7174018764328325122-DYr6?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk',
+        label: 'Linkedin (Part 1 - Intro & Overview)'
+      },
+      {
+        href: 'https://www.linkedin.com/posts/ttp-product-and-technology-consultancy_generativediffusion-aiintegration-productdevelopment-activity-7179090272721502208-9qoy?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk',
+        label: 'Linkedin (Part 2 -Industrial Designer Interview)'
+      },
+      {
+        href: 'https://www.linkedin.com/posts/ttp-product-and-technology-consultancy_generativediffusion-aiintegration-productdevelopment-activity-7184474042161098752-hBR7?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk',
+        label: 'Linkedin (Part 3 - Product Designer Interview)'
+      }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/sdps-demo.mp4',
     technologies: ['Stable Diffusion', 'Photoshop', 'auto-photoshop-stable-diffusion-plugin (Open-source)', 'Digital Painting']
@@ -86,7 +120,7 @@ const projects = [
     description:
       'We hack some electronics and cutting-edge multi-modal models to teach my Roomba into avoiding cables.',
     links: [
-      { href: 'https://youtu.be/IqqvarZpZTM?t=299', label: 'youtube.com' }
+      { href: 'https://youtu.be/IqqvarZpZTM?t=299', label: 'Youtube' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/gobby-demo.mp4',
     technologies: ['OpenCV (cv2)', 'Arduino (C++)', 'Hardware Hacking', 'Python', 'Replicate', 'LLaVa']
@@ -96,8 +130,8 @@ const projects = [
     description:
       'Trained OCR model on MNIST dataset to recognize handwritten digits in Sudoku puzzles. Features real-time grid detection with perspective transformation, efficient backtracking solver with threading, and AR interface that overlays solutions onto the original puzzle in live camera view.',
     links: [
-      { href: 'https://github.com/mattbarty/cv_sudoku_solver', label: 'github.com' },
-      { href: 'https://www.linkedin.com/posts/mattbarty_machinelearning-tensorflow-artificialintelligence-activity-7101517894634586112-Kf8X?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'linkedin.com' }
+      { href: 'https://github.com/mattbarty/cv_sudoku_solver', label: 'Github' },
+      { href: 'https://www.linkedin.com/posts/mattbarty_machinelearning-tensorflow-artificialintelligence-activity-7101517894634586112-Kf8X?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/sudoku-solver-demo.mp4',
     technologies: ['Python', 'TensorFlow', 'OpenCV (cv2)', 'matplotlib', 'NumPy', 'PIL']
@@ -112,12 +146,12 @@ const projects = [
         label: 'mattbarty.com/blog'
       },
       {
-        href: 'https://www.linkedin.com/posts/mattbarty_figmadesign-figma-midjourney-activity-7103756584387792896-0G7n?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk',
-        label: 'linkedin.com'
-      },
-      {
         href: 'https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602',
         label: 'Figma'
+      },
+      {
+        href: 'https://www.linkedin.com/posts/mattbarty_figmadesign-figma-midjourney-activity-7103756584387792896-0G7n?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk',
+        label: 'Linkedin'
       }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/arcanaGPT.mp4',
@@ -128,7 +162,8 @@ const projects = [
     description:
       'A webapp that uses GPT-3.5 and GoDaddy API to generate clever domain names based on your idea description.',
     links: [
-      { href: 'https://www.linkedin.com/posts/matthew-barty_turn-your-ideas-into-clever-domains-instantly-activity-7175056135220015104-Ghgo?utm_source=share&utm_medium=member_desktop', label: 'linkedin.com' }
+      { href: 'https://domain-sprout.vercel.app/', label: 'Demo - (domain-sprout.vercel.app)' },
+      { href: 'https://www.linkedin.com/posts/matthew-barty_turn-your-ideas-into-clever-domains-instantly-activity-7175056135220015104-Ghgo?utm_source=share&utm_medium=member_desktop', label: 'Linkedin' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/domainsprout-demo.mp4',
     technologies: ['GPT-3.5', 'React', 'GoDaddy API', 'NextJS', 'API Integration']
@@ -140,7 +175,7 @@ const projects = [
     links: [
       {
         href: 'https://www.linkedin.com/posts/matthew-barty_developercommunity-developer-whatsapp-activity-7079777301743181826-bfDI?utm_source=share&utm_medium=member_desktop',
-        label: 'linkedin.com'
+        label: 'Linkedin'
       }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/whatsapp-1-demo.mp4',
@@ -151,7 +186,7 @@ const projects = [
     description:
       'Generate bespoke, fully-voiced meditations using GPT-4o and AWS Polly',
     links: [
-      { href: 'https://satori-iota.vercel.app/', label: 'satori-iota.vercel.com' }
+      { href: 'https://satori-iota.vercel.app/', label: 'Demo - (satori-iota.vercel.com)' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/satori-demo.mp4',
     technologies: ['GPT-4o', 'AWS Polly', 'Next.js', 'React', 'Vercel', 'Text-to-Speech']
@@ -161,7 +196,8 @@ const projects = [
     description:
       'My usability and clinical data science work on the next generation of surgical robotics.',
     links: [
-      { href: 'https://www.mattbarty.com/blog/my-work-on-versius', label: 'mattbarty.com/blog' }
+      { href: 'https://www.mattbarty.com/blog/my-work-on-versius', label: 'mattbarty.com/blog' },
+      { href: 'https://cmrsurgical.com/', label: 'CMRsurgical.com' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/VersiusPage-FinalBanner-xCompressed.mp4',
     technologies: ['Surgical Robotics', 'Usability Research', 'Data Science', 'Healthcare Technology']
@@ -171,7 +207,7 @@ const projects = [
     description:
       'Generate the perfect user personas for your project using GPT-4o',
     links: [
-      { href: 'https://genpersona.vercel.app/', label: 'genpersona.vercel.app' }
+      { href: 'https://genpersona.vercel.app/', label: 'Demo - (genpersona.vercel.app)' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/genpersona-demo.mp4',
     technologies: ['GPT-4o', 'Next.js', 'React', 'UX Research', 'UI Design']
@@ -181,7 +217,8 @@ const projects = [
     description:
       'WebApp that uses BLIP-2 and GPT-3.5 to generate parody LinkedIn posts.',
     links: [
-      { href: 'https://linkedinfluencer-one.vercel.app/', label: 'linkedinfluencer.app' }
+      { href: 'https://linkedinfluencer-one.vercel.app/', label: 'Demo - (linkedinfluencer.app)' },
+      { href: 'https://www.linkedin.com/posts/mattbarty_ai-project-webdev-activity-7063114429814460416-kxOI?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk', label: 'Linkedin' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/linkedinfluencer-demo.mp4',
     technologies: ['BLIP-2', 'GPT-3.5', 'Next.js', 'React', 'Computer Vision', 'UX Design']
@@ -191,7 +228,7 @@ const projects = [
     description:
       'Using python, some complex algorithms, and a webdriver to hack a real-world, online Wordle game.',
     links: [
-      { href: 'https://github.com/mattbarty/wordle-bot', label: 'github.com' }
+      { href: 'https://github.com/mattbarty/wordle-bot', label: 'Github' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/wordle-bot.mp4',
     technologies: ['Python', 'Selenium', 'Algorithm Design', 'Web Automation']
@@ -203,7 +240,7 @@ const projects = [
     links: [
       {
         href: 'https://www.linkedin.com/posts/matthew-barty_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop',
-        label: 'linkedin.com'
+        label: 'Linkedin'
       }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/art-art-demo.mp4',
@@ -216,7 +253,7 @@ const projects = [
     links: [
       {
         href: 'https://youtu.be/SQ4NgT3jDkE?t=1407',
-        label: 'youtube.com'
+        label: 'Youtube'
       }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/data-viz.mp4',
@@ -229,7 +266,7 @@ const projects = [
     links: [
       {
         href: 'https://youtu.be/qNfxUsQ70QU',
-        label: 'youtube.com'
+        label: 'Youtube'
       }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/imdb-scraper.mp4',
@@ -242,7 +279,7 @@ const projects = [
     links: [
       {
         href: 'https://www.kaggle.com/code/mattbarty/gotta-plot-em-all',
-        label: 'kaggle.com'
+        label: 'Kaggle'
       }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/plotemall-demo.mp4',
@@ -253,7 +290,7 @@ const projects = [
     description:
       'Training a DNN to diagnose my own retina scan.',
     links: [
-      { href: 'https://github.com/mattbarty/eye_diseases_classification', label: 'github.com' }
+      { href: 'https://github.com/mattbarty/eye_diseases_classification', label: 'Github' }
     ],
     gif: 'https://dixog9cdtdsmc.cloudfront.net/projects/eye-disease-classification-demo.gif',
     technologies: ['Deep Learning', 'TensorFlow', 'Medical Imaging', 'CNN', 'Healthcare AI']
@@ -263,7 +300,7 @@ const projects = [
     description:
       'A demo that combines cutting-edge LLM, Image Diffusion, and text-to-voice models to tell an entirely original horror story.',
     links: [
-      { href: 'https://www.linkedin.com/feed/update/urn:li:activity:7110525573034033153/', label: 'linkedin.com' }
+      { href: 'https://www.linkedin.com/feed/update/urn:li:activity:7110525573034033153/', label: 'Linkedin' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/ai-story-demo.mp4',
     technologies: ['LLM', 'Text-to-Speech', 'Stable Diffusion', 'Storytelling', 'Creative AI']
@@ -274,25 +311,14 @@ const projects = [
       'Using Stable Diffusion to create portraits of myself.',
     links: [
       {
-        href: 'https://www.linkedin.com/posts/matthew-barty_stablediffusion-ai-aiartwork-activity-7065698539477069825-eaZ8?utm_source=share&utm_medium=member_desktop',
-        label: 'linkedin.com'
+        href: 'https://www.linkedin.com/posts/mattbarty_stablediffusion-ai-aiartwork-activity-7065698539477069825-KI9h?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk',
+        label: 'Linkedin'
       }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/stable-diffusion-portrait-demo.mp4',
     technologies: ['Stable Diffusion', 'ControlNet', 'AI Art', 'Portrait Generation']
   },
 ];
-
-function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
 
 export function ProjectsList() {
   return (
@@ -375,7 +401,7 @@ export function ProjectsList() {
               )}
 
               {/* Links section */}
-              <div className="flex flex-wrap items-center gap-4 mt-4">
+              <div className="flex flex-col items-start gap-4 mt-4">
                 {project.links.map((link, linkIndex) => (
                   <a
                     key={linkIndex}
@@ -384,7 +410,7 @@ export function ProjectsList() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-sm font-medium text-zinc-200 hover:text-teal-400 transition-colors"
                   >
-                    <LinkIcon className="h-5 w-5 flex-none" />
+                    <ExternalLink className="h-4 w-4 flex-none" />
                     <span className="ml-2">{link.label}</span>
                   </a>
                 ))}
