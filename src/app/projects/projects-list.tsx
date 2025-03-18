@@ -239,7 +239,7 @@ const projects = [
       'Combining Midjourney, Stable Diffusion, and Photoshop GenAI models to rapidly create digital art.',
     links: [
       {
-        href: 'https://www.linkedin.com/posts/matthew-barty_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-gYiL?utm_source=share&utm_medium=member_desktop',
+        href: 'https://www.linkedin.com/posts/mattbarty_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-XFAz?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk',
         label: 'Linkedin'
       }
     ],
