@@ -1,6 +1,8 @@
 import { ArticleLayout } from '@/components/ArticleLayout';
 import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
+import { TarotCarousel } from '@/components/TarotCarousel';
+import { tarotCards } from '@/data/tarotCards';
 
 
 export const article = {
@@ -37,7 +39,7 @@ const personaData = [
       "Needs an accessible, step-by-step introduction."
     ],
     "arcanaGpthelps": [
-      "Offers an intuitive interface that doesn’t intimidate.",
+      "Offers an intuitive interface that doesn't intimidate.",
       "Provides concise and accurate readings.",
       "Allows progressive learning and practice."
     ]
@@ -229,7 +231,7 @@ export default function articleBody() {
   return (
     <>
       <ArticleLayout article={article}>
-        <div className='flex flex-col lg:flex-row w-full h-auto justify-between relative bg-black rounded-xl overflow-clip '>
+        <div className='flex flex-col lg:flex-row w-full h-auto justify-between relative bg-black rounded-xl overflow-clip'>
           <div className='relative flex flex-col justify-center w-auto mx-2 my-2 md:mx-6 items'>
             <div className='absolute top-0 left-0 md:-inset-x-[35%] z-10'>
               <ArcanagptBackgroundAsset className='h-[300px] lg:h-auto  absolute mb-8 animate-slow-spin duration-1000' />
@@ -262,34 +264,35 @@ export default function articleBody() {
           </div>
         </div>
         <Divider title='Project Summary' />
-        <h1 className='text-xl text-slate-100 font-bold'>Context</h1>
-        <p>Tarot reading, with its rich history and mystique, has long been a tool for introspection. Typically done by a trained reader,
-          it involves drawing cards from a deck and interpreting their meanings in the context of a question or situation - In my personal life,
-          I've found it a convenient and fun prompt for self-reflection.
-        </p>
-        <p>
-          However, I've also found that the experience of getting a reading can be quite inaccessible, especially for those who are new to the practice -
-          And it typically required a lot of time and mental charge to be both the reader and the querent.
-        </p>
-        <p>
-          Services exist that offer automated readings, but they are often generic and impersonal, and lack the nuance and depth of a human reader.
-          Therefore, I decided to create ArcanaGPT, a webapp that uses contemporary AI to deliver instant, tailored Tarot readings using cutting edge
-          LLM technology.
-        </p>
-        <h1 className='text-xl text-slate-100 font-bold'>Problem Statement</h1>
-        <div className='font-semibold text-white border-t border-b p-4'>
+        <div className='flex flex-col gap-4'>
+          <p className="mb-4">Tarot reading, with its rich history and mystique, has long been a tool for introspection. Typically done by a trained reader,
+            it involves drawing cards from a deck and interpreting their meanings in the context of a question or situation - In my personal life,
+            I've found it a convenient and fun prompt for self-reflection.
+          </p>
+          <p className="mb-4">
+            However, I've also found that the experience of getting a reading can be quite inaccessible, especially for those who are new to the practice -
+            And it typically required a lot of time and mental charge to be both the reader and the querent.
+          </p>
+          <p className="mb-4">
+            Services exist that offer automated readings, but they are often generic and impersonal, and lack the nuance and depth of a human reader.
+            Therefore, I decided to create ArcanaGPT, a webapp that uses contemporary AI to deliver instant, tailored Tarot readings using cutting edge
+            LLM technology.
+          </p>
+        </div>
+        <h1 className='text-xl text-slate-100 font-bold mb-4'>Problem Statement</h1>
+        <div className='font-semibold text-white border-t border-b p-4 mb-4'>
           <p className='text-xl md:text-3xl'>
             "I don't understand Tarot, but I'm open to it - It seems like a fun way to reflect on my life, but I don't know where to start."
           </p>
         </div>
-        <ul>
+        <ul className="mb-4">
           <li>🧙‍♀️ Traditional tarot reading requires a trained interpreter and can be inaccessible to newcomers.</li>
           <li>😵‍💫 Acting as both reader and querent is mentally taxing.</li>
           <li>💤 Automated tarot services are generic and lack the depth and nuance of human readers.</li>
           <li>🤖 There's a gap for a solution that blends automation convenience with human-like depth.</li>
         </ul>
-        <h1 className='text-xl text-slate-100 font-bold'>Solution</h1>
-        <p>
+        <h1 className='text-xl text-slate-100 font-bold mb-4'>Solution</h1>
+        <p className="mb-4">
           Introducing <strong>ArcanaGPT</strong> - Bridging Tradition with Modern Technology - a revolutionary
           digital platform designed to make tarot reading accessible, convenient, and insightful.
           Our aim is to merge the age-old wisdom of traditional tarot reading with the power of contemporary AI.
@@ -297,14 +300,20 @@ export default function articleBody() {
         <Image
           src='https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/tartogpt-screens.png'
           alt='TarotGPT screen samples'
-          className='rounded-none'
+          className='rounded-none mb-12'
           width={0}
           height={0}
           sizes="100vw"
           style={{ width: '100%', height: 'auto' }}
           unoptimized
         />
-        <p>It's really easiest shown than explained - <br />
+        <p className="mb-8">
+          Featuring a full 22 card deck of customised, AI-generated cards representing the 22 major arcana, their meanings, and unique interpretations. All cards are generated using Midjourney.
+        </p>
+        <div>
+          <TarotCarousel cards={tarotCards} />
+        </div>
+        <p className="mb-4">It's really easiest shown than explained - <br />
           Click the link below to give it a go for yourself! ( and let me know what you think! )</p>
         <a
           href='https://www.figma.com/proto/PJPSyobvDnfkinWS8UFOoE/ArcanaGPT?page-id=0%3A1&type=design&node-id=103-602&viewport=1867%2C1699%2C0.15&t=QkEvDFlDgK7A2edI-1&scaling=scale-down&starting-point-node-id=103%3A602&mode=design'
@@ -316,15 +325,15 @@ export default function articleBody() {
           </div>
         </a>
         <Divider title='Discovery' />
-        <p>
+        <p className="mb-4">
           As with any serious development, its important to model, define, and understand the user, task, and environment factors of what we are developing.
           In this case, we are developing a digital product that will be used by a wide range of users, each with their own unique needs and goals - Therefore,
           well be using three exploratory methods to help us understand the landscape of our product; Personas, Task Analysis, and Competitive Analysis.
         </p>
-        <p>Then, we'll summarise all our findings into a set of <span className='font-bold'>user requirements</span> we can take forward into ideation.</p>
-        <h1 className='text-xl text-slate-100 font-bold'>Task Analysis</h1>
-        <VideoAutoplay className='-z-1 bg-black min-h-[225px] aspect-[6/3] rounded-lg' src={'https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/tarot-live-demo.mp4'} />
-        <p>A key aspect of developing ArcanaGPT was ensuring that the mystique and ritual of Tarot reading were preserved when translating it into a digital format.
+        <p className="mb-4">Then, we'll summarise all our findings into a set of <span className='font-bold'>user requirements</span> we can take forward into ideation.</p>
+        <h1 className='text-xl text-slate-100 font-bold mb-4'>Task Analysis</h1>
+        <VideoAutoplay className='-z-1 bg-black min-h-[225px] aspect-[6/3] rounded-lg mb-4' src={'https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/tarot-live-demo.mp4'} />
+        <p className="mb-4">A key aspect of developing ArcanaGPT was ensuring that the mystique and ritual of Tarot reading were preserved when translating it into a digital format.
           This involved careful consideration of each step in the reading process to maintain the traditional experience while leveraging the advantages of modern technology.</p>
         <Image
           src='https://dixog9cdtdsmc.cloudfront.net/case-study-arcanagpt/tarot-workflow.png'
@@ -333,9 +342,10 @@ export default function articleBody() {
           height={0}
           sizes="100vw"
           style={{ width: '100%', height: 'auto' }}
+          className="mb-4"
           unoptimized
         />
-        <ul className="list-disc list-inside space-y-6">
+        <ul className="list-disc list-inside space-y-6 mb-4">
           <li>
             <div className="font-semibold text-white border-l-2 border-slate-600 pl-2">1. Shuffle</div>
             <p>
@@ -357,7 +367,7 @@ export default function articleBody() {
           <li>
             <div className="font-semibold text-white border-l-2 border-slate-600 pl-2">3. Reveal Cards</div>
             <p>
-              <strong className='text-white'>Preserving Ritual:</strong> The drawn cards are revealed one by one, maintaining the suspense and significance of each card’s revelation. This step reflects the traditional practice where each card’s unveiling is a moment of insight.
+              <strong className='text-white'>Preserving Ritual:</strong> The drawn cards are revealed one by one, maintaining the suspense and significance of each card's revelation. This step reflects the traditional practice where each card's unveiling is a moment of insight.
             </p>
             <p>
               <strong className='text-white'>Digital Enhancement:</strong> Visual effects and animations are used to enhance the moment of revelation, adding to the mystique and excitement.
@@ -369,7 +379,7 @@ export default function articleBody() {
               <strong className='text-white'>Preserving Ritual:</strong> ArcanaGPT provides a detailed narration for each card, akin to the interpretation given by a human reader. This narration respects the depth and nuance of traditional Tarot readings.
             </p>
             <p>
-              <strong className='text-white'>Digital Enhancement:</strong> The AI’s advanced natural language processing allows for highly personalized and context-aware interpretations, offering users a reading that feels tailored to their unique situation.
+              <strong className='text-white'>Digital Enhancement:</strong> The AI's advanced natural language processing allows for highly personalized and context-aware interpretations, offering users a reading that feels tailored to their unique situation.
             </p>
           </li>
           <li>
@@ -382,34 +392,47 @@ export default function articleBody() {
             </p>
           </li>
         </ul>
-        <h1 className='text-xl text-slate-100 font-bold'>Personas</h1>
-        <p>Personas are essential for understanding our diverse user base and designing an app that meets their needs.
+        <h1 className='text-xl text-slate-100 font-bold mb-4'>Personas</h1>
+        <p className="mb-4">Personas are essential for understanding our diverse user base and designing an app that meets their needs.
           ArcanaGPT attracts a wide range of users, from curious beginners to seasoned readers.
           Common trends include the need for accessible, accurate, and meaningful readings that support personal growth and emotional navigation.</p>
-        <div className='flex flex-col w-full justify-around'>
+        <div className='flex flex-col w-full justify-around mb-4'>
           <div className="container mx-auto flex flex-wrap justify-center">
             {personaData.map((persona, idx) => (
               <PersonaCard key={idx} {...persona} />
             ))}
           </div>
         </div>
-        <p>By identifying and addressing the diverse needs of our users through these personas,
+        <p className="mb-4">By identifying and addressing the diverse needs of our users through these personas,
           we can ensure that ArcanaGPT remains a valuable tool for anyone interested in Tarot,
           regardless of their level of experience or their specific goals.</p>
-        <h1 className='text-xl text-slate-100 font-bold'>Competitor Analysis</h1>
-        <p>( 🚧 section tbc - watch this space! )</p>
-        <h1 className='text-xl text-slate-100 font-bold'>Requirements Specification</h1>
+        <h1 className='text-xl text-slate-100 font-bold mb-4'>Mood Board</h1>
+        <div>
+          <p className="mb-4">( 🚧 section tbc - watch this space! )</p>
+          <div className='flex flex-col w-full justify-around mb-4'>
+            <Image src='/tarot/assets/arcanagpt-design-research.png' alt='ArcanaGPT mood board' width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="mb-4" unoptimized />
+          </div>
+        </div>
         <Divider title='Ideation' />
-        <h1 className='text-xl text-slate-100 font-bold'>Paper sketch</h1>
-        <p>( 🚧 section tbc - watch this space! )</p>
-        <h1 className='text-xl text-slate-100 font-bold'>WireFraming</h1>
-        <p>( 🚧 section tbc - watch this space! )</p>
+        <div>
+          <div className='flex flex-col w-full justify-around mb-4'>
+            <p>Initial designs built in Figma - View prototype here: <a href='https://www.figma.com/proto/bBeCvvu0gvlNZs2TpjVtPI/TarotGPT?node-id=0-1&p=f&viewport=-2158%2C1460%2C0.43&t=DHB0nJxNYLuzk1IZ-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=15%3A2009' target='_blank' className='text-blue-500'>Figma</a></p>
+            <Image src='/tarot/assets/arcanagpt-initial-design-1.jpg' alt='ArcanaGPT initial design' width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="mb-4" unoptimized />
+            <Image src='/tarot/assets/arcanagpt-initial-design-flow.png' alt='ArcanaGPT initial design flow' width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="mb-4" unoptimized />
+          </div>
+        </div>
         <Divider title='Design' />
-        <h1 className='text-xl text-slate-100 font-bold'>Design Walkthrough</h1>
-        <p>( 🚧 section tbc - watch this space! )</p>
-        <h1 className='text-xl text-slate-100 font-bold'>Next Steps & Reflections</h1>
-        <p>( 🚧 section tbc - watch this space! )</p>
+        <h1 className='text-xl text-slate-100 font-bold mb-4'>Design Walkthrough</h1>
+        <p className="mb-4">( 🚧 section tbc - watch this space! )</p>
+        <div className='flex flex-col w-full justify-around mb-4'>
+          <p className='mb-4'>
+            Designs, flows, and features were build in public on my Instagram.
+          </p>
+          <Image src='/tarot/assets/arcanagpt-build-in-public.png' alt='ArcanaGPT build in public' width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="mb-4" unoptimized />
+        </div>
+        <h1 className='text-xl text-slate-100 font-bold mb-4'>Next Steps & Reflections</h1>
+        <p className="mb-4">( 🚧 section tbc - watch this space! )</p>
       </ArticleLayout>
     </>
   );
-};;
+};
