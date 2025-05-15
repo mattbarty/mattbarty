@@ -20,6 +20,16 @@ const projects = [
     technologies: ['Generative AI', 'Midjourney', 'Public Speaking', 'Creative Technology']
   },
   {
+    name: 'LangMini - AI-Powered Language Learning',
+    description:
+      'LangMini is a web app that uses AI to help you learn languages! Engage in objective-based chat scenarios with automated feedback, translation tools, and more.',
+    links: [
+      { href: 'https://langmini.com/', label: 'Demo - (langmini.com)' },
+    ],
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/langmini-demo-compressed.mp4',
+    technologies: ['NextJS', 'ReactJS', 'OpenAI API', 'NextAuth', 'Stripe', 'Supabase']
+  },
+  {
     name: 'Hex Engine - Procedural World Generator',
     description:
       'Procedurally generate beautiful 3D hexagonal landscapes with realistic terrain generation. Runs in the browser with ThreeJS and React.',
@@ -124,7 +134,7 @@ const projects = [
       { href: 'https://youtu.be/IqqvarZpZTM?t=299', label: 'Youtube' }
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/gobby-demo.mp4',
-    technologies: ['OpenCV (cv2)', 'Arduino (C++)', 'Hardware Hacking', 'Python', 'Replicate', 'LLaVa']
+    technologies: ['OpenCV (cv2)', 'Hardware Hacking', 'Python', 'Replicate', 'LLaVa-2']
   },
   {
     name: 'Augmented Reality, Real-Time Sudoku Solver',
@@ -159,7 +169,7 @@ const projects = [
     technologies: ['Figma', 'UI/UX Design', 'Prototyping', 'LLM Integration', 'Design Thinking']
   },
   {
-    name: 'Ideas to Domains (GPT-3.5 + GoDaddy)',
+    name: 'DomainSprout - Ideas to Domains service',
     description:
       'A webapp that uses GPT-3.5 and GoDaddy API to generate clever domain names based on your idea description.',
     links: [
@@ -237,7 +247,7 @@ const projects = [
   {
     name: 'AI-Powered Art Workflow',
     description:
-      'Combining Midjourney, Stable Diffusion, and Photoshop GenAI models to rapidly create digital art.',
+      'Combining Midjourney, Stable Diffusion, and and digital painting tools in Photoshop to rapidly create digital art.',
     links: [
       {
         href: 'https://www.linkedin.com/posts/mattbarty_rediscovering-my-passion-for-digital-art-activity-7102626220818714624-XFAz?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlTUP0BDc6N7ahE4r8ixV-h2IiFgCVH1tk',
@@ -305,6 +315,23 @@ const projects = [
     ],
     video: 'https://dixog9cdtdsmc.cloudfront.net/projects/ai-story-demo.mp4',
     technologies: ['LLM', 'Text-to-Speech', 'Stable Diffusion', 'Storytelling', 'Creative AI']
+  },
+  {
+    name: 'Hermes - AI Art Installation',
+    description:
+      'A collaborative AI art installation with Nicholas Ong exploring themes of presence and absence through the concept of "Hermes" - The messenger. Through this installation, Nicholas challenged traditional notions of artistic presence by creating a conversational space where play, observation, and collaboration became central to the artistic experience.',
+    links: [
+      {
+        href: 'https://hermes-installation.vercel.app/',
+        label: 'Demo (https://hermes-installation.vercel.app/)'
+      },
+      {
+        href: 'https://www.instagram.com/reel/C2d5UYjRbYM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+        label: 'Instagram (Neekruz x Nicholasongstudio)'
+      }
+    ],
+    video: 'https://dixog9cdtdsmc.cloudfront.net/projects/hermes-demo.mp4',
+    technologies: ['ReactJS', 'NextJS', 'GPT-3', 'TailwindCSS']
   },
   {
     name: 'ControlNet Portraits',
